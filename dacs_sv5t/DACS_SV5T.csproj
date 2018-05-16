@@ -169,6 +169,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\HoatDongController.cs" />
+    <Compile Include="Controllers\MINHCHUNGsController.cs" />
     <Compile Include="Controllers\SinhVienController.cs" />
     <Compile Include="Controllers\TempController.cs" />
     <Compile Include="Global.asax.cs">
@@ -310,8 +312,6 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -382,12 +382,14 @@
     <Content Include="Models\Model.edmx.diagram">
       <DependentUpon>Model.edmx</DependentUpon>
     </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.signalR-2.2.2.js" />
     <Content Include="Scripts\jquery.signalR-2.2.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -413,6 +415,13 @@
     <Content Include="Views\Temp\getTINTUCHOME.cshtml" />
     <Content Include="Views\SinhVien\DangNhap.cshtml" />
     <Content Include="Views\SinhVien\ThongTinSV.cshtml" />
+    <Content Include="Views\MINHCHUNGs\Create.cshtml" />
+    <Content Include="Views\MINHCHUNGs\Delete.cshtml" />
+    <Content Include="Views\MINHCHUNGs\Details.cshtml" />
+    <Content Include="Views\MINHCHUNGs\Edit.cshtml" />
+    <Content Include="Views\MINHCHUNGs\Index.cshtml" />
+    <Content Include="Views\HoatDong\LoaiTieuChi.cshtml" />
+    <Content Include="Views\HoatDong\TieuChi.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
