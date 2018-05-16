@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DACS_SV5TModelStoreContainer" CdmEntityContainer="DACS_SV5TEntities">
+    <EntitySetMapping Name="CAPs">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.CAP">
+        <MappingFragment StoreEntitySet="CAP">
+          <ScalarProperty Name="ID_CAP" ColumnName="ID_CAP" />
+          <ScalarProperty Name="TEN_CAP" ColumnName="TEN_CAP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DONVIs">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.DONVI">
+        <MappingFragment StoreEntitySet="DONVI">
+          <ScalarProperty Name="ID_DV" ColumnName="ID_DV" />
+          <ScalarProperty Name="TenDV" ColumnName="TenDV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HOATDONGs">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.HOATDONG">
+        <MappingFragment StoreEntitySet="HOATDONG">
+          <ScalarProperty Name="ID_HD" ColumnName="ID_HD" />
+          <ScalarProperty Name="ID_DV" ColumnName="ID_DV" />
+          <ScalarProperty Name="TenCT" ColumnName="TenCT" />
+          <ScalarProperty Name="NgayTC" ColumnName="NgayTC" />
+          <ScalarProperty Name="DiaDiemTC" ColumnName="DiaDiemTC" />
+          <ScalarProperty Name="ID_CAP" ColumnName="ID_CAP" />
+          <ScalarProperty Name="ID_TC" ColumnName="ID_TC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOAI_TIEUCHI">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.LOAI_TIEUCHI">
+        <MappingFragment StoreEntitySet="LOAI_TIEUCHI">
+          <ScalarProperty Name="ID_LTC" ColumnName="ID_LTC" />
+          <ScalarProperty Name="TEN_LTC" ColumnName="TEN_LTC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MENUs">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.MENU">
+        <MappingFragment StoreEntitySet="MENU">
+          <ScalarProperty Name="ID_MENU" ColumnName="ID_MENU" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="DATEBEGIN" ColumnName="DATEBEGIN" />
+          <ScalarProperty Name="META" ColumnName="META" />
+          <ScalarProperty Name="ORDER" ColumnName="ORDER" />
+          <ScalarProperty Name="LINK" ColumnName="LINK" />
+          <ScalarProperty Name="HIDE" ColumnName="HIDE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SINHVIENs">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.SINHVIEN">
+        <MappingFragment StoreEntitySet="SINHVIEN">
+          <ScalarProperty Name="ID_SV" ColumnName="ID_SV" />
+          <ScalarProperty Name="TEN_SV" ColumnName="TEN_SV" />
+          <ScalarProperty Name="LOP" ColumnName="LOP" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="ID_CAP" ColumnName="ID_CAP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="THAMGIAs">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.THAMGIA">
+        <MappingFragment StoreEntitySet="THAMGIA">
+          <ScalarProperty Name="ID_SV" ColumnName="ID_SV" />
+          <ScalarProperty Name="ID_HD" ColumnName="ID_HD" />
+          <ScalarProperty Name="NGAY_HD" ColumnName="NGAY_HD" />
+          <ScalarProperty Name="XACNHAN" ColumnName="XACNHAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIEUCHIs">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.TIEUCHI">
+        <MappingFragment StoreEntitySet="TIEUCHI">
+          <ScalarProperty Name="ID_TC" ColumnName="ID_TC" />
+          <ScalarProperty Name="TEN_TC" ColumnName="TEN_TC" />
+          <ScalarProperty Name="ID_LTC" ColumnName="ID_LTC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TINTUCs">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.TINTUC">
+        <MappingFragment StoreEntitySet="TINTUC">
+          <ScalarProperty Name="ID_TT" ColumnName="ID_TT" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="DETAIL" ColumnName="DETAIL" />
+          <ScalarProperty Name="DATEBEGIN" ColumnName="DATEBEGIN" />
+          <ScalarProperty Name="META" ColumnName="META" />
+          <ScalarProperty Name="ORDER" ColumnName="ORDER" />
+          <ScalarProperty Name="LINK" ColumnName="LINK" />
+          <ScalarProperty Name="HIDE" ColumnName="HIDE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERS">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.USER">
+        <MappingFragment StoreEntitySet="USERS">
+          <ScalarProperty Name="ID_USER" ColumnName="ID_USER" />
+          <ScalarProperty Name="USERNAMES" ColumnName="USERNAMES" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="NAMES" ColumnName="NAMES" />
+          <ScalarProperty Name="PERMISSION" ColumnName="PERMISSION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VANBANs">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.VANBAN">
+        <MappingFragment StoreEntitySet="VANBAN">
+          <ScalarProperty Name="ID_VB" ColumnName="ID_VB" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="DECREPTION" ColumnName="DECREPTION" />
+          <ScalarProperty Name="FILEPATH" ColumnName="FILEPATH" />
+          <ScalarProperty Name="DATEBEGIN" ColumnName="DATEBEGIN" />
+          <ScalarProperty Name="META" ColumnName="META" />
+          <ScalarProperty Name="ORDER" ColumnName="ORDER" />
+          <ScalarProperty Name="LINK" ColumnName="LINK" />
+          <ScalarProperty Name="HIDE" ColumnName="HIDE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="HOANTHANH" TypeName="DACS_SV5TModel.HOANTHANH" StoreEntitySet="HOANTHANH">
+      <EndProperty Name="SINHVIEN">
+        <ScalarProperty Name="ID_SV" ColumnName="ID_SV" />
+      </EndProperty>
+      <EndProperty Name="TIEUCHI">
+        <ScalarProperty Name="ID_TC" ColumnName="ID_TC" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="DACS_SV5TModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="DACS_SV5TModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="DACS_SV5TModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="DACS_SV5TModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DACS_SV5TModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="DACS_SV5TModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DACS_SV5TModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DACS_SV5TModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DACS_SV5TModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

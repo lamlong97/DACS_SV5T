@@ -1,0 +1,13 @@
+﻿@model IEnumerable<DACS_SV5T.Models.TINTUC>
+
+<div class="panel panel-primary" style="width: 100%;">
+    <div class="panel-heading">Tin mới</div>
+    <div class="panel-body">
+        @foreach (var item in Model)
+        {
+            <div style="margin-bottom: 5px;"><img src="~/Content/img/newicon_vi.gif">  <a href="@item.LINK">@item.TITLE</a></div>
+        }
+        <div class="pull-right"><a href="#">Xem thêm...</a></div>
+    </div>
+</div>
+

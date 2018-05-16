@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DACS_SV5TModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CAP">
+    <Key>
+      <PropertyRef Name="ID_CAP" />
+    </Key>
+    <Property Name="ID_CAP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TEN_CAP" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DONVI">
+    <Key>
+      <PropertyRef Name="ID_DV" />
+    </Key>
+    <Property Name="ID_DV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenDV" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="HOANTHANH">
+    <Key>
+      <PropertyRef Name="ID_SV" />
+    </Key>
+    <Property Name="ID_SV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_TC" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HOATDONG">
+    <Key>
+      <PropertyRef Name="ID_HD" />
+    </Key>
+    <Property Name="ID_HD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_DV" Type="int" Nullable="false" />
+    <Property Name="TenCT" Type="nvarchar" MaxLength="255" />
+    <Property Name="NgayTC" Type="smalldatetime" />
+    <Property Name="DiaDiemTC" Type="nvarchar" MaxLength="255" />
+    <Property Name="ID_CAP" Type="int" Nullable="false" />
+    <Property Name="ID_TC" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LOAI_TIEUCHI">
+    <Key>
+      <PropertyRef Name="ID_LTC" />
+    </Key>
+    <Property Name="ID_LTC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TEN_LTC" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MENU">
+    <Key>
+      <PropertyRef Name="ID_MENU" />
+    </Key>
+    <Property Name="ID_MENU" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TITLE" Type="nvarchar" MaxLength="50" />
+    <Property Name="DATEBEGIN" Type="smalldatetime" />
+    <Property Name="META" Type="varchar" MaxLength="255" />
+    <Property Name="ORDER" Type="int" />
+    <Property Name="LINK" Type="nvarchar" MaxLength="255" />
+    <Property Name="HIDE" Type="int" />
+  </EntityType>
+  <EntityType Name="SINHVIEN">
+    <Key>
+      <PropertyRef Name="ID_SV" />
+    </Key>
+    <Property Name="ID_SV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TEN_SV" Type="nvarchar" MaxLength="50" />
+    <Property Name="LOP" Type="varchar" MaxLength="10" />
+    <Property Name="DIACHI" Type="nvarchar" MaxLength="100" />
+    <Property Name="SDT" Type="int" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="ID_CAP" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="THAMGIA">
+    <Key>
+      <PropertyRef Name="ID_SV" />
+    </Key>
+    <Property Name="ID_SV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_HD" Type="int" Nullable="false" />
+    <Property Name="NGAY_HD" Type="datetime" />
+    <Property Name="XACNHAN" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TIEUCHI">
+    <Key>
+      <PropertyRef Name="ID_TC" />
+    </Key>
+    <Property Name="ID_TC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TEN_TC" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_LTC" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TINTUC">
+    <Key>
+      <PropertyRef Name="ID_TT" />
+    </Key>
+    <Property Name="ID_TT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TITLE" Type="nvarchar" MaxLength="255" />
+    <Property Name="DETAIL" Type="ntext" />
+    <Property Name="DATEBEGIN" Type="smalldatetime" />
+    <Property Name="META" Type="varchar" MaxLength="255" />
+    <Property Name="ORDER" Type="int" />
+    <Property Name="LINK" Type="nvarchar" MaxLength="255" />
+    <Property Name="HIDE" Type="int" />
+  </EntityType>
+  <EntityType Name="USERS">
+    <Key>
+      <PropertyRef Name="ID_USER" />
+    </Key>
+    <Property Name="ID_USER" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERNAMES" Type="nvarchar" MaxLength="50" />
+    <Property Name="PASSWORD" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAMES" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERMISSION" Type="int" />
+  </EntityType>
+  <EntityType Name="VANBAN">
+    <Key>
+      <PropertyRef Name="ID_VB" />
+    </Key>
+    <Property Name="ID_VB" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TITLE" Type="nvarchar" MaxLength="255" />
+    <Property Name="DECREPTION" Type="nvarchar" MaxLength="255" />
+    <Property Name="FILEPATH" Type="nvarchar" MaxLength="255" />
+    <Property Name="DATEBEGIN" Type="smalldatetime" />
+    <Property Name="META" Type="varchar" MaxLength="50" />
+    <Property Name="ORDER" Type="int" />
+    <Property Name="LINK" Type="nvarchar" MaxLength="255" />
+    <Property Name="HIDE" Type="int" />
+  </EntityType>
+  <Association Name="FK__HOANTHANH__ID_SV__25869641">
+    <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="1" />
+    <End Role="HOANTHANH" Type="Self.HOANTHANH" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="SINHVIEN">
+        <PropertyRef Name="ID_SV" />
+      </Principal>
+      <Dependent Role="HOANTHANH">
+        <PropertyRef Name="ID_SV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HOANTHANH__ID_TC__22AA2996">
+    <End Role="TIEUCHI" Type="Self.TIEUCHI" Multiplicity="1" />
+    <End Role="HOANTHANH" Type="Self.HOANTHANH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIEUCHI">
+        <PropertyRef Name="ID_TC" />
+      </Principal>
+      <Dependent Role="HOANTHANH">
+        <PropertyRef Name="ID_TC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HOATDONG__ID_CAP__1FCDBCEB">
+    <End Role="CAP" Type="Self.CAP" Multiplicity="1" />
+    <End Role="HOATDONG" Type="Self.HOATDONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAP">
+        <PropertyRef Name="ID_CAP" />
+      </Principal>
+      <Dependent Role="HOATDONG">
+        <PropertyRef Name="ID_CAP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HOATDONG__ID_DV__276EDEB3">
+    <End Role="DONVI" Type="Self.DONVI" Multiplicity="1" />
+    <End Role="HOATDONG" Type="Self.HOATDONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DONVI">
+        <PropertyRef Name="ID_DV" />
+      </Principal>
+      <Dependent Role="HOATDONG">
+        <PropertyRef Name="ID_DV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HOATDONG__ID_TC__239E4DCF">
+    <End Role="TIEUCHI" Type="Self.TIEUCHI" Multiplicity="1" />
+    <End Role="HOATDONG" Type="Self.HOATDONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIEUCHI">
+        <PropertyRef Name="ID_TC" />
+      </Principal>
+      <Dependent Role="HOATDONG">
+        <PropertyRef Name="ID_TC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SINHVIEN__ID_CAP__20C1E124">
+    <End Role="CAP" Type="Self.CAP" Multiplicity="1" />
+    <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAP">
+        <PropertyRef Name="ID_CAP" />
+      </Principal>
+      <Dependent Role="SINHVIEN">
+        <PropertyRef Name="ID_CAP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__THAMGIA__ID_HD__267ABA7A">
+    <End Role="HOATDONG" Type="Self.HOATDONG" Multiplicity="1" />
+    <End Role="THAMGIA" Type="Self.THAMGIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOATDONG">
+        <PropertyRef Name="ID_HD" />
+      </Principal>
+      <Dependent Role="THAMGIA">
+        <PropertyRef Name="ID_HD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__THAMGIA__ID_SV__24927208">
+    <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="1" />
+    <End Role="THAMGIA" Type="Self.THAMGIA" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="SINHVIEN">
+        <PropertyRef Name="ID_SV" />
+      </Principal>
+      <Dependent Role="THAMGIA">
+        <PropertyRef Name="ID_SV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TIEUCHI__ID_LTC__21B6055D">
+    <End Role="LOAI_TIEUCHI" Type="Self.LOAI_TIEUCHI" Multiplicity="1" />
+    <End Role="TIEUCHI" Type="Self.TIEUCHI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAI_TIEUCHI">
+        <PropertyRef Name="ID_LTC" />
+      </Principal>
+      <Dependent Role="TIEUCHI">
+        <PropertyRef Name="ID_LTC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="DACS_SV5TModelStoreContainer">
+    <EntitySet Name="CAP" EntityType="Self.CAP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DONVI" EntityType="Self.DONVI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HOANTHANH" EntityType="Self.HOANTHANH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HOATDONG" EntityType="Self.HOATDONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOAI_TIEUCHI" EntityType="Self.LOAI_TIEUCHI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MENU" EntityType="Self.MENU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SINHVIEN" EntityType="Self.SINHVIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="THAMGIA" EntityType="Self.THAMGIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIEUCHI" EntityType="Self.TIEUCHI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TINTUC" EntityType="Self.TINTUC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VANBAN" EntityType="Self.VANBAN" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__HOANTHANH__ID_SV__25869641" Association="Self.FK__HOANTHANH__ID_SV__25869641">
+      <End Role="SINHVIEN" EntitySet="SINHVIEN" />
+      <End Role="HOANTHANH" EntitySet="HOANTHANH" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HOANTHANH__ID_TC__22AA2996" Association="Self.FK__HOANTHANH__ID_TC__22AA2996">
+      <End Role="TIEUCHI" EntitySet="TIEUCHI" />
+      <End Role="HOANTHANH" EntitySet="HOANTHANH" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HOATDONG__ID_CAP__1FCDBCEB" Association="Self.FK__HOATDONG__ID_CAP__1FCDBCEB">
+      <End Role="CAP" EntitySet="CAP" />
+      <End Role="HOATDONG" EntitySet="HOATDONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HOATDONG__ID_DV__276EDEB3" Association="Self.FK__HOATDONG__ID_DV__276EDEB3">
+      <End Role="DONVI" EntitySet="DONVI" />
+      <End Role="HOATDONG" EntitySet="HOATDONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HOATDONG__ID_TC__239E4DCF" Association="Self.FK__HOATDONG__ID_TC__239E4DCF">
+      <End Role="TIEUCHI" EntitySet="TIEUCHI" />
+      <End Role="HOATDONG" EntitySet="HOATDONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SINHVIEN__ID_CAP__20C1E124" Association="Self.FK__SINHVIEN__ID_CAP__20C1E124">
+      <End Role="CAP" EntitySet="CAP" />
+      <End Role="SINHVIEN" EntitySet="SINHVIEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK__THAMGIA__ID_HD__267ABA7A" Association="Self.FK__THAMGIA__ID_HD__267ABA7A">
+      <End Role="HOATDONG" EntitySet="HOATDONG" />
+      <End Role="THAMGIA" EntitySet="THAMGIA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__THAMGIA__ID_SV__24927208" Association="Self.FK__THAMGIA__ID_SV__24927208">
+      <End Role="SINHVIEN" EntitySet="SINHVIEN" />
+      <End Role="THAMGIA" EntitySet="THAMGIA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TIEUCHI__ID_LTC__21B6055D" Association="Self.FK__TIEUCHI__ID_LTC__21B6055D">
+      <End Role="LOAI_TIEUCHI" EntitySet="LOAI_TIEUCHI" />
+      <End Role="TIEUCHI" EntitySet="TIEUCHI" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

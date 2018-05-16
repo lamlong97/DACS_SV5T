@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="sinh vien 5 tot, 5 tot" />
+    <title>Website Sinh viên 5 tốt</title>
+    <link rel="shortcut icon" href="~/Content/img/logo-hutech1.png">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="~/Scirpts/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/js/backtotop.js"></script>
+</head>
+<body>
+    @*-------------------fb------------*@
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.0&appId=120263562176488&autoLogAppEvents=1';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    @*------------*@
+    <div class="main">
+        <div class="row">
+            <div>
+                <div class="col-md-9">
+                    <img src="~/Content/img/header_logo.png">
+                </div>
+                <div class="col-md-3">
+                    <div style="height:50px;"></div>
+                    <div class="pull-right">
+                        <a href="#" style="color:#008ccd;">Đăng ký</a>
+                        <span> | </span>
+                        <a href="#" style="color:#008ccd;">Đăng nhập</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="row">
+                <nav class="navbar" style="background-color: #0063cd;">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="color: #FFF;">
+                                <span class="glyphicon glyphicon-align-justify"></span>
+                            </button>
+                            <a class="navbar-brand" style="color: #FFF;" href="#">SV5T</a>
+                        </div>
+                        @{ Html.RenderAction("getMENU", "Temp");}
+                </nav>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 10px; margin-bottom: 10px;">
+            <div class="col-md-8">
+                @RenderBody()
+            </div>
+
+            <div class="col-md-4">
+                @{ Html.RenderAction("getTINTUCHOME", "Temp");}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading" style="text-transform: uppercase;">Văn bản</div>
+                    <div class="panel-body">
+                        aaaa
+                    </div>
+                </div>
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading" style="text-transform: uppercase;">Sự kiện</div>
+                    <div class="panel-body">
+                        aaaa
+                    </div>
+                </div>
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading" style="text-transform: uppercase;">FANPAGE</div>
+                    <div class="panel-body">
+                        <div class="fb-page" data-href="https://www.facebook.com/itHutech/" data-tabs="timeline" data-width="270" data-height="250" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/itHutech/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/itHutech/">Khoa Công nghệ thông tin - Hutech</a></blockquote></div>
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading" style="text-transform: uppercase;">
+                        <a href="https://www.facebook.com/groups/lhttsv5tkhoacntt/" target="_blank"><img src="~/Content/img/logo-hutech.png"></a>
+                        <span style="margin-left: 20px;">CLB SV5T KHOA CNTT</span>
+                    </div>
+                </div>
+
+                <div class="panel panel-danger">
+                    <div class="panel-heading" style="text-transform: uppercase;">
+                        <a href="https://www.hutech.edu.vn/doantn" target="_blank"><img src="~/Content/img/logo-dtn.png"></a>
+                        <span style="margin-left: 20px;">ĐOÀN THANH NIÊN HUTECH</span>
+                    </div>
+                </div>
+
+                <div class="panel panel-success">
+                    <div class="panel-heading" style="text-transform: uppercase;">
+                        <a href="https://www.hutech.edu.vn/doantn" target="_blank"><img src="~/Content/img/logo-hsv.png"></a>
+                        <span style="margin-left: 20px;">HỘI SINH VIÊN HUTECH</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="background-color: #0063cd; color: #FFF;">
+            <div class="col-md-8" style="padding-top: 10px; padding-bottom: 15px;">
+                <div><h5><strong>KHOA CÔNG NGHỆ THÔNG TIN HUTECH</strong></h5></div>
+                <div><b>Trụ sở:</b> 475A Điện Biên Phủ, P.25, Q.Bình Thạnh, TP.HCM</div>
+                <div>ĐT: (028) 5445 7777 - Fax: (028) 5445 4444 - Email: hutech@hutech.edu.vn</div>
+            </div>
+
+            <div class="col-md-4" style="padding-top: 10px;">
+                <div class="pull-right">
+                    <a href="https://www.hutech.edu.vn/" target="_blank"><p><img src="~/Content/img/social-logo.png"></p></a>
+                    <p>Bản quyền &copy; 2018 ITHutech</p>
+
+                    <div style="text-align:center">
+                        <p class="text-warning" style="color: powderblue;font-size:15px">Số người Online: <span id="UserOnline">0</span> Online.</p>
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+
+        <a href="#" class="cd-top">Back To Top</a>
+
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+    <script src="@Url.Content("~/Scripts/jquery.signalR-2.2.2.js")"></script>
+    <script src="@Url.Content("~/signalr/hubs")"></script>
+    <script>
+        $(function () {
+            //setup hubs
+            var counterHub = $.connection.counterHub;
+            $.connection.hub.start().done(function () {
+                //do something after hub connected
+            });
+            //function receive data from server. server call in on code behind
+            counterHub.client.UpdateCount = function (count) {
+                $('#UserOnline').text(count);
+            }
+        });
+    </script>
+</body>
+</html>

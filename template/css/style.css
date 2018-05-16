@@ -1,0 +1,60 @@
+.main
+{
+	width: 75%;
+	margin:auto;
+	padding: auto;
+}
+
+.collapse.navbar-collapse>ul>li>a
+{
+	color: #FFF !important;
+}
+
+.collapse.navbar-collapse>ul>li>a:hover
+{
+	color: #fff300 !important;
+	background-color: #0063cd;
+}
+
+a.cd-top 
+{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+	background: #3097D1 url("../img/backtotop.png") no-repeat center 50%;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: opacity .3s 0s, visibility 0s .3s;
+	-moz-transition: opacity .3s 0s, visibility 0s .3s;
+	transition: opacity .3s 0s, visibility 0s .3s;
+}
+
+a.cd-top.cd-is-visible, a.cd-top.cd-fade-out, .no-touch a.cd-top:hover 
+{
+	-webkit-transition: opacity .3s 0s, visibility 0s 0s;
+	-moz-transition: opacity .3s 0s, visibility 0s 0s;
+	transition: opacity .3s 0s, visibility 0s 0s;
+}
+ 
+a.cd-top, a.cd-top:visited, a.cd-top:hover 
+{
+	color: #CCCCCC;
+	text-decoration: none;
+}
+ 
+a.cd-top.cd-is-visible 
+{
+	visibility: visible;
+	opacity: 1;
+}
+a.cd-top.cd-fade-out 
+{
+	opacity: 1;
+}
