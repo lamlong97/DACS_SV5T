@@ -17,8 +17,8 @@
     <link rel="stylesheet" type="text/css" href="~/Content/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="~/Scirpts/js/bootstrap.min.js"></script>
-    <script src="~/Scripts/js/backtotop.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <script src="~/Content/js/backtotop.js"></script>
 </head>
 <body>
     @*-------------------fb------------*@
@@ -59,8 +59,10 @@
                             </button>
                             
                         </div>
-                        @{ Html.RenderAction("getMENU", "Temp");}
-                        </div>
+                        
+                            @{ Html.RenderAction("getMENU", "Temp");}
+                        
+                    </div>
                 </nav>
             </div>
         </div>
