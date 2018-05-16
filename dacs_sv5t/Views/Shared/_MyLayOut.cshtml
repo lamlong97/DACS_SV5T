@@ -41,7 +41,7 @@
                 <div class="col-md-3">
                     <div style="height:50px;"></div>
                     <div class="pull-right">
-                        <a><strong style="color:#008ccd">Xin chào: </strong>@Session["TEN_SV"] </a>
+                        <a href="thong-tin-sv"><strong style="color:#008ccd">Xin chào: </strong>@Session["TEN_SV"] </a>
                         <br />
                         <a href="dang-xuat"><strong style="color:#008ccd">Đăng xuất</strong></a>
                     </div>
@@ -57,7 +57,7 @@
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="color: #FFF;">
                                 <span class="glyphicon glyphicon-align-justify"></span>
                             </button>
-                            <a class="navbar-brand" style="color: #FFF;" href="#">SV5T</a>
+                            
                         </div>
                         @{ Html.RenderAction("getMENU", "Temp");}
                         </div>

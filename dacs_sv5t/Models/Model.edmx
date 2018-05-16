@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DACS_SV5TModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DACS_SV5TModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CAP">
           <Key>
             <PropertyRef Name="ID_CAP" />
@@ -94,6 +94,7 @@
           <Property Name="ID_KV" Type="int" Nullable="false" />
           <Property Name="PASSWORD" Type="varchar(max)" />
           <Property Name="MSSV" Type="int" />
+          <Property Name="ID_CAP" Type="int" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -210,6 +211,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_SINHVIEN_CAP">
+          <End Role="CAP" Type="Self.CAP" Multiplicity="0..1" />
+          <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CAP">
+              <PropertyRef Name="ID_CAP" />
+            </Principal>
+            <Dependent Role="SINHVIEN">
+              <PropertyRef Name="ID_CAP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="DACS_SV5TModelStoreContainer">
           <EntitySet Name="CAP" EntityType="Self.CAP" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CT_TEUCHI" EntityType="Self.CT_TEUCHI" Schema="dbo" store:Type="Tables" />
@@ -251,9 +264,12 @@
             <End Role="LOAITIEUCHI" EntitySet="LOAITIEUCHI" />
             <End Role="TIEUCHI" EntitySet="TIEUCHI" />
           </AssociationSet>
+          <AssociationSet Name="FK_SINHVIEN_CAP" Association="Self.FK_SINHVIEN_CAP">
+            <End Role="CAP" EntitySet="CAP" />
+            <End Role="SINHVIEN" EntitySet="SINHVIEN" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DACS_SV5TModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -265,6 +281,7 @@
           <Property Name="TEN_CAP" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="NAM" Type="Int32" />
           <NavigationProperty Name="DANHGIAs" Relationship="Self.FK__DANHGIA__ID_CAP__21B6055D" FromRole="CAP" ToRole="DANHGIA" />
+          <NavigationProperty Name="SINHVIENs" Relationship="DACS_SV5TModel.FK_SINHVIEN_CAP" FromRole="CAP" ToRole="SINHVIEN" />
         </EntityType>
         <EntityType Name="CT_TEUCHI">
           <Key>
@@ -358,6 +375,8 @@
           <Property Name="MSSV" Type="Int32" />
           <NavigationProperty Name="KHOAVIEN" Relationship="Self.FK__SINHVIEN__ID_KV__20C1E124" FromRole="SINHVIEN" ToRole="KHOAVIEN" />
           <NavigationProperty Name="MINHCHUNGs" Relationship="Self.FK__MINHCHUNG__ID_SV__1FCDBCEB" FromRole="SINHVIEN" ToRole="MINHCHUNG" />
+          <Property Name="ID_CAP" Type="Int32" />
+          <NavigationProperty Name="CAP" Relationship="DACS_SV5TModel.FK_SINHVIEN_CAP" FromRole="SINHVIEN" ToRole="CAP" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -517,7 +536,23 @@
             <End Role="SINHVIEN" EntitySet="SINHVIENs" />
             <End Role="MINHCHUNG" EntitySet="MINHCHUNGs" />
           </AssociationSet>
+          <AssociationSet Name="FK_SINHVIEN_CAP" Association="DACS_SV5TModel.FK_SINHVIEN_CAP">
+            <End Role="CAP" EntitySet="CAPs" />
+            <End Role="SINHVIEN" EntitySet="SINHVIENs" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="FK_SINHVIEN_CAP">
+          <End Type="DACS_SV5TModel.CAP" Role="CAP" Multiplicity="0..1" />
+          <End Type="DACS_SV5TModel.SINHVIEN" Role="SINHVIEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CAP">
+              <PropertyRef Name="ID_CAP" />
+            </Principal>
+            <Dependent Role="SINHVIEN">
+              <PropertyRef Name="ID_CAP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -609,6 +644,7 @@
           <EntitySetMapping Name="SINHVIENs">
             <EntityTypeMapping TypeName="DACS_SV5TModel.SINHVIEN">
               <MappingFragment StoreEntitySet="SINHVIEN">
+                <ScalarProperty Name="ID_CAP" ColumnName="ID_CAP" />
                 <ScalarProperty Name="ID_SV" ColumnName="ID_SV" />
                 <ScalarProperty Name="TEN_SV" ColumnName="TEN_SV" />
                 <ScalarProperty Name="LOP" ColumnName="LOP" />

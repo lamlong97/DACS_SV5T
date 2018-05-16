@@ -412,6 +412,7 @@
     <Content Include="Views\Temp\getMENU.cshtml" />
     <Content Include="Views\Temp\getTINTUCHOME.cshtml" />
     <Content Include="Views\SinhVien\DangNhap.cshtml" />
+    <Content Include="Views\SinhVien\ThongTinSV.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
