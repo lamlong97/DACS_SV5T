@@ -46,7 +46,7 @@ namespace DACS_SV5T
                new[] { "DACS_SV5T.Controllers" });
 
             routes.MapRoute("HoatDong", "{type}",
-               new { controller = "HoatDong", action = "Index" },
+               new { controller = "HoatDong", action = "LoaiTieuChi" },
                new RouteValueDictionary
                {
                     {"type","hoat-dong" }

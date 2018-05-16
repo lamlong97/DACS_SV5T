@@ -1,0 +1,27 @@
+﻿@model IEnumerable<DACS_SV5T.Models.LOAITIEUCHI>
+@{
+    ViewBag.Title = "Hoạt động";
+    Layout = "~/Views/Shared/_MyLayOut.cshtml";
+}
+
+
+<div class="panel-group" id="accordion">
+    @foreach (var item in Model)
+    {
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#@item.ID_LTCHI">
+                        @Html.DisplayFor(modelItem => item.TEN_LTCHI)
+                    </a>
+                </h4>
+            </div>
+            <div id="@item.ID_LTCHI" class="panel-collapse collapse">
+                <div class="panel-body">
+                    @Html.Action("TieuChi", "HoatDong", new { LTC = @item.ID_LTCHI})
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

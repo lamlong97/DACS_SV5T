@@ -170,6 +170,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HoatDongController.cs" />
+    <Compile Include="Controllers\MINHCHUNGsController.cs" />
     <Compile Include="Controllers\SinhVienController.cs" />
     <Compile Include="Controllers\TempController.cs" />
     <Compile Include="Global.asax.cs">
@@ -414,7 +415,13 @@
     <Content Include="Views\Temp\getTINTUCHOME.cshtml" />
     <Content Include="Views\SinhVien\DangNhap.cshtml" />
     <Content Include="Views\SinhVien\ThongTinSV.cshtml" />
-    <Content Include="Views\HoatDong\Index.cshtml" />
+    <Content Include="Views\MINHCHUNGs\Create.cshtml" />
+    <Content Include="Views\MINHCHUNGs\Delete.cshtml" />
+    <Content Include="Views\MINHCHUNGs\Details.cshtml" />
+    <Content Include="Views\MINHCHUNGs\Edit.cshtml" />
+    <Content Include="Views\MINHCHUNGs\Index.cshtml" />
+    <Content Include="Views\HoatDong\LoaiTieuChi.cshtml" />
+    <Content Include="Views\HoatDong\TieuChi.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
