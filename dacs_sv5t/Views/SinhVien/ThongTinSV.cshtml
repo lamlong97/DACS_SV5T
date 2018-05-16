@@ -1,0 +1,85 @@
+﻿@model DACS_SV5T.Models.SINHVIEN
+@{
+    ViewBag.Title = "ThongTinSV";
+    Layout = "~/Views/Shared/_MyLayOut.cshtml";
+}
+
+<div style="max-width:80%;margin:auto">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div style="display:none">
+            @Html.DropDownList("ID_CAP", null, htmlAttributes: new { @class = "form-control" })
+        </div>
+        <hr />
+        <h4 style="color:limegreen">@ViewBag.success</h4>
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.ID_SV)
+
+            <div class="form-group">
+                @Html.Label("Họ và tên", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TEN_SV, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TEN_SV, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group" style="margin-top:10px">
+                @Html.Label("Lớp", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.LOP, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.LOP, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("MSSV", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.MSSV, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.MSSV, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group" style="margin-top:10px">
+                @Html.Label("Địa chỉ", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.DIACHI, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.DIACHI, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group" style="margin-top:10px">
+                @Html.Label("Số điện thoại", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.SDT, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.SDT, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group" style="margin-top:10px">
+                @Html.Label(" Email", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.EMAIL, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.EMAIL, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Khoa/Viện", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("ID_KV", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.ID_KV, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group" style="margin-top:10px">
+                @Html.Label("Cấp độ", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.CAP.TEN_CAP, new { htmlAttributes = new { @class = "form-control", disabled = "disabled", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.ID_CAP, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            
+            <div class="form-group" style="margin-top:20px">
+                <div class="col-md-offset-2 col-md-10" style="margin-top:10px">
+                    <input type="submit" value="Lưu" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

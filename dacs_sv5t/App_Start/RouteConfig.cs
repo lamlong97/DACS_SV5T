@@ -29,6 +29,22 @@ namespace DACS_SV5T
                 },
                 new[] { "DACS_SV5T.Controllers" });
 
+            routes.MapRoute("ThongTinSV", "{type}",
+                new { controller = "SinhVien", action = "ThongTinSV" },
+                new RouteValueDictionary
+                {
+                    {"type","thong-tin-sv" }
+                },
+                new[] { "DACS_SV5T.Controllers" });
+
+            routes.MapRoute("TrangChu", "{type}",
+               new { controller = "Default", action = "Index" },
+               new RouteValueDictionary
+               {
+                    {"type","trang-chu" }
+               },
+               new[] { "DACS_SV5T.Controllers" });
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

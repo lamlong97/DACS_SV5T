@@ -29,9 +29,11 @@ namespace DACS_SV5T.Models
         public int ID_KV { get; set; }
         public string PASSWORD { get; set; }
         public Nullable<int> MSSV { get; set; }
+        public Nullable<int> ID_CAP { get; set; }
     
         public virtual KHOAVIEN KHOAVIEN { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MINHCHUNG> MINHCHUNGs { get; set; }
+        public virtual CAP CAP { get; set; }
     }
 }

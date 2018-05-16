@@ -18,6 +18,7 @@ namespace DACS_SV5T.Models
         public CAP()
         {
             this.DANHGIAs = new HashSet<DANHGIA>();
+            this.SINHVIENs = new HashSet<SINHVIEN>();
         }
     
         public int ID_CAP { get; set; }
@@ -26,5 +27,7 @@ namespace DACS_SV5T.Models
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DANHGIA> DANHGIAs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SINHVIEN> SINHVIENs { get; set; }
     }
 }

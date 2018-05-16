@@ -24,6 +24,7 @@
         <AssociationConnector Association="DACS_SV5TModel.FK__SINHVIEN__ID_KV__20C1E124" ManuallyRouted="false" />
         <AssociationConnector Association="DACS_SV5TModel.FK__TIEUCHI__ID_LTCH__22AA2996" ManuallyRouted="false" />
         <AssociationConnector Association="DACS_SV5TModel.FK__MINHCHUNG__ID_SV__1FCDBCEB" ManuallyRouted="false" />
+        <AssociationConnector Association="DACS_SV5TModel.FK_SINHVIEN_CAP" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
