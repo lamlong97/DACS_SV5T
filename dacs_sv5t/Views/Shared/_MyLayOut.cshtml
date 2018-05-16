@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@{
+    if (Session["MSSV"] == null)
+    {
+        Response.Redirect("dang-nhap");
+    }
+}
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,9 +41,9 @@
                 <div class="col-md-3">
                     <div style="height:50px;"></div>
                     <div class="pull-right">
-                        <a href="#" style="color:#008ccd;">Đăng ký</a>
-                        <span> | </span>
-                        <a href="#" style="color:#008ccd;">Đăng nhập</a>
+                        <a><strong style="color:#008ccd">Xin chào: </strong>@Session["TEN_SV"] </a>
+                        <br />
+                        <a href="dang-xuat"><strong style="color:#008ccd">Đăng xuất</strong></a>
                     </div>
                 </div>
             </div>
@@ -54,6 +60,7 @@
                             <a class="navbar-brand" style="color: #FFF;" href="#">SV5T</a>
                         </div>
                         @{ Html.RenderAction("getMENU", "Temp");}
+                        </div>
                 </nav>
             </div>
         </div>
@@ -133,7 +140,7 @@
                         <p class="text-warning" style="color: powderblue;font-size:15px">Số người Online: <span id="UserOnline">0</span> Online.</p>
                     </div>
                 </div>
-                    
+
             </div>
         </div>
 

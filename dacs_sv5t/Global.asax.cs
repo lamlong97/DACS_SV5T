@@ -17,5 +17,17 @@ namespace DACS_SV5T
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+        protected void Session_Start()
+        {
+            Session["ID_SV"] = null;
+            Session["TEN_SV"] = null;
+            Session["MSSV"] = null;
+            Session["LOP"] = null;
+            Session["DIACHI"] = null;
+            Session["EMAIL"] = null;
+            Session["SDT"] = null;
+            Session["ID_KV"] = null;
+            Session["PASSWORD"] = null;
+        }
     }
 }

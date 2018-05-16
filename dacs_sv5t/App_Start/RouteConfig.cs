@@ -13,6 +13,22 @@ namespace DACS_SV5T
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapRoute("DangNhap", "{type}",
+                new { controller = "SinhVien", action = "DangNhap" },
+                new RouteValueDictionary
+                {
+                    {"type","dang-nhap" }
+                },
+                new[] { "DACS_SV5T.Controllers" });
+
+            routes.MapRoute("DangXuat", "{type}",
+                new { controller = "SinhVien", action = "DangXuat" },
+                new RouteValueDictionary
+                {
+                    {"type","dang-xuat" }
+                },
+                new[] { "DACS_SV5T.Controllers" });
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

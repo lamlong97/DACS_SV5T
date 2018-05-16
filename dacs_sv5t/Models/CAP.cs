@@ -17,16 +17,14 @@ namespace DACS_SV5T.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CAP()
         {
-            this.HOATDONGs = new HashSet<HOATDONG>();
-            this.SINHVIENs = new HashSet<SINHVIEN>();
+            this.DANHGIAs = new HashSet<DANHGIA>();
         }
     
         public int ID_CAP { get; set; }
         public string TEN_CAP { get; set; }
+        public Nullable<int> NAM { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HOATDONG> HOATDONGs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SINHVIEN> SINHVIENs { get; set; }
+        public virtual ICollection<DANHGIA> DANHGIAs { get; set; }
     }
 }

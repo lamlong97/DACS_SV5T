@@ -17,18 +17,15 @@ namespace DACS_SV5T.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TIEUCHI()
         {
-            this.HOATDONGs = new HashSet<HOATDONG>();
-            this.SINHVIENs = new HashSet<SINHVIEN>();
+            this.CT_TEUCHI = new HashSet<CT_TEUCHI>();
         }
     
-        public int ID_TC { get; set; }
-        public string TEN_TC { get; set; }
-        public int ID_LTC { get; set; }
+        public int ID_TCHI { get; set; }
+        public string TEN_TCHI { get; set; }
+        public int ID_LTCHI { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HOATDONG> HOATDONGs { get; set; }
-        public virtual LOAI_TIEUCHI LOAI_TIEUCHI { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SINHVIEN> SINHVIENs { get; set; }
+        public virtual ICollection<CT_TEUCHI> CT_TEUCHI { get; set; }
+        public virtual LOAITIEUCHI LOAITIEUCHI { get; set; }
     }
 }

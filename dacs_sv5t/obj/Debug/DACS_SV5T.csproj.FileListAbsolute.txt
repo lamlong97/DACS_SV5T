@@ -166,8 +166,8 @@ D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.AI.DependencyCollector.xml
 D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.AI.ServerTelemetryChannel.xml
 D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.AI.WindowsServer.xml
 D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.AI.Web.xml
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\obj\Debug\DACS_SV5T.csprojResolveAssemblyReference.cache
 D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\obj\Debug\DACS_SV5T.csproj.CoreCompileInputs.cache
 D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\obj\Debug\DACS_SV5T.csproj.CopyComplete
 D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\obj\Debug\DACS_SV5T.dll
 D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\obj\Debug\DACS_SV5T.pdb
+D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\obj\Debug\DACS_SV5T.csprojResolveAssemblyReference.cache

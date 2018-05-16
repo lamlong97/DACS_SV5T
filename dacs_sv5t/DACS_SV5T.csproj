@@ -169,24 +169,32 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\SinhVienController.cs" />
     <Compile Include="Controllers\TempController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helps\Common.cs" />
     <Compile Include="Hubs\CounterHub.cs" />
     <Compile Include="Models\CAP.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DONVI.cs">
+    <Compile Include="Models\CT_TEUCHI.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\HOATDONG.cs">
+    <Compile Include="Models\DANHGIA.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\LOAI_TIEUCHI.cs">
+    <Compile Include="Models\KHOAVIEN.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LOAITIEUCHI.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MENU.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MINHCHUNG.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Model.Context.cs">
@@ -204,31 +212,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\NGUOIDUNG.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\SINHVIEN.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sp_helpdiagrams_Result.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\THAMGIA.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TIEUCHI.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TINTUC.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\USER.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\VANBAN.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -243,6 +239,48 @@
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\html\login\css\main.css" />
+    <Content Include="Content\html\login\css\util.css" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Content\html\login\fonts\iconic\css\material-design-iconic-font.css" />
+    <Content Include="Content\html\login\fonts\iconic\css\material-design-iconic-font.min.css" />
+    <Content Include="Content\html\login\fonts\iconic\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Content\html\login\images\icons\favicon.ico" />
+    <Content Include="Content\html\login\index.html" />
+    <Content Include="Content\html\login\js\main.js" />
+    <Content Include="Content\html\login\vendor\animate\animate.css" />
+    <Content Include="Content\html\login\vendor\animsition\css\animsition.css" />
+    <Content Include="Content\html\login\vendor\animsition\css\animsition.min.css" />
+    <Content Include="Content\html\login\vendor\animsition\js\animsition.js" />
+    <Content Include="Content\html\login\vendor\animsition\js\animsition.min.js" />
+    <Content Include="Content\html\login\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Content\html\login\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Content\html\login\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Content\html\login\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\html\login\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\html\login\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\html\login\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\html\login\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\html\login\vendor\bootstrap\js\popper.js" />
+    <Content Include="Content\html\login\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="Content\html\login\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="Content\html\login\vendor\countdowntime\countdowntime.js" />
+    <Content Include="Content\html\login\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="Content\html\login\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="Content\html\login\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="Content\html\login\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="Content\html\login\vendor\daterangepicker\moment.js" />
+    <Content Include="Content\html\login\vendor\daterangepicker\moment.min.js" />
+    <Content Include="Content\html\login\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="Content\html\login\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="Content\html\login\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="Content\html\login\vendor\select2\select2.css" />
+    <Content Include="Content\html\login\vendor\select2\select2.js" />
+    <Content Include="Content\html\login\vendor\select2\select2.min.css" />
+    <Content Include="Content\html\login\vendor\select2\select2.min.js" />
     <Content Include="Content\img\backtotop.png" />
     <Content Include="Content\img\header_logo.png" />
     <Content Include="Content\img\logo-dtn.png" />
@@ -282,6 +320,61 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="Content\html\login\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="Content\html\login\fonts\iconic\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Content\html\login\fonts\iconic\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Content\html\login\fonts\iconic\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Content\html\login\fonts\iconic\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Content\html\login\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="Content\html\login\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="Content\html\login\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="Content\html\login\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="Content\html\login\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="Content\html\login\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="Content\html\login\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="Content\html\login\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="Content\html\login\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="Content\html\login\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="Content\html\login\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="Content\html\login\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="Content\html\login\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="Content\html\login\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="Content\html\login\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="Content\html\login\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="Content\html\login\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="Content\html\login\fonts\poppins\Poppins-ThinItalic.ttf" />
     <EntityDeploy Include="Models\Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model.Designer.cs</LastGenOutput>
@@ -314,10 +407,11 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_MyLayOut.cshtml" />
+    <Content Include="Views\Shared\_MyLayout.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Temp\getMENU.cshtml" />
     <Content Include="Views\Temp\getTINTUCHOME.cshtml" />
+    <Content Include="Views\SinhVien\DangNhap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

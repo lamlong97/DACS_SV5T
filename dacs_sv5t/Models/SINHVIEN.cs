@@ -14,16 +14,24 @@ namespace DACS_SV5T.Models
     
     public partial class SINHVIEN
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public SINHVIEN()
+        {
+            this.MINHCHUNGs = new HashSet<MINHCHUNG>();
+        }
+    
         public int ID_SV { get; set; }
         public string TEN_SV { get; set; }
         public string LOP { get; set; }
         public string DIACHI { get; set; }
-        public Nullable<int> SDT { get; set; }
         public string EMAIL { get; set; }
-        public int ID_CAP { get; set; }
+        public string SDT { get; set; }
+        public int ID_KV { get; set; }
+        public string PASSWORD { get; set; }
+        public Nullable<int> MSSV { get; set; }
     
-        public virtual CAP CAP { get; set; }
-        public virtual THAMGIA THAMGIA { get; set; }
-        public virtual TIEUCHI TIEUCHI { get; set; }
+        public virtual KHOAVIEN KHOAVIEN { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<MINHCHUNG> MINHCHUNGs { get; set; }
     }
 }
