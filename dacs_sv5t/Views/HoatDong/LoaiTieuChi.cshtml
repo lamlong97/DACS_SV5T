@@ -4,7 +4,6 @@
     Layout = "~/Views/Shared/_MyLayOut.cshtml";
 }
 
-
 <div class="panel-group" id="accordion">
     @foreach (var item in Model)
     {
@@ -18,7 +17,9 @@
             </div>
             <div id="@item.ID_LTCHI" class="panel-collapse collapse">
                 <div class="panel-body">
-                    @Html.Action("TieuChi", "HoatDong", new { LTC = @item.ID_LTCHI})
+                    <!--/*Html.Action("CTTieuChi", "HoatDong", new { LTC = //item.ID_LTCHI})*/
+                        //-->
+                    @Html.Action("TieuChi", "HoatDong", new {LTC = item.ID_LTCHI })
                 </div>
             </div>
         </div>

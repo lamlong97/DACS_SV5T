@@ -70,6 +70,7 @@
           <Property Name="URL" Type="nvarchar" MaxLength="255" />
           <Property Name="DUYET" Type="bit" />
           <Property Name="MOTA" Type="nvarchar" MaxLength="255" />
+          <Property Name="HINHANH" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="NGUOIDUNG">
           <Key>
@@ -349,6 +350,7 @@
           <Property Name="MOTA" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CT_TEUCHI" Relationship="Self.FK__MINHCHUNG__ID_CT__25869641" FromRole="MINHCHUNG" ToRole="CT_TEUCHI" />
           <NavigationProperty Name="SINHVIEN" Relationship="Self.FK__MINHCHUNG__ID_SV__1FCDBCEB" FromRole="MINHCHUNG" ToRole="SINHVIEN" />
+          <Property Name="HINHANH" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="NGUOIDUNG">
           <Key>
@@ -620,6 +622,7 @@
           <EntitySetMapping Name="MINHCHUNGs">
             <EntityTypeMapping TypeName="DACS_SV5TModel.MINHCHUNG">
               <MappingFragment StoreEntitySet="MINHCHUNG">
+                <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
                 <ScalarProperty Name="ID_SV" ColumnName="ID_SV" />
                 <ScalarProperty Name="ID_CTTCHI" ColumnName="ID_CTTCHI" />
                 <ScalarProperty Name="TCHUAN_HOCTAP" ColumnName="TCHUAN_HOCTAP" />

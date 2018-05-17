@@ -18,13 +18,24 @@ namespace DACS_SV5T.Controllers
                     select t;
             return View(v.ToList());
         }
+        public ActionResult CTTieuChi(int LTC, int IDTC)
+        {
+            var TieuChi = _db.TIEUCHIs;
+            var ChiTietTC = _db.CT_TEUCHI;
+            var v = from t in TieuChi
+                    join l in ChiTietTC
+                    on t.ID_TCHI equals l.ID_TCHI
+                    where t.ID_LTCHI == LTC && l.ID_TCHI == IDTC
+                    select l;
+            return PartialView(v.ToList());
+        }
         public ActionResult TieuChi(int LTC)
         {
             var TieuChi = _db.TIEUCHIs;
             var v = from t in TieuChi
                     where t.ID_LTCHI == LTC
                     select t;
-            return PartialView(v.ToList());
+            return View(v.ToList());
         }
     }
 }

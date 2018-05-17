@@ -1,0 +1,43 @@
+﻿@model List<DACS_SV5T.Models.CT_TEUCHI>
+<style>
+
+    th, td {
+        padding: 15px;
+    }
+
+        td p {
+            height: 50px;
+            overflow-y: hidden;
+            text-overflow: ellipsis;
+        }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    caption {
+        margin-bottom: 10px
+    }
+</style>
+<table>
+    <caption>Hãy nộp một trong các yêu cầu sau nhé !!!</caption>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td width="70%">
+                    @Html.DisplayFor(modelItem => item.NOIDUNG)
+                </td>
+                <td width="15%" style="text-align:center; vertical-align:middle">
+                    <img src="~/Content/img/logo-hutech.png" style='width: 100%; object-fit: cover' class="responsive" />
+                </td>
+                <td width="12%">
+                    <input style="display:none" type="file" name="img" id="img" accept=".jpg,.png,.gif,.jpeg,.bmp" />
+                    <label class="btn btn-2" style="text-align:center" for="img">Chọn hình</label>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

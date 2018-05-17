@@ -421,6 +421,7 @@
     <Content Include="Views\MINHCHUNGs\Edit.cshtml" />
     <Content Include="Views\MINHCHUNGs\Index.cshtml" />
     <Content Include="Views\HoatDong\LoaiTieuChi.cshtml" />
+    <Content Include="Views\HoatDong\CTTieuChi.cshtml" />
     <Content Include="Views\HoatDong\TieuChi.cshtml" />
   </ItemGroup>
   <ItemGroup>
