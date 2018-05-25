@@ -21,6 +21,7 @@ namespace DACS_SV5T.Models
         public string URL { get; set; }
         public Nullable<bool> DUYET { get; set; }
         public string MOTA { get; set; }
+        public string HINHANH { get; set; }
     
         public virtual CT_TEUCHI CT_TEUCHI { get; set; }
         public virtual SINHVIEN SINHVIEN { get; set; }

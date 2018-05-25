@@ -1,0 +1,65 @@
+﻿@model List<DACS_SV5T.Models.CT_TEUCHI>
+<style>
+
+    th, td {
+        padding: 15px;
+    }
+
+        td p {
+            height: 50px;
+            overflow-y: hidden;
+            text-overflow: ellipsis;
+        }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    caption {
+        margin-bottom: 10px
+    }
+
+    
+</style>
+<table>
+    <caption>Hãy nộp một trong các yêu cầu sau nhé !!!</caption>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td width="80%">
+                    @Html.DisplayFor(modelItem => item.NOIDUNG)
+                </td>
+                <td width="15%" style="text-align:center; vertical-align:middle">
+                    @Html.Action("HinhTieuChi", "HoatDong", new { ID_CTTCHI = item.ID_CTTCHI})
+                </td>
+                <td width="20%">
+
+
+                    @*Html.ActionLink("QuanLyMinhChung", "QuanLyMinhChung",new { ID_CTTCHI = @item.ID_CTTCHI})*@
+
+                    <a class="btn btn-success" href="@Url.Action("QuanLyMinhChung","HoatDong",new { ID_CTTCHI = @item.ID_CTTCHI})">Minh chứng</a>
+
+                    @* Phần POPUP chưa xử lý được --- KHÔNG ĐƯỢC XÓA !!!!!!!!!!!!!!!!!
+        <a class="btn btn-success" data-toggle="modal" data-target=".@item.ID_CTTCHI-bootstrapmodal">Minh chứng</a>
+        <div class="modal fade @item.ID_CTTCHI-bootstrapmodal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button data-dismiss="modal" class="close"><span>&times;</span></button>
+                        <div class="modal-title" style="text-align:center"><h4>Quản lý minh chứng-@item.ID_CTTCHI</h4></div>
+                    </div>
+                    <div class="modal-body">
+                        @Html.Action("QuanLyMinhChung","HoatDong", new { ID_CTTCHI = @item.ID_CTTCHI })
+                    </div>
+                </div>
+            </div>
+        </div>*@
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

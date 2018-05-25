@@ -1,6 +1,21 @@
-﻿@model List<DACS_SV5T.Models.TIEUCHI>
+﻿@model IEnumerable<DACS_SV5T.Models.TIEUCHI>
 
-@foreach (var item in Model)
-{
-    @Html.DisplayFor(modelItem => item.TEN_TCHI)
-}
+<div class="panel-group" id="accordionTieuChi">
+    @foreach (var item in Model)
+    {
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordionTieuChi" href="#@item.ID_TCHI-TieuChi">
+                        @Html.DisplayFor(modelItem => item.TEN_TCHI)
+                    </a>
+                </h4>
+            </div>
+            <div id="@item.ID_TCHI-TieuChi" class="panel-collapse collapse">
+                <div class="panel-body">
+                    @Html.Action("CTTieuChi", "HoatDong", new { LTC = @item.ID_LTCHI, IDTC = @item.ID_TCHI})
+                </div>
+            </div>
+        </div>
+    }
+</div>
