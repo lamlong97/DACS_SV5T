@@ -1,0 +1,75 @@
+﻿@model DACS_SV5T.Models.TINTUC
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/admin/Views/Shared/_MyLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TINTUC</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TITLE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TITLE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DETAIL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DETAIL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DATEBEGIN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATEBEGIN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.META)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.META)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ORDER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ORDER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LINK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LINK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HIDE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HIDE)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_TT }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

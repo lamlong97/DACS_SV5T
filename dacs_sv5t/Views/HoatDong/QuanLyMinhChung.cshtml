@@ -1,0 +1,28 @@
+﻿@model DACS_SV5T.Models.MINHCHUNG
+
+@{
+    ViewBag.Title = "Quản lý minh chứng";
+    Layout = "~/Views/Shared/_MyLayOut.cshtml";
+}
+
+@using (Html.BeginForm("QuanLyMinhChung", "HoatDong", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div style="display:none">
+        @Html.DropDownList("ID_SV", null, htmlAttributes: new { @class = "form-control" })
+        @Html.DropDownList("ID_CTTCHI", null, htmlAttributes: new { @class = "form-control" })
+    </div>
+    <div style="display:block">
+        <div style="height: 150px; width:150px">
+            @Html.Action("HinhTieuChi", "HoatDong")
+        </div>
+        <div>
+            <input style="display:none" type="file" name="img" id="img" accept=".jpg,.png,.gif,.jpeg,.bmp" />
+            <label class="btn btn-2" style="text-align:center" for="img">Chọn hình</label>
+        </div>
+
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Lưu" class="btn btn-default" />
+        </div>
+    </div>
+}
