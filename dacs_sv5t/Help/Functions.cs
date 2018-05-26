@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using System.Web.Mvc.Html;
 using System.Web.Routing;
 
-namespace ShopOnline.Help
+namespace DACS_SV5T.Help
 {
     public static class Functions
     {

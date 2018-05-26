@@ -1,0 +1,81 @@
+﻿@using DACS_SV5T.Help
+@model Tuple<DACS_SV5T.Models.KHOAVIEN, DACS_SV5T.Models.CAP>
+
+@{
+    ViewBag.Title = "Danh sách sinh viên";
+    Layout = "~/Areas/admin/Views/Shared/_MyLayout.cshtml";
+}
+
+@section _Header
+{
+    <!-- DataTables CSS -->
+    <link href="/Areas/admin/Content/vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+    <!-- DataTables Responsive CSS -->
+    <link href="/Areas/admin/Content/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-red">
+            <div class="panel-heading">
+                Quản lý sinh viên
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="bs-example" style="text-align:right; padding-bottom:10px;">
+                    <div class="btn-group">
+                        @Html.DropDownListFor(Tuple => Tuple.Item1.ID_KV, (SelectList)ViewBag.KhoaVien, " --- Tất cả khoa --- ",
+                                                                        new { @class = "form-control", @id = "KhoaVien" })
+                    </div>
+                    <div class="btn-group">
+                        @Html.DropDownListFor(Tuple => Tuple.Item2.ID_CAP, (SelectList)ViewBag.Cap, " --- Tất cả cấp --- ",
+                                                                        new { @class = "form-control", @id = "Cap" })
+                    </div>
+                    <div class="btn-group">
+                        @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-plus'></span> Thêm mới", "Create", "Create", "SinhVien", routeValues: new { }, htmlAttributes: new { @class = "btn btn-primary" })
+                    </div>
+                </div>
+                <div id="getSinhVien"></div>
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+@section _Footer
+{
+    <!-- DataTables JavaScript -->
+    <script src="/Areas/admin/Content/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="/Areas/admin/Content/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="/Areas/admin/Content/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <script>
+        $(document).ready(function () {
+            function getKhoa() {
+                var ID_KV = $('#KhoaVien').val();
+                var ID_CAP = $('#Cap').val();
+                $.ajax({
+                    url: '@Url.Action("getSinhVien", "SinhVien")',
+                    type: "GET",
+                    data: { id1: ID_KV, id2: ID_CAP },
+                    success: function (data) {
+                        $("#getSinhVien").html(data);
+                    },
+                    error: function (data) {
+                        alert("something went wrong.");
+                    }
+                });
+            }
+            getKhoa();
+            $("#KhoaVien").change(function () {
+                getKhoa();
+            })
+            $("#Cap").change(function () {
+                getKhoa();
+            })
+        });
+    </script>
+}
+
+
+
