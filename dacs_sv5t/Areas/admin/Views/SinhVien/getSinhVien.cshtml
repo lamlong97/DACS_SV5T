@@ -53,7 +53,6 @@
                     @Html.DisplayFor(modelItem => item.CAP.TEN_CAP)
                 </td>
                 <td>
-                    @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-pencil'></span>", "Edit", "Edit", "SinhVien", routeValues: new { id = item.ID_SV }, htmlAttributes: new { @class = "btn btn-default" })
                     @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-zoom-in'></span>", "Detail", "Details", "SinhVien", routeValues: new { id = item.ID_SV }, htmlAttributes: new { @class = "btn btn-primary" })
                     @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-trash'></span>", "Delete", "Delete", "SinhVien", routeValues: new { id = item.ID_SV }, htmlAttributes: new { @class = "btn btn-danger" })
                 </td>

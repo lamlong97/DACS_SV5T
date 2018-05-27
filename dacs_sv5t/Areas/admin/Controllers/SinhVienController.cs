@@ -69,6 +69,7 @@ namespace DACS_SV5T.Areas.admin.Controllers
         // GET: admin/SinhVien/Details/5
         public ActionResult Details(int? id)
         {
+            Session["Detail_ID_SV"] = id;
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -78,6 +79,7 @@ namespace DACS_SV5T.Areas.admin.Controllers
             {
                 return HttpNotFound();
             }
+            Edit(id);
             return View(sINHVIEN);
         }
 
@@ -136,7 +138,7 @@ namespace DACS_SV5T.Areas.admin.Controllers
             {
                 db.Entry(sINHVIEN).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+
             }
             ViewBag.ID_KV = new SelectList(db.KHOAVIENs, "ID_KV", "TEN_KV", sINHVIEN.ID_KV);
             ViewBag.ID_CAP = new SelectList(db.CAPs, "ID_CAP", "TEN_CAP", sINHVIEN.ID_CAP);

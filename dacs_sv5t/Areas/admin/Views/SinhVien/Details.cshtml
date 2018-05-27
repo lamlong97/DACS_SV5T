@@ -4,88 +4,93 @@
     ViewBag.Title = "Details";
     Layout = "~/Areas/admin/Views/Shared/_MyLayout.cshtml";
 }
+<style>
+        dt, dd {
+            margin-bottom:5px;
+        }
+</style>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-red" style="margin-top:20px">
+            <div class="panel-heading">
+                Chi tiết sinh viên : @Html.DisplayFor(model => model.TEN_SV)
+            </div>
+            
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        Họ và tên sinh viên :
+                    </dt>
 
-<h2>Details</h2>
+                    <dd>
+                        @Html.DisplayFor(model => model.TEN_SV)
+                    </dd>
+                    <dt>
+                        Mã số sinh viên :
+                    </dt>
 
-<div>
-    <h4>SINHVIEN</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.TEN_SV)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.MSSV)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.TEN_SV)
-        </dd>
+                    <dt>
+                        Lớp :
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LOP)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.LOP)
+                    </dd>
+                    <dt>
+                        Khoa/Viện :
+                    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.LOP)
-        </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.KHOAVIEN.TEN_KV)
+                    </dd>
+                    <dt>
+                        Địa chỉ :
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.DIACHI)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.DIACHI)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.DIACHI)
-        </dd>
+                    <dt>
+                        Email :
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.EMAIL)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.EMAIL)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.EMAIL)
-        </dd>
+                    <dt>
+                        Số điện thoại :
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.SDT)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.SDT)
+                    </dd>
+                    <dt>
+                        Cấp độ SV5T :
+                    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.SDT)
-        </dd>
+                    <dd>
+                        @{ Html.RenderAction("Edit", "SinhVien");}
+                    </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PASSWORD)
-        </dt>
+                </dl>
+                
+                <div style="width:80%; margin-left:20px">
+                    <hr />
+                    @{ Html.RenderAction("LoaiTieuChi", "HoatDongAdmin");}
+                </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.PASSWORD)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.MSSV)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MSSV)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.KHOAVIEN.TEN_KV)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.KHOAVIEN.TEN_KV)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CAP.TEN_CAP)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CAP.TEN_CAP)
-        </dd>
-
-    </dl>
+            </div>
+        </div>
+        <!-- /.panel-body -->
+    </div>
+    <!-- /.panel -->
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_SV }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<!-- /.col-lg-12 -->

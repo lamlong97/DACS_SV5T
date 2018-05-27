@@ -1,0 +1,39 @@
+﻿@model List<DACS_SV5T.Models.CT_TEUCHI>
+<style>
+
+    th, td {
+        padding: 15px;
+    }
+
+        td p {
+            height: 50px;
+            overflow-y: hidden;
+            text-overflow: ellipsis;
+        }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    caption {
+        margin-bottom: 10px
+    }
+</style>
+<table>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td width="80%">
+                    @Html.DisplayFor(modelItem => item.NOIDUNG)
+                </td>
+                <td width="20%" style="text-align:center; vertical-align:middle">
+                    @Html.Action("HinhTieuChi", "HoatDongAdmin", new { ID_CTTCHI = item.ID_CTTCHI })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
