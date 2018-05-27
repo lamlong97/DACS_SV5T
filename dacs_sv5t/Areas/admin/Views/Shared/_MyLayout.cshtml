@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@{
+
+    if (Session["ID_ND"] == null)
+    {
+        Response.Redirect("~/admin/NguoiDung/DangNhap");
+    }
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -36,7 +43,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Welcome</a>
+                <a class="navbar-brand" href="index.html">Xin chào : @Session["TENND"]</a>
             </div>
             <!-- /.navbar-header -->
             <ul class="nav navbar-top-links navbar-right">
@@ -54,7 +61,7 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            <a href="~/admin/NguoiDung/DangXuat"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->

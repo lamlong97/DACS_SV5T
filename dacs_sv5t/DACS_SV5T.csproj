@@ -174,6 +174,7 @@
     <Compile Include="Areas\admin\Controllers\ChiTietTieuChiController.cs" />
     <Compile Include="Areas\admin\Controllers\DefaultController.cs" />
     <Compile Include="Areas\admin\Controllers\HoatDongAdminController.cs" />
+    <Compile Include="Areas\admin\Controllers\NguoiDungController.cs" />
     <Compile Include="Areas\admin\Controllers\SinhVienController.cs" />
     <Compile Include="Areas\admin\Controllers\TinTucController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
@@ -1845,6 +1846,7 @@
     <Content Include="Areas\admin\Views\HoatDongAdmin\TieuChi.cshtml" />
     <Content Include="Areas\admin\Views\HoatDongAdmin\CTTieuChi.cshtml" />
     <Content Include="Areas\admin\Views\HoatDongAdmin\HinhTieuChi.cshtml" />
+    <Content Include="Areas\admin\Views\NguoiDung\DangNhap.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

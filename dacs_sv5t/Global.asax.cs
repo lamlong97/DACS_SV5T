@@ -28,6 +28,12 @@ namespace DACS_SV5T
             Session["SDT"] = null;
             Session["ID_KV"] = null;
             Session["PASSWORD"] = null;
+
+            Session["ID_ND"] = null;
+            Session["TENDN"] = null;
+            Session["MK"] = null;
+            Session["TENND"] = null;
+            Session["PQ"] = null;
         }
     }
 }
