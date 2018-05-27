@@ -1839,6 +1839,7 @@
     <Content Include="Areas\admin\Views\SinhVien\Edit.cshtml" />
     <Content Include="Areas\admin\Views\SinhVien\Index.cshtml" />
     <Content Include="Areas\admin\Views\SinhVien\getSinhVien.cshtml" />
+    <Content Include="Areas\admin\Views\ChiTietTieuChi\getTieuChi.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

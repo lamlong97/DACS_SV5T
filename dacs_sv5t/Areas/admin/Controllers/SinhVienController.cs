@@ -33,12 +33,37 @@ namespace DACS_SV5T.Areas.admin.Controllers
         }
         public ActionResult getSinhVien(long? id1, long? id2)
         {
+            var SinhVien = db.SINHVIENs;
+            var Khoa = db.KHOAVIENs;
+            var Cap = db.CAPs;
             if (id1 == null && id2 ==null)
             {
                 var v = db.SINHVIENs.ToList();
                 return PartialView(v);
             }
-            var m = db.SINHVIENs.Where(x => x.ID_KV == id1 || x.ID_CAP == id2).ToList();
+            if (id1 != null && id2 == null)
+            {
+                var n = from a in SinhVien
+                        join b in Khoa on a.ID_KV equals b.ID_KV
+                        join c in Cap on a.ID_CAP equals c.ID_CAP
+                        where b.ID_KV == id1
+                        select a;
+                return PartialView(n.ToList());
+            }
+            if (id1 == null && id2 != null)
+            {
+                var o = from a in SinhVien
+                        join b in Khoa on a.ID_KV equals b.ID_KV
+                        join c in Cap on a.ID_CAP equals c.ID_CAP
+                        where c.ID_CAP == id2
+                        select a;
+                return PartialView(o.ToList());
+            }
+            var m = from a in SinhVien
+                    join b in Khoa on a.ID_KV equals b.ID_KV
+                    join c in Cap on a.ID_CAP equals c.ID_CAP
+                    where b.ID_KV == id1 && c.ID_CAP == id2
+                    select a;
             return PartialView(m);
         }
         // GET: admin/SinhVien/Details/5
