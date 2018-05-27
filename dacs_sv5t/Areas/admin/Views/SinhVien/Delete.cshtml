@@ -1,0 +1,105 @@
+﻿@model DACS_SV5T.Models.SINHVIEN
+
+@{
+    ViewBag.Title = "Xóa sinh viên";
+    Layout = "~/Areas/admin/Views/Shared/_MyLayout.cshtml";
+}
+
+<style>
+    dt, dd {
+        margin-bottom: 5px;
+    }
+</style>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-red" style="margin-top:20px">
+            <div class="panel-heading">
+                Bạn có muốn xóa sinh viên : @Html.DisplayFor(model => model.TEN_SV)
+            </div>
+
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        Họ và tên sinh viên :
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.TEN_SV)
+                    </dd>
+
+                    <dt>
+                        Lớp :
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.LOP)
+                    </dd>
+
+                    <dt>
+                        Địa chỉ : 
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.DIACHI)
+                    </dd>
+
+                    <dt>
+                        Email :
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.EMAIL)
+                    </dd>
+
+                    <dt>
+                        Số điện thoại
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.SDT)
+                    </dd>
+
+                    <dt>
+                        Mã số sinh viên :
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.MSSV)
+                    </dd>
+
+                    <dt>
+                        Khoa/Viện :
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.KHOAVIEN.TEN_KV)
+                    </dd>
+
+                    <dt>
+                        Cấp độ SV5T :
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.CAP.TEN_CAP)
+                    </dd>
+
+                </dl>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-actions no-color">
+                        <input type="submit" value="Xóa" class="btn btn-danger" /> |
+                        @Html.ActionLink("Quay về", "Index")
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <!-- /.panel-body -->
+</div>
+<!-- /.panel -->

@@ -170,3 +170,4 @@ D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\obj\Debug\DACS_SV5T.csproj.CoreCompileInputs
 D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\obj\Debug\DACS_SV5T.csproj.CopyComplete
 D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\obj\Debug\DACS_SV5T.dll
 D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\obj\Debug\DACS_SV5T.pdb
+D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\obj\Debug\DACS_SV5T.csprojAssemblyReference.cache

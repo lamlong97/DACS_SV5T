@@ -173,6 +173,8 @@
     <Compile Include="Areas\admin\adminAreaRegistration.cs" />
     <Compile Include="Areas\admin\Controllers\ChiTietTieuChiController.cs" />
     <Compile Include="Areas\admin\Controllers\DefaultController.cs" />
+    <Compile Include="Areas\admin\Controllers\HoatDongAdminController.cs" />
+    <Compile Include="Areas\admin\Controllers\SinhVienController.cs" />
     <Compile Include="Areas\admin\Controllers\TinTucController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HoatDongController.cs" />
@@ -1832,6 +1834,17 @@
     <Content Include="Areas\admin\Views\TinTuc\Details.cshtml" />
     <Content Include="Areas\admin\Views\TinTuc\Edit.cshtml" />
     <Content Include="Areas\admin\Views\TinTuc\Index.cshtml" />
+    <Content Include="Areas\admin\Views\SinhVien\Create.cshtml" />
+    <Content Include="Areas\admin\Views\SinhVien\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\SinhVien\Details.cshtml" />
+    <Content Include="Areas\admin\Views\SinhVien\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\SinhVien\Index.cshtml" />
+    <Content Include="Areas\admin\Views\SinhVien\getSinhVien.cshtml" />
+    <Content Include="Areas\admin\Views\ChiTietTieuChi\getTieuChi.cshtml" />
+    <Content Include="Areas\admin\Views\HoatDongAdmin\LoaiTieuChi.cshtml" />
+    <Content Include="Areas\admin\Views\HoatDongAdmin\TieuChi.cshtml" />
+    <Content Include="Areas\admin\Views\HoatDongAdmin\CTTieuChi.cshtml" />
+    <Content Include="Areas\admin\Views\HoatDongAdmin\HinhTieuChi.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
