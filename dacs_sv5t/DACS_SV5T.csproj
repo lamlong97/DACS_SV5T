@@ -1847,6 +1847,11 @@
     <Content Include="Areas\admin\Views\HoatDongAdmin\CTTieuChi.cshtml" />
     <Content Include="Areas\admin\Views\HoatDongAdmin\HinhTieuChi.cshtml" />
     <Content Include="Areas\admin\Views\NguoiDung\DangNhap.cshtml" />
+    <Content Include="Areas\admin\Views\NguoiDung\Index.cshtml" />
+    <Content Include="Areas\admin\Views\NguoiDung\DangKy.cshtml" />
+    <Content Include="Areas\admin\Views\NguoiDung\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\NguoiDung\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\NguoiDung\ThongTinNguoiDung.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

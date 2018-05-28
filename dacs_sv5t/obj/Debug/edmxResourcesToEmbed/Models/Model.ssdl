@@ -73,9 +73,9 @@
     </Key>
     <Property Name="ID_ND" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TENDN" Type="varchar" MaxLength="255" />
-    <Property Name="MK" Type="varchar" MaxLength="20" />
     <Property Name="TENND" Type="nvarchar" MaxLength="255" />
-    <Property Name="PQ" Type="int" />
+    <Property Name="MK" Type="varchar" MaxLength="100" />
+    <Property Name="PQ" Type="bit" />
   </EntityType>
   <EntityType Name="SINHVIEN">
     <Key>

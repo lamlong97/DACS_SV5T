@@ -84,9 +84,9 @@
     </Key>
     <Property Name="ID_ND" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TENDN" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Name="MK" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MK" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="TENND" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="PQ" Type="Int32" />
+    <Property Name="PQ" Type="Boolean" />
   </EntityType>
   <EntityType Name="SINHVIEN">
     <Key>

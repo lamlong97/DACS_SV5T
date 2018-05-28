@@ -1,0 +1,115 @@
+﻿@using DACS_SV5T.Help
+@model IEnumerable<DACS_SV5T.Models.NGUOIDUNG>
+
+@{
+    ViewBag.Title = "Danh sách quản lý";
+    Layout = "~/Areas/admin/Views/Shared/_MyLayout.cshtml";
+}
+<style>
+    th, td {
+        text-align: center;
+    }
+
+        td p {
+            height: 50px;
+            overflow-y: hidden;
+            text-overflow: ellipsis;
+        }
+</style>
+@section _Header
+{
+    <!-- DataTables CSS -->
+    <link href="/Areas/admin/Content/vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+    <!-- DataTables Responsive CSS -->
+    <link href="/Areas/admin/Content/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-red" style="margin-top:20px">
+            @if (Convert.ToBoolean(Session["PQ"]) == true)
+            {
+                <div class="panel-heading">
+                    Quản lý người quản trị
+                </div>
+            }
+            else
+            {
+                <div class="panel-heading">
+                    Danh sách người quản trị
+                </div>
+            }
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                @if (Convert.ToBoolean(Session["PQ"]) == true)
+                {
+                    <div class="bs-example" style="text-align:right; padding-bottom:10px;">
+                        <div class="btn-group">
+                            @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-plus'></span> Thêm người quản trị", "DangKy", "DangKy", "NguoiDung", routeValues: new { }, htmlAttributes: new { @class = "btn btn-primary" })
+                        </div>
+
+                    </div>
+                }
+                <table class="table table-striped table-bordered table-hover" id="dataTables-example" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>
+                                STT
+                            </th>
+                            <th>
+                                Tên đăng nhập
+                            </th>
+                            <th>
+                                Tên người dùng
+                            </th>
+                            <th>
+                                Phân quyền
+                            </th>
+                            @if (Convert.ToBoolean(Session["PQ"]) == true)
+                            {
+                                <th></th>}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{var Number = 1; }
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.Raw(Number++)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.TENDN)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.TENND)
+                                </td>
+                                <td>
+                                    @*Html.DisplayFor(modelItem => item.PQ)*@
+                                    @(item.PQ.GetValueOrDefault(true) ? "Administrator" : "User")
+                                </td>
+                                @if (Convert.ToBoolean(Session["PQ"]) == true)
+                                {
+                                    <td>
+                                        @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-pencil'></span>", "Edit", "Edit", "NguoiDung", routeValues: new { id = item.ID_ND }, htmlAttributes: new { @class = "btn btn-default" })
+                                        @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-trash'></span>", "Delete", "Delete", "NguoiDung", routeValues: new { id = item.ID_ND }, htmlAttributes: new { @class = "btn btn-danger" })
+                                    </td>
+                                }
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<script>
+    $(document).ready(function () {
+        $('#dataTables-example').DataTable({
+            responsive: true
+        });
+    });
+</script>
