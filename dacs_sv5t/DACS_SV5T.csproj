@@ -176,7 +176,9 @@
     <Compile Include="Areas\admin\Controllers\HoatDongAdminController.cs" />
     <Compile Include="Areas\admin\Controllers\NguoiDungController.cs" />
     <Compile Include="Areas\admin\Controllers\SinhVienController.cs" />
+    <Compile Include="Areas\admin\Controllers\TieuChiController.cs" />
     <Compile Include="Areas\admin\Controllers\TinTucController.cs" />
+    <Compile Include="Areas\admin\Controllers\YeuCauController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HoatDongController.cs" />
     <Compile Include="Controllers\SinhVienController.cs" />
@@ -1852,6 +1854,16 @@
     <Content Include="Areas\admin\Views\NguoiDung\Edit.cshtml" />
     <Content Include="Areas\admin\Views\NguoiDung\Delete.cshtml" />
     <Content Include="Areas\admin\Views\NguoiDung\ThongTinNguoiDung.cshtml" />
+    <Content Include="Areas\admin\Views\YeuCau\Create.cshtml" />
+    <Content Include="Areas\admin\Views\YeuCau\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\YeuCau\Details.cshtml" />
+    <Content Include="Areas\admin\Views\YeuCau\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\YeuCau\Index.cshtml" />
+    <Content Include="Areas\admin\Views\TieuChi\Create.cshtml" />
+    <Content Include="Areas\admin\Views\TieuChi\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\TieuChi\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\TieuChi\Index.cshtml" />
+    <Content Include="Areas\admin\Views\YeuCau\getYeuCau.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

@@ -83,17 +83,28 @@
                             </div>
                             <!-- /input-group -->
                         </li>
-                        <li>
-                            <a href="@Url.Action("Index","ChiTietTieuChi") "><i class="fa fa-star fa-fw"></i> Quản lý tiêu chí</a>
+                        <li >
+                            <a><i class="fa fa-star fa-fw"></i>Quản lý tiêu chí<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="@Url.Action("Index","TieuChi") "><i class="fa fa-trophy fa-fw"></i> Quản lý tiêu chí</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index","YeuCau") "><i class="fa fa-tasks fa-fw"></i> Quản lý yêu cầu</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index","ChiTietTieuChi") "><i class="fa fa-pencil fa-fw"></i> Quản lý chi tiết tiêu chí</a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <a href="@Url.Action("Index","TinTuc") "><i class="fa fa-newspaper-o fa-fw"></i> Quản lý tin tức</a>
                         </li>
                         <li>
-                            <a href="@Url.Action("Index","SinhVien") "><i class="fa fa-user fa-fw"></i> Quản lý sinh viên</a>
+                            <a href="@Url.Action("Index","SinhVien") "><i class="fa fa-mortar-board fa-fw"></i> Quản lý sinh viên</a>
                         </li>
                         <li>
-                            <a href="@Url.Action("Index","NguoiDung") "><i class="fa fa-user fa-fw"></i> Quản lý người quản trị </a>
+                            <a href="@Url.Action("Index","NguoiDung") "><i class="fa fa-users fa-fw"></i> Quản lý người quản trị </a>
                         </li>
                     </ul>
                 </div>
