@@ -20,13 +20,16 @@
                 STT
             </th>
             <th>
-                Tên yêu cầu
+                Loại yêu cầu
             </th>
             <th>
                 Tên tiêu chí
             </th>
-            <th></th>
-        </tr>
+            @if (Convert.ToBoolean(Session["PQ"]) == true)
+            {
+                <th></th>
+            }
+            </tr>
     </thead>
     <tbody>
         @{var Number = 1; }
@@ -42,14 +45,23 @@
             <td>
                 @Html.DisplayFor(modelItem => item.LOAITIEUCHI.TEN_LTCHI)
             </td>
-            <td>
-                @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-pencil'></span>", "Edit", "Edit", "YeuCau", routeValues: new { id = item.ID_TCHI }, htmlAttributes: new { data_modal = "", @class = "btn btn-default" })
-                @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-zoom-in'></span>", "Detail", "Details", "YeuCau", routeValues: new { id = item.ID_TCHI }, htmlAttributes: new { data_modal = "", @class = "btn btn-primary" })
-                @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-trash'></span>", "Delete", "Delete", "YeuCau", routeValues: new { id = item.ID_TCHI }, htmlAttributes: new { data_modal = "", @class = "btn btn-danger" })
+            @if (Convert.ToBoolean(Session["PQ"]) == true)
+            {
+                <td>
+                    @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-pencil'></span>", "Edit", "Edit", "YeuCau", routeValues: new { id = item.ID_TCHI }, htmlAttributes: new { data_modal = "", @class = "btn btn-default" })
+                    @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-trash'></span>", "Delete", "Delete", "YeuCau", routeValues: new { id = item.ID_TCHI }, htmlAttributes: new { data_modal = "", @class = "btn btn-danger" })
 
-            </td>
-        </tr>
+                </td>
+            }
+            </tr>
         }
         </tbody>
 </table>
 
+<script>
+        $(document).ready(function () {
+            $('#dataTables-example').DataTable({
+                responsive: true
+            });
+        });
+</script>

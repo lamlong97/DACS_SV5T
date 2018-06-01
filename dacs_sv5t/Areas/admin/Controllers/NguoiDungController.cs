@@ -64,17 +64,14 @@ namespace DACS_SV5T.Areas.admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult ThongTinNguoiDung([Bind(Include = "ID_ND,TENDN,MK,TENND,PQ")] NGUOIDUNG nGUOIDUNG)
+        public ActionResult ThongTinNguoiDung([Bind(Include = "ID_ND,TENDN,MK,TENND,PQ,XNMK")] NGUOIDUNG nGUOIDUNG)
         {
             var MK = Session["MK"];
-            if (ModelState.IsValid)
-            {
                 nGUOIDUNG.MK = (string)MK;
                 db.Entry(nGUOIDUNG).State = EntityState.Modified;
                 db.SaveChanges();
                 ViewBag.success = "Cập nhật thông tin thành công";
                 Session["TENND"] = nGUOIDUNG.TENND;
-            }
             return View(nGUOIDUNG);
         }
 
@@ -99,23 +96,30 @@ namespace DACS_SV5T.Areas.admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult DangKy([Bind(Include = "ID_ND,TENDN,MK,XNMK,TENND,PQ")] NGUOIDUNG nGUOIDUNG)
+        public ActionResult DangKy([Bind(Include = "ID_ND,TENDN,MK,TENND,PQ,XNMK")] NGUOIDUNG nGUOIDUNG)
         {
-            if (ModelState.IsValid)
+            if (nGUOIDUNG.XNMK != nGUOIDUNG.MK)
             {
-                if(CheckUserName(nGUOIDUNG.TENDN))
+                ViewBag.error = "Xác nhận mật khẩu thất bại";
+            }
+            else
+            {
+                if (ModelState.IsValid)
                 {
-                    ModelState.AddModelError("", "Tên đăng nhập đã tồn tại");
-                }
-                else {
-                string passwordMD5 = Common.EncryptMD5(nGUOIDUNG.TENDN + nGUOIDUNG.MK);
-                nGUOIDUNG.MK = passwordMD5;
-                db.NGUOIDUNGs.Add(nGUOIDUNG);
-                db.SaveChanges();
-                ViewBag.success = "Đăng ký thành công";
+                    if (CheckUserName(nGUOIDUNG.TENDN))
+                    {
+                        ModelState.AddModelError("", "Tên đăng nhập đã tồn tại");
+                    }
+                    else
+                    {
+                        string passwordMD5 = Common.EncryptMD5(nGUOIDUNG.TENDN + nGUOIDUNG.MK);
+                        nGUOIDUNG.MK = passwordMD5;
+                        db.NGUOIDUNGs.Add(nGUOIDUNG);
+                        db.SaveChanges();
+                        ViewBag.success = "Đăng ký thành công";
+                    }
                 }
             }
-
             return View(nGUOIDUNG);
         }
 
@@ -139,7 +143,7 @@ namespace DACS_SV5T.Areas.admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID_ND,TENDN,MK,TENND,PQ")] NGUOIDUNG nGUOIDUNG)
+        public ActionResult Edit([Bind(Include = "ID_ND,TENDN,MK,TENND,PQ,XNMK")] NGUOIDUNG nGUOIDUNG)
         { 
             if (ModelState.IsValid)
             {

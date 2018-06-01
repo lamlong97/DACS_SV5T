@@ -60,8 +60,6 @@
     </Key>
     <Property Name="ID_SV" Type="int" Nullable="false" />
     <Property Name="ID_CTTCHI" Type="int" Nullable="false" />
-    <Property Name="TCHUAN_HOCTAP" Type="float" />
-    <Property Name="TCHUAN_HD" Type="bit" />
     <Property Name="URL" Type="nvarchar" MaxLength="255" />
     <Property Name="DUYET" Type="bit" />
     <Property Name="MOTA" Type="nvarchar" MaxLength="255" />
@@ -76,6 +74,7 @@
     <Property Name="TENND" Type="nvarchar" MaxLength="255" />
     <Property Name="MK" Type="varchar" MaxLength="100" />
     <Property Name="PQ" Type="bit" />
+    <Property Name="XNMK" Type="varchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="SINHVIEN">
     <Key>

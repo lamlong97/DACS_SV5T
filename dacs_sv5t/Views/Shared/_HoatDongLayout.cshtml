@@ -1,0 +1,112 @@
+﻿@{
+    if (Session["MSSV"] == null)
+    {
+        Response.Redirect("dang-nhap");
+    }
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="sinh vien 5 tot, 5 tot" />
+    <title>Website Sinh viên 5 tốt</title>
+    <link rel="shortcut icon" href="~/Content/img/logo-hutech1.png">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <script src="~/Content/js/backtotop.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="row">
+            <div>
+                <div class="col-md-9">
+                    <img src="~/Content/img/header_logo.png">
+                </div>
+                <div class="col-md-3">
+                    <div style="height:50px;"></div>
+                    <div class="pull-right">
+                        <a href="thong-tin-sv"><strong style="color:#008ccd">Xin chào: </strong>@Session["TEN_SV"] </a>
+                        <br />
+                        <a href="dang-xuat"><strong style="color:#008ccd">Đăng xuất</strong></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="row">
+                <nav class="navbar" style="background-color: #0063cd;">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="color: #FFF;">
+                                <span class="glyphicon glyphicon-align-justify"></span>
+                            </button>
+
+                        </div>
+
+                        @{ Html.RenderAction("getMENU", "Temp");}
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 10px; margin-bottom: 10px;">
+            <div style="width:100%">
+
+                @RenderSection("_Header", false)
+                @RenderBody()
+                @RenderSection("_Footer", false)
+            </div>
+
+           
+        </div>
+
+        <div class="row" style="background-color: #0063cd; color: #FFF;">
+            <div class="col-md-8" style="padding-top: 10px; padding-bottom: 15px;">
+                <div><h5><strong>KHOA CÔNG NGHỆ THÔNG TIN HUTECH</strong></h5></div>
+                <div><b>Trụ sở:</b> 475A Điện Biên Phủ, P.25, Q.Bình Thạnh, TP.HCM</div>
+                <div>ĐT: (028) 5445 7777 - Fax: (028) 5445 4444 - Email: hutech@hutech.edu.vn</div>
+            </div>
+
+            <div class="col-md-4" style="padding-top: 10px;">
+                <div class="pull-right">
+                    <a href="https://www.hutech.edu.vn/" target="_blank"><p><img src="~/Content/img/social-logo.png"></p></a>
+                    <p>Bản quyền &copy; 2018 ITHutech</p>
+
+                    <div style="text-align:center">
+                        <p class="text-warning" style="color: powderblue;font-size:15px">Số người Online: <span id="UserOnline">0</span> Online.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <a href="#" class="cd-top">Back To Top</a>
+
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+    <script src="@Url.Content("~/Scripts/jquery.signalR-2.2.2.js")"></script>
+    <script src="@Url.Content("~/signalr/hubs")"></script>
+    <script>
+        $(function () {
+            //setup hubs
+            var counterHub = $.connection.counterHub;
+            $.connection.hub.start().done(function () {
+                //do something after hub connected
+            });
+            //function receive data from server. server call in on code behind
+            counterHub.client.UpdateCount = function (count) {
+                $('#UserOnline').text(count);
+            }
+        });
+    </script>
+
+</body>
+</html>

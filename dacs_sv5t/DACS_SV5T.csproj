@@ -179,6 +179,7 @@
     <Compile Include="Areas\admin\Controllers\TieuChiController.cs" />
     <Compile Include="Areas\admin\Controllers\TinTucController.cs" />
     <Compile Include="Areas\admin\Controllers\YeuCauController.cs" />
+    <Compile Include="Controllers\DANHGIAsController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HoatDongController.cs" />
     <Compile Include="Controllers\SinhVienController.cs" />
@@ -1464,6 +1465,7 @@
     <Content Include="Areas\admin\Content\html\vendor\morrisjs\morris.min.js" />
     <Content Include="Areas\admin\Content\html\vendor\raphael\raphael.js" />
     <Content Include="Areas\admin\Content\html\vendor\raphael\raphael.min.js" />
+    <Content Include="Areas\admin\Content\js\imagezoom.js" />
     <Content Include="Areas\admin\Content\js\sb-admin-2.js" />
     <Content Include="Areas\admin\Content\vendor\bootstrap-social\bootstrap-social.css" />
     <Content Include="Areas\admin\Content\vendor\bootstrap\css\bootstrap.css" />
@@ -1560,6 +1562,7 @@
     <Content Include="Content\css\bootstrap-theme.min.css" />
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\buttonHover.css" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\html\login\css\main.css" />
@@ -1605,6 +1608,10 @@
     <Content Include="Content\html\login\vendor\select2\select2.min.css" />
     <Content Include="Content\html\login\vendor\select2\select2.min.js" />
     <Content Include="Content\img\backtotop.png" />
+    <Content Include="Content\img\control\eyes_icon.ico" />
+    <Content Include="Content\img\control\no_icon.png" />
+    <Content Include="Content\img\control\pending_icon.png" />
+    <Content Include="Content\img\control\yes_icon.png" />
     <Content Include="Content\img\header_logo.png" />
     <Content Include="Content\img\logo-dtn.png" />
     <Content Include="Content\img\logo-hsv.png" />
@@ -1900,6 +1907,14 @@
     <Content Include="Views\HoatDong\TieuChi.cshtml" />
     <Content Include="Views\HoatDong\HinhTieuChi.cshtml" />
     <Content Include="Views\HoatDong\QuanLyMinhChung.cshtml" />
+    <Content Include="Views\Shared\_HoatDongLayout.cshtml" />
+    <Content Include="Views\HoatDong\DuyetTieuChi.cshtml" />
+    <Content Include="Views\HoatDong\Cap.cshtml" />
+    <Content Include="Views\DANHGIAs\Create.cshtml" />
+    <Content Include="Views\DANHGIAs\Delete.cshtml" />
+    <Content Include="Views\DANHGIAs\Details.cshtml" />
+    <Content Include="Views\DANHGIAs\Edit.cshtml" />
+    <Content Include="Views\DANHGIAs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -21,17 +21,20 @@
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
-                <div class="bs-example" style="text-align:right; padding-bottom:10px;">
-                    <div class="btn-group">
-                        @Html.DropDownListFor(model => model.ID_LTCHI, (SelectList)ViewBag.YeuCau, " --- Tất cả tiêu chí --- ",
-                                                                        new { @class = "form-control", @id = "TieuChi" })
+                @if (Convert.ToBoolean(Session["PQ"]) == true)
+                {
+                    <div class="bs-example" style="text-align:right; padding-bottom:10px;">
+                        <div class="btn-group">
+                            @Html.DropDownListFor(model => model.ID_LTCHI, (SelectList)ViewBag.YeuCau, " --- Tất cả tiêu chí --- ",
+                                                                         new { @class = "form-control", @id = "TieuChi" })
+                        </div>
+                        <div class="btn-group">
+                            @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-plus'></span> Thêm mới", "Create", "Create", "YeuCau", routeValues: new { }, htmlAttributes: new { @class = "btn btn-primary" })
+                        </div>
                     </div>
-                    <div class="btn-group">
-                        @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-plus'></span> Thêm mới", "Create", "Create", "YeuCau", routeValues: new { }, htmlAttributes: new { @class = "btn btn-primary" })
-                    </div>
+                }
+                    <div id="getYeuCau"></div>
                 </div>
-                <div id="getYeuCau"></div>
-            </div>
             <!-- /.panel-body -->
         </div>
         <!-- /.panel -->

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -130,8 +131,22 @@ namespace DACS_SV5T.Areas.admin.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             TIEUCHI tIEUCHI = db.TIEUCHIs.Find(id);
+            try
+            {
+                
             db.TIEUCHIs.Remove(tIEUCHI);
             db.SaveChanges();
+            }
+            catch (DbEntityValidationException e)
+            {
+                ViewBag.error = "Không thể xóa";
+                return View(tIEUCHI);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.error = "Không thể xóa";
+                return View(tIEUCHI);
+            }
             return RedirectToAction("Index");
         }
 

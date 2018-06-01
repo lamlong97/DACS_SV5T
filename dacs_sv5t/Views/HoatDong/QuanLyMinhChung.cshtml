@@ -2,9 +2,13 @@
 
 @{
     ViewBag.Title = "Quản lý minh chứng";
-    Layout = "~/Views/Shared/_MyLayOut.cshtml";
+    Layout = "~/Views/Shared/_HoatDongLayout.cshtml";
 }
+@section _Header
+{
 
+    <link href="~/Content/css/buttonHover.css" rel="stylesheet" />
+}
 @using (Html.BeginForm("QuanLyMinhChung", "HoatDong", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
@@ -13,16 +17,18 @@
         @Html.DropDownList("ID_CTTCHI", null, htmlAttributes: new { @class = "form-control" })
     </div>
     <div style="display:block">
-        <div style="height: 150px; width:150px">
-            @Html.Action("HinhTieuChi", "HoatDong")
+        <div style="height: 200px; width:200px; border: 3px dashed #ccc;position:relative;margin: 0 auto">
+            <div style="width:80%;height:80%;display:inline-block;margin:auto;position:absolute;left:0;right:0;top:0;bottom:0">
+                @Html.Action("HinhTieuChi", "HoatDong")
+            </div>
         </div>
         <div>
             <input style="display:none" type="file" name="img" id="img" accept=".jpg,.png,.gif,.jpeg,.bmp" />
-            <label class="btn btn-2" style="text-align:center" for="img">Chọn hình</label>
+            <label class="btn btn-2" style="text-align:center; margin-top:20px" for="img">Chọn hình</label>
         </div>
 
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Lưu" class="btn btn-default" />
+        <div style="margin-bottom:20px; vertical-align:middle; text-align:center">
+            <input type="submit" value="Lưu" class="btn btn-success" />
         </div>
     </div>
 }

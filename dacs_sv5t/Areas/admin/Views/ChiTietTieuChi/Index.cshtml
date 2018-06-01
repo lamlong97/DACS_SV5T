@@ -31,27 +31,30 @@
                 Quản lý tiêu chí
             </div>
             <div class="panel-body">
-                <div class="bs-example" style="text-align:right; padding-bottom:10px;">
+                @if (Convert.ToBoolean(Session["PQ"]) == true)
+                {
+                    <div class="bs-example" style="text-align:right; padding-bottom:10px;">
 
-                    <div class="btn-group">
-                        @Html.DropDownListFor(Tuple => Tuple.Item2.ID_LTCHI, (SelectList)ViewBag.LTC, " --- Tất cả tiêu chí --- ",
-                                                     new { @class = "form-control", @id = "LTC" })
-          
+                        <div class="btn-group">
+                            @Html.DropDownListFor(Tuple => Tuple.Item2.ID_LTCHI, (SelectList)ViewBag.LTC, " --- Tất cả tiêu chí --- ",
+                                                      new { @class = "form-control", @id = "LTC" })
+
+                        </div>
+
+                        <div class="btn-group">
+                            @Html.DropDownListFor(Tuple => Tuple.Item1.ID_TCHI, (SelectList)ViewBag.YeuCau, " --- Tất cả yêu cầu --- ",
+                                                                         new { @class = "form-control", @id = "YeuCau" })
+
+                        </div>
+
+                        <div class="btn-group">
+                            @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-plus'></span> Thêm mới", "Create", "Create", "ChiTietTieuChi", routeValues: new { }, htmlAttributes: new { @class = "btn btn-primary" })
+                        </div>
+
                     </div>
-
-                    <div class="btn-group">
-                        @Html.DropDownListFor(Tuple => Tuple.Item1.ID_TCHI, (SelectList)ViewBag.YeuCau, " --- Tất cả yêu cầu --- ",
-                                                                        new { @class = "form-control", @id = "YeuCau" })
-
-                    </div>
-
-                    <div class="btn-group">
-                        @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-plus'></span> Thêm mới", "Create", "Create", "ChiTietTieuChi", routeValues: new { }, htmlAttributes: new { @class = "btn btn-primary" })
-                    </div>
-
+                }
+                    <div id="getTieuChi"></div>
                 </div>
-                <div id="getTieuChi"></div>
-            </div>
             <!-- /.panel-body -->
         </div>
         <!-- /.panel -->

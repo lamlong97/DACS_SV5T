@@ -14,7 +14,28 @@ namespace DACS_SV5T
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute("HoatDong", "{type}",
-              new { controller = "HoatDong", action = "LoaiTieuChi" },
+              new { controller = "HoatDong", action = "LoaiTieuChi"},
+              new RouteValueDictionary
+              {
+                    {"type","hoat-dong" }
+              },
+              namespaces: new[] { "DACS_SV5T.Controllers" });
+            routes.MapRoute("HoatDongMeta", "{type}/{meta}",
+              new { controller = "HoatDong", action = "LoaiTieuChi", meta = UrlParameter.Optional },
+              new RouteValueDictionary
+              {
+                    {"type","hoat-dong" }
+              },
+              namespaces: new[] { "DACS_SV5T.Controllers" });
+            routes.MapRoute("HoatDongId", "{type}/{meta}/{id}",
+              new { controller = "HoatDong", action = "LoaiTieuChi", id = UrlParameter.Optional },
+              new RouteValueDictionary
+              {
+                    {"type","hoat-dong" }
+              },
+              namespaces: new[] { "DACS_SV5T.Controllers" });
+            routes.MapRoute("HoatDongQL", "{type}/{meta}/{id}",
+              new { controller = "HoatDong", action = "QuanLyMinhChung",id = UrlParameter.Optional },
               new RouteValueDictionary
               {
                     {"type","hoat-dong" }

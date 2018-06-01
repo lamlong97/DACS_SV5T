@@ -69,8 +69,6 @@
     </Key>
     <Property Name="ID_SV" Type="Int32" Nullable="false" />
     <Property Name="ID_CTTCHI" Type="Int32" Nullable="false" />
-    <Property Name="TCHUAN_HOCTAP" Type="Double" />
-    <Property Name="TCHUAN_HD" Type="Boolean" />
     <Property Name="URL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="DUYET" Type="Boolean" />
     <Property Name="MOTA" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
@@ -87,6 +85,7 @@
     <Property Name="MK" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="TENND" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="PQ" Type="Boolean" />
+    <Property Name="XNMK" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="SINHVIEN">
     <Key>

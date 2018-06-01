@@ -65,8 +65,6 @@
           <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
           <ScalarProperty Name="ID_SV" ColumnName="ID_SV" />
           <ScalarProperty Name="ID_CTTCHI" ColumnName="ID_CTTCHI" />
-          <ScalarProperty Name="TCHUAN_HOCTAP" ColumnName="TCHUAN_HOCTAP" />
-          <ScalarProperty Name="TCHUAN_HD" ColumnName="TCHUAN_HD" />
           <ScalarProperty Name="URL" ColumnName="URL" />
           <ScalarProperty Name="DUYET" ColumnName="DUYET" />
           <ScalarProperty Name="MOTA" ColumnName="MOTA" />
@@ -76,6 +74,7 @@
     <EntitySetMapping Name="NGUOIDUNGs">
       <EntityTypeMapping TypeName="DACS_SV5TModel.NGUOIDUNG">
         <MappingFragment StoreEntitySet="NGUOIDUNG">
+          <ScalarProperty Name="XNMK" ColumnName="XNMK" />
           <ScalarProperty Name="ID_ND" ColumnName="ID_ND" />
           <ScalarProperty Name="TENDN" ColumnName="TENDN" />
           <ScalarProperty Name="MK" ColumnName="MK" />

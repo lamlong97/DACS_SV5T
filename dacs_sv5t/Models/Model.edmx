@@ -65,8 +65,6 @@
           </Key>
           <Property Name="ID_SV" Type="int" Nullable="false" />
           <Property Name="ID_CTTCHI" Type="int" Nullable="false" />
-          <Property Name="TCHUAN_HOCTAP" Type="float" />
-          <Property Name="TCHUAN_HD" Type="bit" />
           <Property Name="URL" Type="nvarchar" MaxLength="255" />
           <Property Name="DUYET" Type="bit" />
           <Property Name="MOTA" Type="nvarchar" MaxLength="255" />
@@ -81,6 +79,7 @@
           <Property Name="TENND" Type="nvarchar" MaxLength="255" />
           <Property Name="MK" Type="varchar" MaxLength="100" />
           <Property Name="PQ" Type="bit" />
+          <Property Name="XNMK" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="SINHVIEN">
           <Key>
@@ -343,8 +342,6 @@
           </Key>
           <Property Name="ID_SV" Type="Int32" Nullable="false" />
           <Property Name="ID_CTTCHI" Type="Int32" Nullable="false" />
-          <Property Name="TCHUAN_HOCTAP" Type="Double" />
-          <Property Name="TCHUAN_HD" Type="Boolean" />
           <Property Name="URL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="DUYET" Type="Boolean" />
           <Property Name="MOTA" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
@@ -361,6 +358,7 @@
           <Property Name="MK" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="TENND" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="PQ" Type="Boolean" />
+          <Property Name="XNMK" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="SINHVIEN">
           <Key>
@@ -625,8 +623,6 @@
                 <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
                 <ScalarProperty Name="ID_SV" ColumnName="ID_SV" />
                 <ScalarProperty Name="ID_CTTCHI" ColumnName="ID_CTTCHI" />
-                <ScalarProperty Name="TCHUAN_HOCTAP" ColumnName="TCHUAN_HOCTAP" />
-                <ScalarProperty Name="TCHUAN_HD" ColumnName="TCHUAN_HD" />
                 <ScalarProperty Name="URL" ColumnName="URL" />
                 <ScalarProperty Name="DUYET" ColumnName="DUYET" />
                 <ScalarProperty Name="MOTA" ColumnName="MOTA" />
@@ -636,6 +632,7 @@
           <EntitySetMapping Name="NGUOIDUNGs">
             <EntityTypeMapping TypeName="DACS_SV5TModel.NGUOIDUNG">
               <MappingFragment StoreEntitySet="NGUOIDUNG">
+                <ScalarProperty Name="XNMK" ColumnName="XNMK" />
                 <ScalarProperty Name="ID_ND" ColumnName="ID_ND" />
                 <ScalarProperty Name="TENDN" ColumnName="TENDN" />
                 <ScalarProperty Name="MK" ColumnName="MK" />

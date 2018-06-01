@@ -1,2 +1,16 @@
 ﻿@model DACS_SV5T.Models.MINHCHUNG
-<img src="~/Content/upload/minhchung/@Model.HINHANH" style='width: 100%; object-fit: cover' class="responsive" />
+
+    <img data-toggle="modal" data-target=".@Model.ID_CTTCHI-bootstrapmodal" src="~/Content/upload/minhchung/@Model.HINHANH" style='width: 100%; object-fit: cover' class="img-responsive" />
+    <div class="modal fade @Model.ID_CTTCHI-bootstrapmodal">
+        <div class="modal-dialog" style="width:50%; height:40%;max-width:500px;max-height:500px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button data-dismiss="modal" class="close"><span>&times;</span></button>
+                    <div class="modal-title" style="text-align:center"><h4>Xem minh chứng</h4></div>
+                </div>
+                <div class="modal-body">
+                    <img src="~/Content/upload/minhchung/@Model.HINHANH" style='width: 100%; object-fit: cover' class="img-responsive" />
+                </div>
+            </div>
+        </div>
+    </div>
