@@ -22,6 +22,7 @@
     <EntitySetMapping Name="DANHGIAs">
       <EntityTypeMapping TypeName="DACS_SV5TModel.DANHGIA">
         <MappingFragment StoreEntitySet="DANHGIA">
+          <ScalarProperty Name="ID_DANHGIA" ColumnName="ID_DANHGIA" />
           <ScalarProperty Name="ID_CAP" ColumnName="ID_CAP" />
           <ScalarProperty Name="ID_CTTCHI" ColumnName="ID_CTTCHI" />
           <ScalarProperty Name="TCHUAN_HOCTAP" ColumnName="TCHUAN_HOCTAP" />
@@ -65,8 +66,6 @@
           <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
           <ScalarProperty Name="ID_SV" ColumnName="ID_SV" />
           <ScalarProperty Name="ID_CTTCHI" ColumnName="ID_CTTCHI" />
-          <ScalarProperty Name="TCHUAN_HOCTAP" ColumnName="TCHUAN_HOCTAP" />
-          <ScalarProperty Name="TCHUAN_HD" ColumnName="TCHUAN_HD" />
           <ScalarProperty Name="URL" ColumnName="URL" />
           <ScalarProperty Name="DUYET" ColumnName="DUYET" />
           <ScalarProperty Name="MOTA" ColumnName="MOTA" />
@@ -76,6 +75,7 @@
     <EntitySetMapping Name="NGUOIDUNGs">
       <EntityTypeMapping TypeName="DACS_SV5TModel.NGUOIDUNG">
         <MappingFragment StoreEntitySet="NGUOIDUNG">
+          <ScalarProperty Name="XNMK" ColumnName="XNMK" />
           <ScalarProperty Name="ID_ND" ColumnName="ID_ND" />
           <ScalarProperty Name="TENDN" ColumnName="TENDN" />
           <ScalarProperty Name="MK" ColumnName="MK" />
@@ -131,6 +131,15 @@
           <ScalarProperty Name="ORDER" ColumnName="ORDER" />
           <ScalarProperty Name="LINK" ColumnName="LINK" />
           <ScalarProperty Name="HIDE" ColumnName="HIDE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DUYET_TC">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.DUYET_TC">
+        <MappingFragment StoreEntitySet="DUYET_TC">
+          <ScalarProperty Name="DUYET" ColumnName="DUYET" />
+          <ScalarProperty Name="ID_DANHGIA" ColumnName="ID_DANHGIA" />
+          <ScalarProperty Name="ID_SV" ColumnName="ID_SV" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

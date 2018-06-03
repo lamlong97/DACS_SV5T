@@ -1,8 +1,7 @@
 ﻿@model List<DACS_SV5T.Models.CT_TEUCHI>
 <style>
-
     th, td {
-        padding: 15px;
+        text-align: center;
     }
 
         td p {
@@ -10,25 +9,24 @@
             overflow-y: hidden;
             text-overflow: ellipsis;
         }
-
-    table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-
-    caption {
-        margin-bottom: 10px
-    }
 </style>
-<table>
+@section _Header
+{
+    <!-- DataTables CSS -->
+    <link href="/Areas/admin/Content/vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+    <!-- DataTables Responsive CSS -->
+    <link href="/Areas/admin/Content/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+}
+<table class="table-bordered table-hover" id="dataTables-example" style="width:100%;">
+   
     <tbody>
         @foreach (var item in Model)
         {
             <tr>
-                <td width="80%">
+                <td>
                     @Html.DisplayFor(modelItem => item.NOIDUNG)
                 </td>
-                <td width="20%" style="text-align:center; vertical-align:middle">
+                <td width="20%" style="text-align:center; vertical-align:middle; max-width:30%">
                     @Html.Action("HinhTieuChi", "HoatDongAdmin", new { ID_CTTCHI = item.ID_CTTCHI })
                 </td>
             </tr>
@@ -37,3 +35,19 @@
 
 </table>
 
+@section _Footer
+{
+    <!-- DataTables JavaScript -->
+    <script src="/Areas/admin/Content/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="/Areas/admin/Content/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="/Areas/admin/Content/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+        $(document).ready(function () {
+            $('#dataTables-example').DataTable({
+                responsive: true
+            });
+        });
+    </script>
+
+}

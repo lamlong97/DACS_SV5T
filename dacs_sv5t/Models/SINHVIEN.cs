@@ -18,6 +18,7 @@ namespace DACS_SV5T.Models
         public SINHVIEN()
         {
             this.MINHCHUNGs = new HashSet<MINHCHUNG>();
+            this.DUYET_TC = new HashSet<DUYET_TC>();
         }
     
         public int ID_SV { get; set; }
@@ -35,5 +36,7 @@ namespace DACS_SV5T.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MINHCHUNG> MINHCHUNGs { get; set; }
         public virtual CAP CAP { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DUYET_TC> DUYET_TC { get; set; }
     }
 }

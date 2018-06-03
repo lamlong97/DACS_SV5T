@@ -23,13 +23,22 @@
         </EntityType>
         <EntityType Name="DANHGIA">
           <Key>
-            <PropertyRef Name="ID_CAP" />
-            <PropertyRef Name="ID_CTTCHI" />
+            <PropertyRef Name="ID_DANHGIA" />
           </Key>
           <Property Name="ID_CAP" Type="int" Nullable="false" />
           <Property Name="ID_CTTCHI" Type="int" Nullable="false" />
           <Property Name="TCHUAN_HOCTAP" Type="float" />
           <Property Name="TCHUAN_HD" Type="bit" />
+          <Property Name="ID_DANHGIA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DUYET_TC">
+          <Key>
+            <PropertyRef Name="ID_SV" />
+            <PropertyRef Name="ID_DANHGIA" />
+          </Key>
+          <Property Name="ID_SV" Type="int" Nullable="false" />
+          <Property Name="ID_DANHGIA" Type="int" Nullable="false" />
+          <Property Name="DUYET" Type="bit" />
         </EntityType>
         <EntityType Name="KHOAVIEN">
           <Key>
@@ -65,8 +74,6 @@
           </Key>
           <Property Name="ID_SV" Type="int" Nullable="false" />
           <Property Name="ID_CTTCHI" Type="int" Nullable="false" />
-          <Property Name="TCHUAN_HOCTAP" Type="float" />
-          <Property Name="TCHUAN_HD" Type="bit" />
           <Property Name="URL" Type="nvarchar" MaxLength="255" />
           <Property Name="DUYET" Type="bit" />
           <Property Name="MOTA" Type="nvarchar" MaxLength="255" />
@@ -78,9 +85,10 @@
           </Key>
           <Property Name="ID_ND" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TENDN" Type="varchar" MaxLength="255" />
-          <Property Name="MK" Type="varchar" MaxLength="20" />
           <Property Name="TENND" Type="nvarchar" MaxLength="255" />
-          <Property Name="PQ" Type="int" />
+          <Property Name="MK" Type="varchar" MaxLength="100" />
+          <Property Name="PQ" Type="bit" />
+          <Property Name="XNMK" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="SINHVIEN">
           <Key>
@@ -212,6 +220,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_DUYET_TC_DANHGIA">
+          <End Role="DANHGIA" Type="Self.DANHGIA" Multiplicity="1" />
+          <End Role="DUYET_TC" Type="Self.DUYET_TC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DANHGIA">
+              <PropertyRef Name="ID_DANHGIA" />
+            </Principal>
+            <Dependent Role="DUYET_TC">
+              <PropertyRef Name="ID_DANHGIA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DUYET_TC_SINHVIEN">
+          <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="1" />
+          <End Role="DUYET_TC" Type="Self.DUYET_TC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SINHVIEN">
+              <PropertyRef Name="ID_SV" />
+            </Principal>
+            <Dependent Role="DUYET_TC">
+              <PropertyRef Name="ID_SV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_SINHVIEN_CAP">
           <End Role="CAP" Type="Self.CAP" Multiplicity="0..1" />
           <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="*" />
@@ -228,6 +260,7 @@
           <EntitySet Name="CAP" EntityType="Self.CAP" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CT_TEUCHI" EntityType="Self.CT_TEUCHI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DANHGIA" EntityType="Self.DANHGIA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DUYET_TC" EntityType="Self.DUYET_TC" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KHOAVIEN" EntityType="Self.KHOAVIEN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LOAITIEUCHI" EntityType="Self.LOAITIEUCHI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MENU" EntityType="Self.MENU" Schema="dbo" store:Type="Tables" />
@@ -265,6 +298,14 @@
             <End Role="LOAITIEUCHI" EntitySet="LOAITIEUCHI" />
             <End Role="TIEUCHI" EntitySet="TIEUCHI" />
           </AssociationSet>
+          <AssociationSet Name="FK_DUYET_TC_DANHGIA" Association="Self.FK_DUYET_TC_DANHGIA">
+            <End Role="DANHGIA" EntitySet="DANHGIA" />
+            <End Role="DUYET_TC" EntitySet="DUYET_TC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DUYET_TC_SINHVIEN" Association="Self.FK_DUYET_TC_SINHVIEN">
+            <End Role="SINHVIEN" EntitySet="SINHVIEN" />
+            <End Role="DUYET_TC" EntitySet="DUYET_TC" />
+          </AssociationSet>
           <AssociationSet Name="FK_SINHVIEN_CAP" Association="Self.FK_SINHVIEN_CAP">
             <End Role="CAP" EntitySet="CAP" />
             <End Role="SINHVIEN" EntitySet="SINHVIEN" />
@@ -297,8 +338,7 @@
         </EntityType>
         <EntityType Name="DANHGIA">
           <Key>
-            <PropertyRef Name="ID_CAP" />
-            <PropertyRef Name="ID_CTTCHI" />
+            <PropertyRef Name="ID_DANHGIA" />
           </Key>
           <Property Name="ID_CAP" Type="Int32" Nullable="false" />
           <Property Name="ID_CTTCHI" Type="Int32" Nullable="false" />
@@ -306,6 +346,8 @@
           <Property Name="TCHUAN_HD" Type="Boolean" />
           <NavigationProperty Name="CAP" Relationship="Self.FK__DANHGIA__ID_CAP__21B6055D" FromRole="DANHGIA" ToRole="CAP" />
           <NavigationProperty Name="CT_TEUCHI" Relationship="Self.FK__DANHGIA__ID_CTTC__24927208" FromRole="DANHGIA" ToRole="CT_TEUCHI" />
+          <Property Name="ID_DANHGIA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="DUYET_TC" Relationship="DACS_SV5TModel.FK_DUYET_TC_DANHGIA" FromRole="DANHGIA" ToRole="DUYET_TC" />
         </EntityType>
         <EntityType Name="KHOAVIEN">
           <Key>
@@ -343,8 +385,6 @@
           </Key>
           <Property Name="ID_SV" Type="Int32" Nullable="false" />
           <Property Name="ID_CTTCHI" Type="Int32" Nullable="false" />
-          <Property Name="TCHUAN_HOCTAP" Type="Double" />
-          <Property Name="TCHUAN_HD" Type="Boolean" />
           <Property Name="URL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="DUYET" Type="Boolean" />
           <Property Name="MOTA" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
@@ -358,9 +398,10 @@
           </Key>
           <Property Name="ID_ND" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TENDN" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="MK" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MK" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="TENND" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="PQ" Type="Int32" />
+          <Property Name="PQ" Type="Boolean" />
+          <Property Name="XNMK" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="SINHVIEN">
           <Key>
@@ -379,6 +420,7 @@
           <NavigationProperty Name="MINHCHUNGs" Relationship="Self.FK__MINHCHUNG__ID_SV__1FCDBCEB" FromRole="SINHVIEN" ToRole="MINHCHUNG" />
           <Property Name="ID_CAP" Type="Int32" />
           <NavigationProperty Name="CAP" Relationship="DACS_SV5TModel.FK_SINHVIEN_CAP" FromRole="SINHVIEN" ToRole="CAP" />
+          <NavigationProperty Name="DUYET_TC" Relationship="DACS_SV5TModel.FK_DUYET_TC_SINHVIEN" FromRole="SINHVIEN" ToRole="DUYET_TC" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -542,6 +584,15 @@
             <End Role="CAP" EntitySet="CAPs" />
             <End Role="SINHVIEN" EntitySet="SINHVIENs" />
           </AssociationSet>
+          <EntitySet Name="DUYET_TC" EntityType="DACS_SV5TModel.DUYET_TC" />
+          <AssociationSet Name="FK_DUYET_TC_DANHGIA" Association="DACS_SV5TModel.FK_DUYET_TC_DANHGIA">
+            <End Role="DANHGIA" EntitySet="DANHGIAs" />
+            <End Role="DUYET_TC" EntitySet="DUYET_TC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DUYET_TC_SINHVIEN" Association="DACS_SV5TModel.FK_DUYET_TC_SINHVIEN">
+            <End Role="SINHVIEN" EntitySet="SINHVIENs" />
+            <End Role="DUYET_TC" EntitySet="DUYET_TC" />
+          </AssociationSet>
         </EntityContainer>
         <Association Name="FK_SINHVIEN_CAP">
           <End Type="DACS_SV5TModel.CAP" Role="CAP" Multiplicity="0..1" />
@@ -552,6 +603,41 @@
             </Principal>
             <Dependent Role="SINHVIEN">
               <PropertyRef Name="ID_CAP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="DUYET_TC">
+          <Key>
+            <PropertyRef Name="ID_SV" />
+            <PropertyRef Name="ID_DANHGIA" />
+          </Key>
+          <Property Name="ID_SV" Type="Int32" Nullable="false" />
+          <Property Name="ID_DANHGIA" Type="Int32" Nullable="false" />
+          <Property Name="DUYET" Type="Boolean" />
+          <NavigationProperty Name="DANHGIA" Relationship="DACS_SV5TModel.FK_DUYET_TC_DANHGIA" FromRole="DUYET_TC" ToRole="DANHGIA" />
+          <NavigationProperty Name="SINHVIEN" Relationship="DACS_SV5TModel.FK_DUYET_TC_SINHVIEN" FromRole="DUYET_TC" ToRole="SINHVIEN" />
+        </EntityType>
+        <Association Name="FK_DUYET_TC_DANHGIA">
+          <End Type="DACS_SV5TModel.DANHGIA" Role="DANHGIA" Multiplicity="1" />
+          <End Type="DACS_SV5TModel.DUYET_TC" Role="DUYET_TC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DANHGIA">
+              <PropertyRef Name="ID_DANHGIA" />
+            </Principal>
+            <Dependent Role="DUYET_TC">
+              <PropertyRef Name="ID_DANHGIA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DUYET_TC_SINHVIEN">
+          <End Type="DACS_SV5TModel.SINHVIEN" Role="SINHVIEN" Multiplicity="1" />
+          <End Type="DACS_SV5TModel.DUYET_TC" Role="DUYET_TC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SINHVIEN">
+              <PropertyRef Name="ID_SV" />
+            </Principal>
+            <Dependent Role="DUYET_TC">
+              <PropertyRef Name="ID_SV" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -582,6 +668,7 @@
           <EntitySetMapping Name="DANHGIAs">
             <EntityTypeMapping TypeName="DACS_SV5TModel.DANHGIA">
               <MappingFragment StoreEntitySet="DANHGIA">
+                <ScalarProperty Name="ID_DANHGIA" ColumnName="ID_DANHGIA" />
                 <ScalarProperty Name="ID_CAP" ColumnName="ID_CAP" />
                 <ScalarProperty Name="ID_CTTCHI" ColumnName="ID_CTTCHI" />
                 <ScalarProperty Name="TCHUAN_HOCTAP" ColumnName="TCHUAN_HOCTAP" />
@@ -625,8 +712,6 @@
                 <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
                 <ScalarProperty Name="ID_SV" ColumnName="ID_SV" />
                 <ScalarProperty Name="ID_CTTCHI" ColumnName="ID_CTTCHI" />
-                <ScalarProperty Name="TCHUAN_HOCTAP" ColumnName="TCHUAN_HOCTAP" />
-                <ScalarProperty Name="TCHUAN_HD" ColumnName="TCHUAN_HD" />
                 <ScalarProperty Name="URL" ColumnName="URL" />
                 <ScalarProperty Name="DUYET" ColumnName="DUYET" />
                 <ScalarProperty Name="MOTA" ColumnName="MOTA" />
@@ -636,6 +721,7 @@
           <EntitySetMapping Name="NGUOIDUNGs">
             <EntityTypeMapping TypeName="DACS_SV5TModel.NGUOIDUNG">
               <MappingFragment StoreEntitySet="NGUOIDUNG">
+                <ScalarProperty Name="XNMK" ColumnName="XNMK" />
                 <ScalarProperty Name="ID_ND" ColumnName="ID_ND" />
                 <ScalarProperty Name="TENDN" ColumnName="TENDN" />
                 <ScalarProperty Name="MK" ColumnName="MK" />
@@ -691,6 +777,15 @@
                 <ScalarProperty Name="ORDER" ColumnName="ORDER" />
                 <ScalarProperty Name="LINK" ColumnName="LINK" />
                 <ScalarProperty Name="HIDE" ColumnName="HIDE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DUYET_TC">
+            <EntityTypeMapping TypeName="DACS_SV5TModel.DUYET_TC">
+              <MappingFragment StoreEntitySet="DUYET_TC">
+                <ScalarProperty Name="DUYET" ColumnName="DUYET" />
+                <ScalarProperty Name="ID_DANHGIA" ColumnName="ID_DANHGIA" />
+                <ScalarProperty Name="ID_SV" ColumnName="ID_SV" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

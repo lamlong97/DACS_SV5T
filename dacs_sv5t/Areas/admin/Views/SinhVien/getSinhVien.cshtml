@@ -54,7 +54,10 @@
                 </td>
                 <td>
                     @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-zoom-in'></span>", "Detail", "Details", "SinhVien", routeValues: new { id = item.ID_SV }, htmlAttributes: new { @class = "btn btn-primary" })
-                    @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-trash'></span>", "Delete", "Delete", "SinhVien", routeValues: new { id = item.ID_SV }, htmlAttributes: new { @class = "btn btn-danger" })
+                    @if (Convert.ToBoolean(Session["PQ"]) == true)
+                    {
+                        @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-trash'></span>", "Delete", "Delete", "SinhVien", routeValues: new { id = item.ID_SV }, htmlAttributes: new { @class = "btn btn-danger" })
+                    }
                 </td>
             </tr>
         }

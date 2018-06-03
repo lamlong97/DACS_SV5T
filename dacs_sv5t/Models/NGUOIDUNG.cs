@@ -18,6 +18,7 @@ namespace DACS_SV5T.Models
         public string TENDN { get; set; }
         public string MK { get; set; }
         public string TENND { get; set; }
-        public Nullable<int> PQ { get; set; }
+        public Nullable<bool> PQ { get; set; }
+        public string XNMK { get; set; }
     }
 }

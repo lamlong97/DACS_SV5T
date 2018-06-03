@@ -1,0 +1,61 @@
+﻿@model DACS_SV5T.Models.NGUOIDUNG
+
+@{
+    ViewBag.Title = "Thông tin người dùng";
+    Layout = "~/Areas/admin/Views/Shared/_MyLayout.cshtml";
+}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-red" style="margin-top:20px">
+            <div class="panel-heading">
+                Thông tin @Session["TENND"]
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        <h4 style="color:limegreen">@ViewBag.success</h4>
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        @Html.HiddenFor(model => model.ID_ND)
+
+                        <div style="display:none">
+                            @{bool PQ = (Model.PQ.GetValueOrDefault(true) ? true : false);}
+                            @Html.CheckBoxFor(model => PQ, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.Label("Tên đăng nhập", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.TENDN, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                @Html.ValidationMessageFor(model => model.TENDN, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.Label("Họ và tên", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.TENND, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.TENND, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Lưu" class="btn btn-success" />
+                        </div>
+                    </div>
+                </div>
+            }
+
+                <div>
+                    @Html.ActionLink("Quay về", "Index","Default")
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

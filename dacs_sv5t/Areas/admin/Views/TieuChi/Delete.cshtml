@@ -1,0 +1,50 @@
+﻿@model DACS_SV5T.Models.LOAITIEUCHI
+
+@{
+    ViewBag.Title = "Xóa tiêu chí";
+    Layout = "~/Areas/admin/Views/Shared/_MyLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-red" style="margin-top:20px">
+            <div class="panel-heading">
+                Bạn có muốn xóa @Html.DisplayFor(model=>model.TEN_LTCHI)
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <h4 style="color:red">@ViewBag.error</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        Tên tiêu chí
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.TEN_LTCHI)
+                    </dd>
+
+                    <dt>
+                        Năm
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.NAM)
+                    </dd>
+
+                </dl>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-actions no-color">
+                        <input type="submit" value="Xóa" class="btn btn-danger" /> |
+                        @Html.ActionLink("Quay về", "Index")
+                    </div>
+                }
+            </div>
+
+        </div>
+    </div>
+</div>

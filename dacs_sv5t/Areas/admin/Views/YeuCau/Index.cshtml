@@ -1,0 +1,73 @@
+﻿@using DACS_SV5T.Help
+@model DACS_SV5T.Models.LOAITIEUCHI
+
+@{
+    ViewBag.Title = "Yêu cầu";
+    Layout = "~/Areas/admin/Views/Shared/_MyLayout.cshtml";
+}
+
+@section _Header
+{
+    <!-- DataTables CSS -->
+    <link href="/Areas/admin/Content/vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+    <!-- DataTables Responsive CSS -->
+    <link href="/Areas/admin/Content/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-red" style="margin-top:20px">
+            <div class="panel-heading">
+                Quản lý yêu cầu
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                @if (Convert.ToBoolean(Session["PQ"]) == true)
+                {
+                    <div class="bs-example" style="text-align:right; padding-bottom:10px;">
+                        <div class="btn-group">
+                            @Html.DropDownListFor(model => model.ID_LTCHI, (SelectList)ViewBag.YeuCau, " --- Tất cả tiêu chí --- ",
+                                                                         new { @class = "form-control", @id = "TieuChi" })
+                        </div>
+                        <div class="btn-group">
+                            @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-plus'></span> Thêm mới", "Create", "Create", "YeuCau", routeValues: new { }, htmlAttributes: new { @class = "btn btn-primary" })
+                        </div>
+                    </div>
+                }
+                    <div id="getYeuCau"></div>
+                </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+@section _Footer
+{
+    <!-- DataTables JavaScript -->
+    <script src="/Areas/admin/Content/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="/Areas/admin/Content/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="/Areas/admin/Content/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <script>
+        $(document).ready(function () {
+            function getYeuCau() {
+                var ID_LTCHI = $('#TieuChi').val();
+                $.ajax({
+                    url: '@Url.Action("getYeuCau", "YeuCau")',
+                    type: "GET",
+                    data: { id: ID_LTCHI},
+                    success: function (data) {
+                        $("#getYeuCau").html(data);
+                    },
+                    error: function (data) {
+                        alert("something went wrong.");
+                    }
+                });
+            }
+            getYeuCau();
+            $("#TieuChi").change(function () {
+                getYeuCau();
+            })
+        });
+    </script>
+}

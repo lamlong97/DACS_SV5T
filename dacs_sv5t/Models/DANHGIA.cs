@@ -14,12 +14,21 @@ namespace DACS_SV5T.Models
     
     public partial class DANHGIA
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public DANHGIA()
+        {
+            this.DUYET_TC = new HashSet<DUYET_TC>();
+        }
+    
         public int ID_CAP { get; set; }
         public int ID_CTTCHI { get; set; }
         public Nullable<double> TCHUAN_HOCTAP { get; set; }
         public Nullable<bool> TCHUAN_HD { get; set; }
+        public int ID_DANHGIA { get; set; }
     
         public virtual CAP CAP { get; set; }
         public virtual CT_TEUCHI CT_TEUCHI { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DUYET_TC> DUYET_TC { get; set; }
     }
 }

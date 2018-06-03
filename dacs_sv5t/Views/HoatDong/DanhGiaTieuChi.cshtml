@@ -1,0 +1,9 @@
+﻿@model IEnumerable<DACS_SV5T.Models.DANHGIA>
+@foreach (var item in Model)
+{
+<td width="20px" height="20px">
+    @item.TCHUAN_HOCTAP
+    @Html.Action("DuyetTC", "HoatDong", new { ID_DANHGIA = item.ID_DANHGIA })
+</td>
+
+}

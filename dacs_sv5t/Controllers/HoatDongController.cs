@@ -41,7 +41,51 @@ namespace DACS_SV5T.Controllers
                     select t;
             return View(v.ToList());
         }
-        
+        public ActionResult Cap()
+        {
+            var Cap = _db.CAPs;
+            var v = from t in Cap
+                    where t.TEN_CAP != "Chưa đạt"
+                    select t;
+            return View(v.ToList());
+        }
+        public ActionResult DanhGiaTieuChi(int? ID_CTTCHI)
+        {
+            int ID_SV = Convert.ToInt32(Session["ID_SV"]);
+            //var dANHGIAs = _db.DANHGIAs.Include(d => d.CAP).Include(d => d.CT_TEUCHI);
+            var DanhGia = _db.DANHGIAs;
+            var v = from a in DanhGia
+                    where a.ID_CTTCHI == ID_CTTCHI
+                    select a;
+            /*
+            var MinhChung = _db.MINHCHUNGs;
+            var DanhGia = _db.DANHGIAs;
+            //var TieuChi = _db.CT_TEUCHI;
+
+            var v = from a in MinhChung
+                    //join b in TieuChi on a.ID_CTTCHI equals b.ID_CTTCHI
+                    join c in DanhGia on a.ID_CTTCHI equals c.ID_CTTCHI
+                    where a.ID_SV == ID_SV && c.ID_CTTCHI == ID_CTTCHI
+                    select a ;*/
+
+            return View(v.ToList());
+        }
+
+        public ActionResult DuyetTC(int? ID_DANHGIA)
+        {
+            int ID_SV = Convert.ToInt32(Session["ID_SV"]);
+            var DTC = _db.DUYET_TC;
+            var DANHGIA = _db.DANHGIAs;
+            var CAP = _db.CAPs;
+
+            var v = from a in DTC
+                    join b in DANHGIA on a.ID_DANHGIA equals b.ID_DANHGIA
+                    join c in CAP on b.ID_CAP equals c.ID_CAP
+                    where a.ID_SV == ID_SV && b.ID_DANHGIA == ID_DANHGIA
+                    select a;
+            return View(v.ToList());
+        }
+
         public ActionResult HinhTieuChi(int? ID_CTTCHI)
         {
             var ID_SV = Session["ID_SV"];
@@ -84,6 +128,7 @@ namespace DACS_SV5T.Controllers
             ViewBag.ID_SV = new SelectList(_db.SINHVIENs, "ID_SV", "TEN_SV", sINHVIEN.ID_SV);
             return View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ValidateInput(false)]
@@ -118,7 +163,7 @@ namespace DACS_SV5T.Controllers
                                 _db.MINHCHUNGs.Add(mINHCHUNG);
                                 _db.SaveChanges();
                             }
-                            return RedirectToAction("LoaiTieuChi");
+                            return RedirectToAction("LoaiTieuChi","HoatDong");
                         }
 
                         path = Path.Combine(Server.MapPath("~/Content/upload/minhchung"), filename);

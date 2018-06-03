@@ -1,0 +1,59 @@
+﻿@model DACS_SV5T.Models.DANHGIA
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_HoatDongLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DANHGIA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TCHUAN_HOCTAP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TCHUAN_HOCTAP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TCHUAN_HD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TCHUAN_HD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DUYET)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DUYET)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAP.TEN_CAP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAP.TEN_CAP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CT_TEUCHI.NOIDUNG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CT_TEUCHI.NOIDUNG)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

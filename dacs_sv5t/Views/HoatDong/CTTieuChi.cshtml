@@ -1,65 +1,83 @@
-﻿@model List<DACS_SV5T.Models.CT_TEUCHI>
+﻿@using DACS_SV5T.Help
+@model List<DACS_SV5T.Models.CT_TEUCHI>
 <style>
-
     th, td {
-        padding: 15px;
+        text-align: center;
+        vertical-align: middle;
     }
 
-        td p {
-            height: 50px;
-            overflow-y: hidden;
-            text-overflow: ellipsis;
-        }
-
-    table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
+    th {
+        background-color: whitesmoke;
     }
 
-    caption {
-        margin-bottom: 10px
+    td p {
+        height: 50px;
+        overflow-y: hidden;
+        text-overflow: ellipsis;
     }
 
-    
+    img {
+        width: 10%;
+        height: 80%;
+    }
 </style>
-<table>
-    <caption>Hãy nộp một trong các yêu cầu sau nhé !!!</caption>
+@section _Header
+{
+    <!-- DataTables CSS -->
+    <link href="/Areas/admin/Content/vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+    <!-- DataTables Responsive CSS -->
+    <link href="/Areas/admin/Content/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+}
+<table class="table-bordered table-hover" id="dataTables-example" style="width:100%;">
+    <thead>
+        <tr>
+            <th width="60%">
+                Nội dung
+            </th>
+            @Html.Action("Cap","HoatDong")
+            <th width="50px">
+                Hình ảnh
+            </th>
+            <th width="50px">
 
+            </th>
+        </tr>
+    </thead>
     <tbody>
+
         @foreach (var item in Model)
         {
-            <tr>
-                <td width="80%">
-                    @Html.DisplayFor(modelItem => item.NOIDUNG)
-                </td>
-                <td width="15%" style="text-align:center; vertical-align:middle">
-                    @Html.Action("HinhTieuChi", "HoatDong", new { ID_CTTCHI = item.ID_CTTCHI})
-                </td>
-                <td width="20%">
+        <tr>
+            <td style="max-width:70%" width="50%" title="@item.NOIDUNG">
+                @Html.DisplayFor(modelItem => item.NOIDUNG)
+            </td>
+            @Html.Action("DanhGiaTieuChi", "HoatDong", new { ID_CTTCHI = item.ID_CTTCHI })
 
-
-                    @*Html.ActionLink("QuanLyMinhChung", "QuanLyMinhChung",new { ID_CTTCHI = @item.ID_CTTCHI})*@
-
-                    <a class="btn btn-success" href="@Url.Action("QuanLyMinhChung","HoatDong",new { ID_CTTCHI = @item.ID_CTTCHI})">Minh chứng</a>
-
-                    @* Phần POPUP chưa xử lý được --- KHÔNG ĐƯỢC XÓA !!!!!!!!!!!!!!!!!
-        <a class="btn btn-success" data-toggle="modal" data-target=".@item.ID_CTTCHI-bootstrapmodal">Minh chứng</a>
-        <div class="modal fade @item.ID_CTTCHI-bootstrapmodal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button data-dismiss="modal" class="close"><span>&times;</span></button>
-                        <div class="modal-title" style="text-align:center"><h4>Quản lý minh chứng-@item.ID_CTTCHI</h4></div>
-                    </div>
-                    <div class="modal-body">
-                        @Html.Action("QuanLyMinhChung","HoatDong", new { ID_CTTCHI = @item.ID_CTTCHI })
-                    </div>
-                </div>
-            </div>
-        </div>*@
-                </td>
-            </tr>
+            <td width="50px" height="50px" style="text-align:center; vertical-align:middle">
+                @Html.Action("HinhTieuChi", "HoatDong", new { ID_CTTCHI = item.ID_CTTCHI })
+            </td>
+            <td width="20px" height="20px">
+                @*<a class="btn btn-success" href="@Url.Action("QuanLyMinhChung","HoatDong",new { ID_CTTCHI = @item.ID_CTTCHI})">Minh chứng</a>*@
+                @Html.NoEncodeActionLink("<span class='glyphicon  glyphicon-upload'></span>", "Upload minh chứng", "QuanLyMinhChung", "HoatDong", routeValues: new { ID_CTTCHI = @item.ID_CTTCHI }, htmlAttributes: new { @class = "btn btn-primary" })
+            </td>
+        </tr>
         }
     </tbody>
 
 </table>
+@section _Footer
+{
+    <!-- DataTables JavaScript -->
+    <script src="/Areas/admin/Content/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="/Areas/admin/Content/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="/Areas/admin/Content/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+        $(document).ready(function () {
+            $('#dataTables-example').DataTable({
+                responsive: true
+            });
+        });
+    </script>
+
+}

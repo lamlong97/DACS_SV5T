@@ -16,8 +16,6 @@ namespace DACS_SV5T.Models
     {
         public int ID_SV { get; set; }
         public int ID_CTTCHI { get; set; }
-        public Nullable<double> TCHUAN_HOCTAP { get; set; }
-        public Nullable<bool> TCHUAN_HD { get; set; }
         public string URL { get; set; }
         public Nullable<bool> DUYET { get; set; }
         public string MOTA { get; set; }

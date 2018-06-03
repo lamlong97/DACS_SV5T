@@ -174,8 +174,11 @@
     <Compile Include="Areas\admin\Controllers\ChiTietTieuChiController.cs" />
     <Compile Include="Areas\admin\Controllers\DefaultController.cs" />
     <Compile Include="Areas\admin\Controllers\HoatDongAdminController.cs" />
+    <Compile Include="Areas\admin\Controllers\NguoiDungController.cs" />
     <Compile Include="Areas\admin\Controllers\SinhVienController.cs" />
+    <Compile Include="Areas\admin\Controllers\TieuChiController.cs" />
     <Compile Include="Areas\admin\Controllers\TinTucController.cs" />
+    <Compile Include="Areas\admin\Controllers\YeuCauController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HoatDongController.cs" />
     <Compile Include="Controllers\SinhVienController.cs" />
@@ -193,6 +196,9 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DANHGIA.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DUYET_TC.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\KHOAVIEN.cs">
@@ -1461,6 +1467,7 @@
     <Content Include="Areas\admin\Content\html\vendor\morrisjs\morris.min.js" />
     <Content Include="Areas\admin\Content\html\vendor\raphael\raphael.js" />
     <Content Include="Areas\admin\Content\html\vendor\raphael\raphael.min.js" />
+    <Content Include="Areas\admin\Content\js\imagezoom.js" />
     <Content Include="Areas\admin\Content\js\sb-admin-2.js" />
     <Content Include="Areas\admin\Content\vendor\bootstrap-social\bootstrap-social.css" />
     <Content Include="Areas\admin\Content\vendor\bootstrap\css\bootstrap.css" />
@@ -1557,6 +1564,7 @@
     <Content Include="Content\css\bootstrap-theme.min.css" />
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\buttonHover.css" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\html\login\css\main.css" />
@@ -1602,6 +1610,10 @@
     <Content Include="Content\html\login\vendor\select2\select2.min.css" />
     <Content Include="Content\html\login\vendor\select2\select2.min.js" />
     <Content Include="Content\img\backtotop.png" />
+    <Content Include="Content\img\control\eyes_icon.ico" />
+    <Content Include="Content\img\control\no_icon.png" />
+    <Content Include="Content\img\control\pending_icon.png" />
+    <Content Include="Content\img\control\yes_icon.png" />
     <Content Include="Content\img\header_logo.png" />
     <Content Include="Content\img\logo-dtn.png" />
     <Content Include="Content\img\logo-hsv.png" />
@@ -1845,7 +1857,25 @@
     <Content Include="Areas\admin\Views\HoatDongAdmin\TieuChi.cshtml" />
     <Content Include="Areas\admin\Views\HoatDongAdmin\CTTieuChi.cshtml" />
     <Content Include="Areas\admin\Views\HoatDongAdmin\HinhTieuChi.cshtml" />
+    <Content Include="Areas\admin\Views\NguoiDung\DangNhap.cshtml" />
+    <Content Include="Areas\admin\Views\NguoiDung\Index.cshtml" />
+    <Content Include="Areas\admin\Views\NguoiDung\DangKy.cshtml" />
+    <Content Include="Areas\admin\Views\NguoiDung\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\NguoiDung\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\NguoiDung\ThongTinNguoiDung.cshtml" />
+    <Content Include="Areas\admin\Views\YeuCau\Create.cshtml" />
+    <Content Include="Areas\admin\Views\YeuCau\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\YeuCau\Details.cshtml" />
+    <Content Include="Areas\admin\Views\YeuCau\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\YeuCau\Index.cshtml" />
+    <Content Include="Areas\admin\Views\TieuChi\Create.cshtml" />
+    <Content Include="Areas\admin\Views\TieuChi\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\TieuChi\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\TieuChi\Index.cshtml" />
+    <Content Include="Areas\admin\Views\YeuCau\getYeuCau.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\Chart.js" />
+    <Content Include="Scripts\Chart.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery.signalR-2.2.2.js" />
@@ -1881,6 +1911,20 @@
     <Content Include="Views\HoatDong\TieuChi.cshtml" />
     <Content Include="Views\HoatDong\HinhTieuChi.cshtml" />
     <Content Include="Views\HoatDong\QuanLyMinhChung.cshtml" />
+    <Content Include="Views\Shared\_HoatDongLayout.cshtml" />
+    <Content Include="Views\HoatDong\DanhGiaTieuChi.cshtml" />
+    <Content Include="Views\HoatDong\Cap.cshtml" />
+    <Content Include="Views\DANHGIAs\Create.cshtml" />
+    <Content Include="Views\DANHGIAs\Delete.cshtml" />
+    <Content Include="Views\DANHGIAs\Details.cshtml" />
+    <Content Include="Views\DANHGIAs\Edit.cshtml" />
+    <Content Include="Views\DANHGIAs\Index.cshtml" />
+    <Content Include="Views\DUYET_TC\Create.cshtml" />
+    <Content Include="Views\DUYET_TC\Delete.cshtml" />
+    <Content Include="Views\DUYET_TC\Details.cshtml" />
+    <Content Include="Views\DUYET_TC\Edit.cshtml" />
+    <Content Include="Views\DUYET_TC\Index.cshtml" />
+    <Content Include="Views\HoatDong\DuyetTC.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

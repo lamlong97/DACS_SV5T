@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using System.Web.Routing;
 
 namespace DACS_SV5T.Areas.admin
 {
@@ -14,6 +15,14 @@ namespace DACS_SV5T.Areas.admin
 
         public override void RegisterArea(AreaRegistrationContext context) 
         {
+            context.MapRoute("DangNhapAdmin", "{type}",
+                new { controller = "NguoiDung", action = "DangNhap" },
+                new RouteValueDictionary
+                {
+                    {"type","dang-nhap-admin" }
+                },
+                namespaces: new[] { "DACS_SV5T.Controllers" });
+
             context.MapRoute(
                 "admin_default",
                 "admin/{controller}/{action}/{id}",

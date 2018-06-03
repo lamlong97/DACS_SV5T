@@ -1,0 +1,35 @@
+﻿@model DACS_SV5T.Models.TIEUCHI
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/admin/Views/Shared/_MyLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TIEUCHI</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TEN_TCHI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TEN_TCHI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LOAITIEUCHI.TEN_LTCHI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOAITIEUCHI.TEN_LTCHI)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_TCHI }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
