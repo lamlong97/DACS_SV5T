@@ -25,6 +25,9 @@
         <AssociationConnector Association="DACS_SV5TModel.FK__TIEUCHI__ID_LTCH__22AA2996" ManuallyRouted="false" />
         <AssociationConnector Association="DACS_SV5TModel.FK__MINHCHUNG__ID_SV__1FCDBCEB" ManuallyRouted="false" />
         <AssociationConnector Association="DACS_SV5TModel.FK_SINHVIEN_CAP" />
+        <EntityTypeShape EntityType="DACS_SV5TModel.DUYET_TC" Width="1.5" PointX="10.5" PointY="6.625" />
+        <AssociationConnector Association="DACS_SV5TModel.FK_DUYET_TC_DANHGIA" />
+        <AssociationConnector Association="DACS_SV5TModel.FK_DUYET_TC_SINHVIEN" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

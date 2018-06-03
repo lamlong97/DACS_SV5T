@@ -1,0 +1,46 @@
+﻿@model IEnumerable<DACS_SV5T.Models.DUYET_TC>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_HoatDongLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DUYET)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DANHGIA.CT_TEUCHI.NOIDUNG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SINHVIEN.TEN_SV)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DUYET)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DANHGIA.CT_TEUCHI.NOIDUNG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SINHVIEN.TEN_SV)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

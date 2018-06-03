@@ -1,0 +1,15 @@
+﻿@model IEnumerable<DACS_SV5T.Models.DUYET_TC>
+@foreach (var item in Model)
+{
+    if (item.DUYET == true)
+    {
+        <img src="~/Content/img/control/yes_icon.png" alt="Đã duyệt" title="Đã duyệt" />
+    }
+    else
+    {
+        if (item.DUYET == false)
+        {
+            <img src="~/Content/img/control/no_icon.png" alt="Không hợp lệ" title="Không hợp lệ" />
+        }
+    }
+}

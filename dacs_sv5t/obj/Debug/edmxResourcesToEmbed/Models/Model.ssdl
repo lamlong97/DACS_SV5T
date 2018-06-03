@@ -18,13 +18,22 @@
   </EntityType>
   <EntityType Name="DANHGIA">
     <Key>
-      <PropertyRef Name="ID_CAP" />
-      <PropertyRef Name="ID_CTTCHI" />
+      <PropertyRef Name="ID_DANHGIA" />
     </Key>
     <Property Name="ID_CAP" Type="int" Nullable="false" />
     <Property Name="ID_CTTCHI" Type="int" Nullable="false" />
     <Property Name="TCHUAN_HOCTAP" Type="float" />
     <Property Name="TCHUAN_HD" Type="bit" />
+    <Property Name="ID_DANHGIA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DUYET_TC">
+    <Key>
+      <PropertyRef Name="ID_SV" />
+      <PropertyRef Name="ID_DANHGIA" />
+    </Key>
+    <Property Name="ID_SV" Type="int" Nullable="false" />
+    <Property Name="ID_DANHGIA" Type="int" Nullable="false" />
+    <Property Name="DUYET" Type="bit" />
   </EntityType>
   <EntityType Name="KHOAVIEN">
     <Key>
@@ -206,6 +215,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_DUYET_TC_DANHGIA">
+    <End Role="DANHGIA" Type="Self.DANHGIA" Multiplicity="1" />
+    <End Role="DUYET_TC" Type="Self.DUYET_TC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DANHGIA">
+        <PropertyRef Name="ID_DANHGIA" />
+      </Principal>
+      <Dependent Role="DUYET_TC">
+        <PropertyRef Name="ID_DANHGIA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DUYET_TC_SINHVIEN">
+    <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="1" />
+    <End Role="DUYET_TC" Type="Self.DUYET_TC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SINHVIEN">
+        <PropertyRef Name="ID_SV" />
+      </Principal>
+      <Dependent Role="DUYET_TC">
+        <PropertyRef Name="ID_SV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_SINHVIEN_CAP">
     <End Role="CAP" Type="Self.CAP" Multiplicity="0..1" />
     <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="*" />
@@ -222,6 +255,7 @@
     <EntitySet Name="CAP" EntityType="Self.CAP" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CT_TEUCHI" EntityType="Self.CT_TEUCHI" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DANHGIA" EntityType="Self.DANHGIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DUYET_TC" EntityType="Self.DUYET_TC" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="KHOAVIEN" EntityType="Self.KHOAVIEN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LOAITIEUCHI" EntityType="Self.LOAITIEUCHI" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MENU" EntityType="Self.MENU" Schema="dbo" store:Type="Tables" />
@@ -258,6 +292,14 @@
     <AssociationSet Name="FK__TIEUCHI__ID_LTCH__22AA2996" Association="Self.FK__TIEUCHI__ID_LTCH__22AA2996">
       <End Role="LOAITIEUCHI" EntitySet="LOAITIEUCHI" />
       <End Role="TIEUCHI" EntitySet="TIEUCHI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DUYET_TC_DANHGIA" Association="Self.FK_DUYET_TC_DANHGIA">
+      <End Role="DANHGIA" EntitySet="DANHGIA" />
+      <End Role="DUYET_TC" EntitySet="DUYET_TC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DUYET_TC_SINHVIEN" Association="Self.FK_DUYET_TC_SINHVIEN">
+      <End Role="SINHVIEN" EntitySet="SINHVIEN" />
+      <End Role="DUYET_TC" EntitySet="DUYET_TC" />
     </AssociationSet>
     <AssociationSet Name="FK_SINHVIEN_CAP" Association="Self.FK_SINHVIEN_CAP">
       <End Role="CAP" EntitySet="CAP" />

@@ -49,14 +49,14 @@ namespace DACS_SV5T.Controllers
                     select t;
             return View(v.ToList());
         }
-        public ActionResult DuyetTieuChi(int? ID_CTTCHI)
+        public ActionResult DanhGiaTieuChi(int? ID_CTTCHI)
         {
             int ID_SV = Convert.ToInt32(Session["ID_SV"]);
             //var dANHGIAs = _db.DANHGIAs.Include(d => d.CAP).Include(d => d.CT_TEUCHI);
             var DanhGia = _db.DANHGIAs;
-            var v = from t in DanhGia
-                    where t.ID_CTTCHI == ID_CTTCHI
-                    select t;
+            var v = from a in DanhGia
+                    where a.ID_CTTCHI == ID_CTTCHI
+                    select a;
             /*
             var MinhChung = _db.MINHCHUNGs;
             var DanhGia = _db.DANHGIAs;
@@ -68,6 +68,21 @@ namespace DACS_SV5T.Controllers
                     where a.ID_SV == ID_SV && c.ID_CTTCHI == ID_CTTCHI
                     select a ;*/
 
+            return View(v.ToList());
+        }
+
+        public ActionResult DuyetTC(int? ID_DANHGIA)
+        {
+            int ID_SV = Convert.ToInt32(Session["ID_SV"]);
+            var DTC = _db.DUYET_TC;
+            var DANHGIA = _db.DANHGIAs;
+            var CAP = _db.CAPs;
+
+            var v = from a in DTC
+                    join b in DANHGIA on a.ID_DANHGIA equals b.ID_DANHGIA
+                    join c in CAP on b.ID_CAP equals c.ID_CAP
+                    where a.ID_SV == ID_SV && b.ID_DANHGIA == ID_DANHGIA
+                    select a;
             return View(v.ToList());
         }
 

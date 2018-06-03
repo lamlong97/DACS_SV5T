@@ -37,5 +37,6 @@ namespace DACS_SV5T.Models
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TIEUCHI> TIEUCHIs { get; set; }
         public virtual DbSet<TINTUC> TINTUCs { get; set; }
+        public virtual DbSet<DUYET_TC> DUYET_TC { get; set; }
     }
 }
