@@ -73,7 +73,62 @@ namespace DACS_SV5T
                     {"type","trang-chu" }
                },
                namespaces: new[] { "DACS_SV5T.Controllers" });
-
+            //-------------
+            //----------------
+            routes.MapRoute("News", "{type}",
+            new { controller = "Blog", action = "Index" },
+          new RouteValueDictionary
+          {
+                { "type", "tin-tuc" }
+          },
+          namespaces: new[] { "DACS_SV5T.Controllers" });
+            //---------------
+            //-------------
+            routes.MapRoute("DetailNews", "{type}/{meta}-{id}",
+            new { controller = "Blog", action = "DetailBlog", id = UrlParameter.Optional },
+            new RouteValueDictionary
+            {
+                { "type", "chi-tiet-tin-tuc" }
+            },
+            namespaces: new[] { "DACS_SV5T.Controllers" });
+            //-------------
+            //----------------
+            routes.MapRoute("VB", "{type}",
+            new { controller = "VanBan", action = "Index" },
+            new RouteValueDictionary
+            {
+                { "type", "van-ban" }
+            },
+            namespaces: new[] { "DACS_SV5T.Controllers" });
+            //---------------
+            //-------------
+            routes.MapRoute("DetailVanBan", "{type}/{meta}-{id}",
+            new { controller = "VanBan", action = "DetailVanBan", id = UrlParameter.Optional },
+            new RouteValueDictionary
+            {
+                { "type", "chi-tiet-van-ban" }
+            },
+            namespaces: new[] { "DACS_SV5T.Controllers" });
+            //-------------
+            //-----------------------
+            routes.MapRoute("Contactc", "{type}",
+           new { controller = "Contact", action = "Index" },
+           new RouteValueDictionary
+           {
+                { "type", "lien-he" }
+           },
+            namespaces: new[] { "DACS_SV5T.Controllers" });
+            //-------------
+            //-----------------------
+            routes.MapRoute("AboutUs", "{type}",
+          new { controller = "GioiThieu", action = "Index" },
+          new RouteValueDictionary
+          {
+                { "type", "gioi-thieu" }
+          },
+          namespaces: new[] { "DACS_SV5T.Controllers" });
+            //-------------
+            //-----------------------
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

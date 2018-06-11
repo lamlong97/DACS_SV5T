@@ -102,7 +102,31 @@
     <script>
         $(document).ready(function () {
             $('#dataTables-example').DataTable({
-                responsive: true
+                responsive: true,
+                "language": {
+                    "decimal": "",
+                    "emptyTable": "Không có dữ liệu trong bảng",
+                    "info": "Hiển thị _START_ tới _END_ ",
+                    "infoEmpty": "Hiển thị 0 đến 0 của 0 danh sách",
+                    "infoFiltered": "(Lọc từ _MAX_ danh sách)",
+                    "infoPostFix": "",
+                    "thousands": ",",
+                    "lengthMenu": "Hiển _MENU_ danh sách",
+                    "loadingRecords": "Đang tải...",
+                    "processing": "Đang xử lý...",
+                    "search": "Tìm kiếm:",
+                    "zeroRecords": "Không tìm thấy",
+                    "paginate": {
+                        "first": "Trang đầu",
+                        "last": "Cuối cùng",
+                        "next": "Trang sau",
+                        "previous": "Trang trước"
+                    },
+                    "aria": {
+                        "sortAscending": ": activate to sort column ascending",
+                        "sortDescending": ": activate to sort column descending"
+                    }
+                }
             });
         });
     </script>

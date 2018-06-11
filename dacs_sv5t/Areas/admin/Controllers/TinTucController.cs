@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -46,7 +47,7 @@ namespace DACS_SV5T.Areas.admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID_TT,TITLE,DETAIL,DATEBEGIN,META,ORDER,LINK,HIDE")] TINTUC tINTUC)
+        public ActionResult Create([Bind(Include = "ID_TT,TITLE,DETAIL,DATEBEGIN,META,ORDER,LINK,HIDE,IMG,MOTA")] TINTUC tINTUC)
         {
             if (ModelState.IsValid)
             {
@@ -78,17 +79,39 @@ namespace DACS_SV5T.Areas.admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID_TT,TITLE,DETAIL,DATEBEGIN,META,ORDER,LINK,HIDE")] TINTUC tINTUC)
+        [ValidateInput(false)]
+        public ActionResult Edit([Bind(Include = "ID_TT,TITLE,DETAIL,DATEBEGIN,META,ORDER,LINK,HIDE,IMG,MOTA")] TINTUC tINTUC, HttpPostedFileBase img)
         {
+            var path = "";
+            var filename = "";
+            TINTUC temp = getbyID(tINTUC.ID_TT);
             if (ModelState.IsValid)
             {
-                db.Entry(tINTUC).State = EntityState.Modified;
+                if (img != null)
+                {
+                    filename = DateTime.Now.ToString("dd-MM-yy-hh-mm-ss") + img.FileName;
+                    path = Path.Combine(Server.MapPath("~/Content/img/upload/tintuc"), filename);
+                    img.SaveAs(path);
+                    temp.IMG = filename;
+                }
+                temp.DATEBEGIN = tINTUC.DATEBEGIN;
+                temp.DETAIL = tINTUC.DETAIL;
+                temp.HIDE = tINTUC.HIDE;
+                temp.LINK = tINTUC.LINK;
+                temp.META = tINTUC.META;
+                temp.MOTA = tINTUC.MOTA;
+                temp.ORDER = tINTUC.ORDER;
+                temp.TITLE = tINTUC.TITLE;
+                db.Entry(temp).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(tINTUC);
         }
-
+        public TINTUC getbyID(long id)
+        {
+            return db.TINTUCs.Where(x => x.ID_TT == id).FirstOrDefault();
+        }
         // GET: admin/TinTuc/Delete/5
         public ActionResult Delete(int? id)
         {

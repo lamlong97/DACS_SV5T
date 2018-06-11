@@ -173,16 +173,24 @@
     <Compile Include="Areas\admin\adminAreaRegistration.cs" />
     <Compile Include="Areas\admin\Controllers\ChiTietTieuChiController.cs" />
     <Compile Include="Areas\admin\Controllers\DefaultController.cs" />
+    <Compile Include="Areas\admin\Controllers\GioiThieuController.cs" />
     <Compile Include="Areas\admin\Controllers\HoatDongAdminController.cs" />
     <Compile Include="Areas\admin\Controllers\NguoiDungController.cs" />
     <Compile Include="Areas\admin\Controllers\SinhVienController.cs" />
+    <Compile Include="Areas\admin\Controllers\SliderController.cs" />
     <Compile Include="Areas\admin\Controllers\TieuChiController.cs" />
     <Compile Include="Areas\admin\Controllers\TinTucController.cs" />
+    <Compile Include="Areas\admin\Controllers\VanBanController.cs" />
     <Compile Include="Areas\admin\Controllers\YeuCauController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\GioiThieuController.cs" />
     <Compile Include="Controllers\HoatDongController.cs" />
     <Compile Include="Controllers\SinhVienController.cs" />
+    <Compile Include="Controllers\SkinController.cs" />
     <Compile Include="Controllers\TempController.cs" />
+    <Compile Include="Controllers\VanBanController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -201,7 +209,13 @@
     <Compile Include="Models\DUYET_TC.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\GIOITHIEU.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\KHOAVIEN.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LICH_HOATDONG.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\LOAITIEUCHI.cs">
@@ -234,13 +248,16 @@
     <Compile Include="Models\SINHVIEN.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\sysdiagram.cs">
+    <Compile Include="Models\Slider.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TIEUCHI.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TINTUC.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VANBAN.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1610,11 +1627,13 @@
     <Content Include="Content\html\login\vendor\select2\select2.min.css" />
     <Content Include="Content\html\login\vendor\select2\select2.min.js" />
     <Content Include="Content\img\backtotop.png" />
+    <Content Include="Content\img\calendar-icon.png" />
+    <Content Include="Content\img\Calendar-icon1.png" />
     <Content Include="Content\img\control\eyes_icon.ico" />
     <Content Include="Content\img\control\no_icon.png" />
     <Content Include="Content\img\control\pending_icon.png" />
     <Content Include="Content\img\control\yes_icon.png" />
-    <Content Include="Content\img\header_logo.png" />
+    <Content Include="Content\img\HUTECH.png" />
     <Content Include="Content\img\logo-dtn.png" />
     <Content Include="Content\img\logo-hsv.png" />
     <Content Include="Content\img\logo-hutech.png" />
@@ -1624,7 +1643,22 @@
     <Content Include="Content\img\slider\banner_2.png" />
     <Content Include="Content\img\slider\banner_3.png" />
     <Content Include="Content\img\social-logo.png" />
+    <Content Include="Content\img\sv5t.jpg" />
     <Content Include="Content\img\tam-guong-hcm.png" />
+    <Content Include="Content\img\upload\tintuc\1.jpg" />
+    <Content Include="Content\img\upload\tintuc\2.jpg" />
+    <Content Include="Content\img\upload\tintuc\3.jpg" />
+    <Content Include="Content\img\upload\tintuc\4.jpg" />
+    <Content Include="Content\img\upload\tintuc\5.jpg" />
+    <Content Include="Content\img\upload\tintuc\6.jpg" />
+    <Content Include="Content\img\upload\tintuc\7.jpg" />
+    <Content Include="Content\img\upload\vanban\1.jpg" />
+    <Content Include="Content\img\upload\vanban\2.jpg" />
+    <Content Include="Content\img\upload\vanban\3.jpg" />
+    <Content Include="Content\img\upload\vanban\4.jpg" />
+    <Content Include="Content\img\upload\vanban\5.jpg" />
+    <Content Include="Content\img\upload\vanban\6.jpg" />
+    <Content Include="Content\img\upload\vanban\7.jpg" />
     <Content Include="Content\js\backtotop.js" />
     <Content Include="Content\js\bootstrap.js" />
     <Content Include="Content\js\bootstrap.min.js" />
@@ -1632,16 +1666,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\Model.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model.edmx</DependentUpon>
-      <LastGenOutput>Model.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\Model.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model.edmx</DependentUpon>
-      <LastGenOutput>Model.cs</LastGenOutput>
-    </Content>
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -1705,12 +1729,15 @@
     <Content Include="Content\html\login\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
     <Content Include="Content\html\login\fonts\poppins\Poppins-Thin.ttf" />
     <Content Include="Content\html\login\fonts\poppins\Poppins-ThinItalic.ttf" />
-    <EntityDeploy Include="Models\Model.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\Model.edmx.diagram">
+    <Content Include="Models\Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -1841,11 +1868,6 @@
     <Content Include="Areas\admin\Views\ChiTietTieuChi\Details.cshtml" />
     <Content Include="Areas\admin\Views\ChiTietTieuChi\Edit.cshtml" />
     <Content Include="Areas\admin\Views\ChiTietTieuChi\Index.cshtml" />
-    <Content Include="Areas\admin\Views\TinTuc\Create.cshtml" />
-    <Content Include="Areas\admin\Views\TinTuc\Delete.cshtml" />
-    <Content Include="Areas\admin\Views\TinTuc\Details.cshtml" />
-    <Content Include="Areas\admin\Views\TinTuc\Edit.cshtml" />
-    <Content Include="Areas\admin\Views\TinTuc\Index.cshtml" />
     <Content Include="Areas\admin\Views\SinhVien\Create.cshtml" />
     <Content Include="Areas\admin\Views\SinhVien\Delete.cshtml" />
     <Content Include="Areas\admin\Views\SinhVien\Details.cshtml" />
@@ -1873,6 +1895,33 @@
     <Content Include="Areas\admin\Views\TieuChi\Edit.cshtml" />
     <Content Include="Areas\admin\Views\TieuChi\Index.cshtml" />
     <Content Include="Areas\admin\Views\YeuCau\getYeuCau.cshtml" />
+    <EntityDeploy Include="Models\Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Content>
+    <Content Include="Areas\admin\Views\VanBan\Create.cshtml" />
+    <Content Include="Areas\admin\Views\VanBan\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\VanBan\Details.cshtml" />
+    <Content Include="Areas\admin\Views\VanBan\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\VanBan\Index.cshtml" />
+    <Content Include="Areas\admin\Views\TinTuc\Create.cshtml" />
+    <Content Include="Areas\admin\Views\TinTuc\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\TinTuc\Details.cshtml" />
+    <Content Include="Areas\admin\Views\TinTuc\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\TinTuc\Index.cshtml" />
+    <Content Include="Areas\admin\Views\GioiThieu\Create.cshtml" />
+    <Content Include="Areas\admin\Views\GioiThieu\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\GioiThieu\Details.cshtml" />
+    <Content Include="Areas\admin\Views\GioiThieu\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\GioiThieu\Index.cshtml" />
+    <Content Include="Areas\admin\Views\Slider\Create.cshtml" />
+    <Content Include="Areas\admin\Views\Slider\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\Slider\Details.cshtml" />
+    <Content Include="Areas\admin\Views\Slider\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\Slider\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Chart.js" />
     <Content Include="Scripts\Chart.min.js" />
@@ -1925,6 +1974,16 @@
     <Content Include="Views\DUYET_TC\Edit.cshtml" />
     <Content Include="Views\DUYET_TC\Index.cshtml" />
     <Content Include="Views\HoatDong\DuyetTC.cshtml" />
+    <Content Include="Views\Temp\getVANBAN.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Blog\DetailBlog.cshtml" />
+    <Content Include="Views\VanBan\Index.cshtml" />
+    <Content Include="Views\VanBan\DetailVanBan.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Skin\getGioiThieu.cshtml" />
+    <Content Include="Views\GioiThieu\Index.cshtml" />
+    <Content Include="Views\Temp\getSUKIEN.cshtml" />
+    <Content Include="Views\Default\getSlider.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

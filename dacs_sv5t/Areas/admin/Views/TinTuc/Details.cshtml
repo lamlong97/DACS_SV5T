@@ -5,71 +5,91 @@
     Layout = "~/Areas/admin/Views/Shared/_MyLayout.cshtml";
 }
 
-<h2>Details</h2>
+<div style="height:15px"></div>
+<div class="panel panel-red">
+    <div class="panel-heading">Xem Bài viết</div>
+    <div class="panel-body">
+        <div>
+            <dl class="dl-horizontal">
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Tiêu đề: ")
+                </dt>
 
-<div>
-    <h4>TINTUC</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.TITLE)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.TITLE)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.TITLE)
-        </dd>
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Mô tả: ")
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.DETAIL)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.MOTA)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.DETAIL)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.DATEBEGIN)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.DATEBEGIN)
-        </dd>
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Ngày đăng: ")
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.META)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.DATEBEGIN)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.META)
-        </dd>
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Meta: ")
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ORDER)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.META)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.ORDER)
-        </dd>
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Sắp xếp: ")
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LINK)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.ORDER)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.LINK)
-        </dd>
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Liên kết: ")
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.HIDE)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.LINK)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.HIDE)
-        </dd>
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Trạng thái: ")
+                </dt>
 
-    </dl>
+                <dd>
+                    @{ var chk = (Model.HIDE == 0) ? "Hiện" : "Ẩn";}
+                    @Html.DisplayFor(model => chk)
+                </dd>
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Hình ảnh: ")
+                </dt>
+
+                <dd>
+                    <img src="~/Content/img/upload/vanban/@Html.DisplayFor(model => model.IMG)" width="150px" />
+                </dd>
+                <dt style="padding-bottom:100px">
+                    @Html.Raw("Nội dung: ")
+                </dt>
+
+                <dd>
+                    @Html.Raw(Model.DETAIL)
+                </dd>
+
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Sửa", "Edit", new { id = Model.ID_TT }, new { @class = "btn btn-success" }) |
+            @Html.ActionLink("Quay về", "Index", "Index", new { @class = "btn btn-danger" })
+        </p>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_TT }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

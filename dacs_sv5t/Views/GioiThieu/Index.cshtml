@@ -1,0 +1,9 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<div class="row" style="margin-right: 10px; margin-left:10px">
+       @{ Html.RenderAction("getGioiThieu", "Skin");}
+</div>

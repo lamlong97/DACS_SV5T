@@ -28,15 +28,18 @@ namespace DACS_SV5T.Models
         public virtual DbSet<CAP> CAPs { get; set; }
         public virtual DbSet<CT_TEUCHI> CT_TEUCHI { get; set; }
         public virtual DbSet<DANHGIA> DANHGIAs { get; set; }
+        public virtual DbSet<DUYET_TC> DUYET_TC { get; set; }
         public virtual DbSet<KHOAVIEN> KHOAVIENs { get; set; }
         public virtual DbSet<LOAITIEUCHI> LOAITIEUCHIs { get; set; }
         public virtual DbSet<MENU> MENUs { get; set; }
         public virtual DbSet<MINHCHUNG> MINHCHUNGs { get; set; }
         public virtual DbSet<NGUOIDUNG> NGUOIDUNGs { get; set; }
         public virtual DbSet<SINHVIEN> SINHVIENs { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TIEUCHI> TIEUCHIs { get; set; }
         public virtual DbSet<TINTUC> TINTUCs { get; set; }
-        public virtual DbSet<DUYET_TC> DUYET_TC { get; set; }
+        public virtual DbSet<VANBAN> VANBANs { get; set; }
+        public virtual DbSet<GIOITHIEU> GIOITHIEUx { get; set; }
+        public virtual DbSet<Slider> Sliders { get; set; }
+        public virtual DbSet<LICH_HOATDONG> LICH_HOATDONG { get; set; }
     }
 }

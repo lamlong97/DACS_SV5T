@@ -1,0 +1,15 @@
+﻿@model IEnumerable<DACS_SV5T.Models.GIOITHIEU>
+
+
+@foreach (var i in Model)
+{
+    <div class="panel panel-info">
+        <div class="panel-heading"><h4>Giới thiệu về hoạt động Sinh viên 5 tốt</h4></div>
+        <div class="panel-body">
+            <div style="color:black; font-size:1em; width:100%">
+                @Html.Raw(i.aboutus)
+            </div>
+        </div>
+    </div>
+}
+

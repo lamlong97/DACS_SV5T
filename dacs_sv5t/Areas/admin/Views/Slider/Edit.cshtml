@@ -1,0 +1,92 @@
+﻿@model DACS_SV5T.Models.Slider
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/admin/Views/Shared/_MyLayout.cshtml";
+}
+
+<div style="height:15px"></div>
+<div class="panel panel-red">
+    <div class="panel-heading">Chỉnh sửa Slider</div>
+    <div class="panel-body">
+
+        @using (Html.BeginForm("Edit", "Slider", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.ID_SLIDE)
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TITLE,"Tiêu đề", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.TITLE, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.TITLE, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.IMG,"Hình ảnh", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-6">
+                        <input type="file" name="img" id="img" accept=".jpg,.png,.gif,.jpeg,.bmp" />
+                         </div>
+                    <div class="col-md-4" >
+                        <img style="width:200px; height:100px" src="~/Content/img/slider/@Model.IMG"/>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ORDER,"Sắp xếp", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.ORDER, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.ORDER, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.LINK,"Liên kết", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.LINK, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.LINK, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Ẩn", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @{ bool HIDE = (Model.HIDE.GetValueOrDefault(true) ? true : false);}
+                            @Html.CheckBoxFor(model => HIDE, new { style = "margin:-1px 5px" })
+                               </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Lưu" class="btn btn-danger" />
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div>
+            @Html.ActionLink("Quay về", "Index", "Index", new { @class = "btn btn-success" })
+        </div>
+
+    </div>
+</div>
+
+@section _footer
+{
+    <script src="~/Areas/admin/Content/ckfinder/ckfinder.js"></script>
+    <script src="~/Areas/admin/Content/ckeditor/ckeditor.js"></script>
+
+    <script type="text/javascript">
+        var editor = CKEDITOR.replace("DETAIL");
+        var editor = CKEDITOR.replace("DETAIL", { height: '600px' });
+        customConfig: '/Areas/admin/Content/ckeditor/config.js';
+    </script>
+
+}
