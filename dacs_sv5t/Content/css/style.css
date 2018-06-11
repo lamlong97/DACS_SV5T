@@ -62,3 +62,41 @@ a.cd-top.cd-fade-out
 {
 	opacity: 1;
 }
+
+.event-left div {
+    text-align: center;
+    padding: 6px 0;
+    font-size: 11px;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.back-orange {
+    background: #ff7023;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.event-left {
+    border: 1px solid #ccc;
+}
+
+.text-orange {
+    color: #ff7023;
+}
+
+.nopadding {
+    padding: 0 !important;
+}
+
+.col-xs-12 {
+    width: 100%;
+}

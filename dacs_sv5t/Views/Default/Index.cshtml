@@ -2,6 +2,15 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
+<div>
+    @{ Html.RenderAction("getSlider", "Default");}
+</div>
+<div style="clear:both; padding-top:10px;"></div>
 
-<h2>đây là nội dung trang chủ.............</h2>
+@*-----------------------------*@
+@*<iframe width="600" height="350" src="https://www.youtube.com/embed/y-jJPDISGFs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>*@
 
+@*---------------------*@
+<div class="row" style="margin-right: 10px; margin-left:10px">
+    @{ Html.RenderAction("getGioiThieu", "Skin");}
+</div>

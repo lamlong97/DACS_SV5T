@@ -28,5 +28,26 @@ namespace DACS_SV5T.Controllers
                     select t).Take(4);
             return PartialView(v.ToList());
         }
+
+        public ActionResult getVANBAN()
+        {
+            var v = (from t in db.VANBANs
+                     where t.HIDE == 0
+                     orderby t.ORDER ascending
+                     select t).Take(4);
+            return PartialView(v.ToList());
+        }
+        public ActionResult getSUKIEN()
+        {
+            var v = (from t in db.LICH_HOATDONG
+                     where t.HIDE == 0
+                     orderby t.ORDER ascending
+                     select t).Take(4);
+            return PartialView(v.ToList());
+        }
+
+
+
+
     }
 }

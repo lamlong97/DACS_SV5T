@@ -1,0 +1,48 @@
+﻿@model IEnumerable<DACS_SV5T.Models.Slider>
+
+@{ int _count = 0;}
+@foreach (var item in Model)
+{
+    _count = _count + 1;
+}
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        @for (int i = 1; i < _count; i++)
+        {
+            <li data-target="#myCarousel" data-slide-to="@i"></li>
+        }
+    </ol>
+    @{ int _check = 0;}
+    <div class="carousel-inner">
+        @foreach (var item in Model)
+        {
+            if (_check == 0)
+            {
+                <div class="item active">
+                    <img src="~/Content/img/slider/@item.IMG" alt="@item.META" />
+                    <div class="carousel-caption">
+                        <h3 style="color:#ff0000">@item.TITLE</h3>
+                        
+                    </div>
+                </div>
+                _check = 1;
+            }
+            else
+            {
+                <div class="item">
+                    <img src="~/Content/img/slider/@item.IMG" alt="@item.META" />
+                    <div class="carousel-caption">
+                        <h3 style="color:#ff0000">@item.TITLE</h3>
+                        
+                    </div>
+                </div>
+            }
+        }
+    </div>
+
+</div>
+
+
+

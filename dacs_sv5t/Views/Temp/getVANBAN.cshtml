@@ -1,0 +1,13 @@
+﻿@model IEnumerable< DACS_SV5T.Models.VANBAN>
+
+<div class="panel panel-primary" style="width: 100%;">
+    <div class="panel-heading"><a href="/van-ban/" style="color:white">Văn bản</a></div>
+    <div class="panel-body">
+        @foreach (var item in Model)
+        {
+            <div style="margin-bottom: 5px;"><img src="~/Content/img/newicon_vi.gif">  <a href="/chi-tiet-van-ban/@item.META-@item.ID_VB">@item.TITLE</a></div>
+        }
+        <div class="pull-right"><a href="/van-ban">Xem thêm...</a></div>
+    </div>
+</div>
+

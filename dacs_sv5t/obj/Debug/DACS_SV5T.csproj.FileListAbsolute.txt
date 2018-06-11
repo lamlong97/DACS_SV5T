@@ -113,61 +113,231 @@ C:\Users\lamth\Desktop\DACS_SV5T\DACS_SV5T\DACS_SV5T\obj\Debug\DACS_SV5T.csproj.
 C:\Users\lamth\Desktop\DACS_SV5T\DACS_SV5T\DACS_SV5T\obj\Debug\DACS_SV5T.csproj.CopyComplete
 C:\Users\lamth\Desktop\DACS_SV5T\DACS_SV5T\DACS_SV5T\obj\Debug\DACS_SV5T.dll
 C:\Users\lamth\Desktop\DACS_SV5T\DACS_SV5T\DACS_SV5T\obj\Debug\DACS_SV5T.pdb
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\ApplicationInsights.config
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\DACS_SV5T.dll.config
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\DACS_SV5T.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\DACS_SV5T.pdb
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Antlr3.Runtime.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\EntityFramework.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\EntityFramework.SqlServer.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.AI.Agent.Intercept.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.AI.DependencyCollector.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.AI.PerfCounterCollector.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.AI.ServerTelemetryChannel.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.AI.Web.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.AI.WindowsServer.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.ApplicationInsights.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.AspNet.SignalR.Core.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.Owin.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.Owin.Host.SystemWeb.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.Owin.Security.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.Web.Infrastructure.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Newtonsoft.Json.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Owin.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\System.Web.Helpers.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\System.Web.Mvc.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\System.Web.Optimization.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\System.Web.Razor.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\System.Web.WebPages.Deployment.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\System.Web.WebPages.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\System.Web.WebPages.Razor.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\WebGrease.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\EntityFramework.xml
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\EntityFramework.SqlServer.xml
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.AspNet.SignalR.Core.xml
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.Owin.xml
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.Owin.Host.SystemWeb.xml
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.Owin.Security.xml
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\System.Web.Helpers.xml
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\System.Web.Mvc.xml
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\System.Web.Optimization.xml
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\System.Web.Razor.xml
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\System.Web.WebPages.xml
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\System.Web.WebPages.Deployment.xml
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\System.Web.WebPages.Razor.xml
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Antlr3.Runtime.pdb
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Newtonsoft.Json.xml
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.ApplicationInsights.xml
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.AI.DependencyCollector.xml
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.AI.ServerTelemetryChannel.xml
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.AI.WindowsServer.xml
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\bin\Microsoft.AI.Web.xml
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\obj\Debug\DACS_SV5T.csprojAssemblyReference.cache
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\obj\Debug\DACS_SV5T.csproj.CoreCompileInputs.cache
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\obj\Debug\DACS_SV5T.csproj.CopyComplete
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\obj\Debug\DACS_SV5T.dll
-D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\obj\Debug\DACS_SV5T.pdb
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\ApplicationInsights.config
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\DACS_SV5T.dll.config
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\DACS_SV5T.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\DACS_SV5T.pdb
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Antlr3.Runtime.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\EntityFramework.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\EntityFramework.SqlServer.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.Web.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.ApplicationInsights.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.Security.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Newtonsoft.Json.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Owin.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Helpers.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Mvc.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Optimization.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Razor.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.Deployment.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.Razor.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\WebGrease.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\EntityFramework.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\EntityFramework.SqlServer.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.Security.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Helpers.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Mvc.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Optimization.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Razor.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.Deployment.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.Razor.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Antlr3.Runtime.pdb
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Newtonsoft.Json.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.ApplicationInsights.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.Web.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\obj\Debug\DACS_SV5T.csprojResolveAssemblyReference.cache
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\obj\Debug\DACS_SV5T.csproj.CoreCompileInputs.cache
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\obj\Debug\DACS_SV5T.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\obj\Debug\DACS_SV5T.pdb
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\ApplicationInsights.config
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\DACS_SV5T.dll.config
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\DACS_SV5T.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\DACS_SV5T.pdb
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Antlr3.Runtime.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\EntityFramework.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\EntityFramework.SqlServer.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.Web.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.ApplicationInsights.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.Security.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Newtonsoft.Json.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Owin.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Helpers.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Mvc.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Optimization.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Razor.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.Deployment.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.Razor.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\WebGrease.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\EntityFramework.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\EntityFramework.SqlServer.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.Security.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Helpers.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Mvc.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Optimization.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Razor.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.Deployment.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.Razor.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Antlr3.Runtime.pdb
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Newtonsoft.Json.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.ApplicationInsights.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.Web.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\obj\Debug\DACS_SV5T.csproj.CoreCompileInputs.cache
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\obj\Debug\DACS_SV5T.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\obj\Debug\DACS_SV5T.pdb
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\ApplicationInsights.config
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\DACS_SV5T.dll.config
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\DACS_SV5T.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\DACS_SV5T.pdb
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Antlr3.Runtime.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\EntityFramework.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\EntityFramework.SqlServer.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.Web.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.ApplicationInsights.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.Security.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Newtonsoft.Json.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Owin.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Helpers.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Mvc.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Optimization.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Razor.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.Deployment.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.Razor.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\WebGrease.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\EntityFramework.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\EntityFramework.SqlServer.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.Security.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Helpers.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Mvc.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Optimization.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Razor.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.Deployment.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.Razor.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Antlr3.Runtime.pdb
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Newtonsoft.Json.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.ApplicationInsights.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.Web.xml
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\obj\Debug\DACS_SV5T.csproj.CoreCompileInputs.cache
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\obj\Debug\DACS_SV5T.dll
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\obj\Debug\DACS_SV5T.pdb
+C:\Users\NGOCTHUY\Desktop\DACS_SV5T-LamLong\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\obj\Debug\DACS_SV5T.csprojResolveAssemblyReference.cache
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\ApplicationInsights.config
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\DACS_SV5T.dll.config
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\DACS_SV5T.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\DACS_SV5T.pdb
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Antlr3.Runtime.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\EntityFramework.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\EntityFramework.SqlServer.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.DependencyCollector.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.Web.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.WindowsServer.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.ApplicationInsights.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.Security.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Web.Infrastructure.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Newtonsoft.Json.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Owin.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Helpers.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Mvc.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Optimization.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Razor.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.Deployment.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.Razor.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\WebGrease.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\EntityFramework.xml
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\EntityFramework.SqlServer.xml
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.xml
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.Owin.Security.xml
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Helpers.xml
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Mvc.xml
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Optimization.xml
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.Razor.xml
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.xml
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.Deployment.xml
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\System.Web.WebPages.Razor.xml
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Antlr3.Runtime.pdb
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Newtonsoft.Json.xml
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.ApplicationInsights.xml
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.DependencyCollector.xml
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.WindowsServer.xml
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\bin\Microsoft.AI.Web.xml
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\obj\Debug\DACS_SV5T.csprojAssemblyReference.cache
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\obj\Debug\DACS_SV5T.csproj.CoreCompileInputs.cache
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\obj\Debug\DACS_SV5T.csproj.CopyComplete
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\obj\Debug\DACS_SV5T.dll
+E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\obj\Debug\DACS_SV5T.pdb

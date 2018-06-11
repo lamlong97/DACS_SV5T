@@ -1,0 +1,93 @@
+﻿@model DACS_SV5T.Models.VANBAN
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/admin/Views/Shared/_MyLayout.cshtml";
+}
+
+<div style="height:15px"></div>
+<div class="panel panel-red">
+    <div class="panel-heading">Xem Bài viết</div>
+    <div class="panel-body">
+        <div>
+            <dl class="dl-horizontal">
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Tiêu đề: ")
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.TITLE)
+                </dd>
+
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Mô tả: ")
+                </dt>
+
+                <dd>
+                    @Html.(model => model.MOTA)
+                </dd>
+
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Ngày đăng: ")
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DATEBEGIN)
+                </dd>
+
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Meta: ")
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.META)
+                </dd>
+
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Sắp xếp: ")
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ORDER)
+                </dd>
+
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Liên kết: ")
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.LINK)
+                </dd>
+
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Trạng thái: ")
+                </dt>
+
+                <dd>
+                    @{ var chk = (Model.HIDE == 0) ? "Hiện" : "Ẩn";}
+                    @Html.DisplayFor(model => chk)
+                </dd>
+
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Hình ảnh: ")
+                </dt>
+
+                <dd>
+                    <img src="~/Content/img/upload/vanban/@Html.DisplayFor(model => model.IMG)" width="150px" />
+                </dd>
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Nội dung: ")
+                </dt>
+
+                <dd>
+                    @Html.Raw(Model.DETAIL)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Sửa", "Edit", new { id = Model.ID_VB }, new { @class = "btn btn-success" }) |
+            @Html.ActionLink("Quay về", "Index", "Index", new { @class = "btn btn-danger" })
+        </p>
+    </div>
+</div>

@@ -22,5 +22,7 @@ namespace DACS_SV5T.Models
         public Nullable<int> ORDER { get; set; }
         public string LINK { get; set; }
         public Nullable<int> HIDE { get; set; }
+        public string IMG { get; set; }
+        public string MOTA { get; set; }
     }
 }

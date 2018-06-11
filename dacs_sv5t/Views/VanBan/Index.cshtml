@@ -1,0 +1,61 @@
+﻿@model IEnumerable<DACS_SV5T.Models.VANBAN>
+
+@{
+    ViewBag.Title = "Văn bản";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+@{
+    var k = 0;
+}
+
+<div class="row">
+    @foreach (var i in Model)
+    {
+        if (k % 2 == 0)
+        {
+            <div class="row" style="border-bottom: 1px dotted red; margin-left:20px; margin-right:20px; margin-bottom: 10px;">
+                <div class="col-md-3" style="margin-bottom: 10px">
+                    <img src="~/Content/img/upload/tintuc/@i.IMG" width="100px" />
+                </div>
+                <div class="col-md-9">
+                    <a href="/chi-tiet-van-ban/@i.META-@i.ID_VB"><p style="font-weight:bold; font-size:15px; color: #000099">@i.TITLE</p></a>
+                    <h5><p>@i.MOTA</p></h5>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="row" style="border-bottom: 1px dotted red; margin-left:20px; margin-right:20px; margin-bottom: 10px;">
+                <div class="col-md-3" style="margin-bottom: 10px">
+                    <img src="~/Content/img/upload/tintuc/@i.IMG" width="100px" />
+                </div>
+                <div class="col-md-9">
+                    <a href="/chi-tiet-van-ban/@i.META-@i.ID_VB"><h3><p style="font-weight:bold; font-size:15px; color: #000099">@i.TITLE</p></h3></a>
+                    <h5><p>@i.MOTA</p></h5>
+                </div>
+            </div>
+        }
+        k++;
+    }
+</div>
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+            </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="/van-ban">1</a></li>
+        <li class="page-item"><a class="page-link" href="/van-ban">2</a></li>
+        <li class="page-item"><a class="page-link" href="/van-ban">3</a></li>
+        <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+            </a>
+        </li>
+    </ul>
+</nav>

@@ -40,12 +40,30 @@
           <Property Name="ID_DANHGIA" Type="int" Nullable="false" />
           <Property Name="DUYET" Type="bit" />
         </EntityType>
+        <EntityType Name="GIOITHIEU">
+          <Key>
+            <PropertyRef Name="id_gt" />
+          </Key>
+          <Property Name="id_gt" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="aboutus" Type="ntext" />
+        </EntityType>
         <EntityType Name="KHOAVIEN">
           <Key>
             <PropertyRef Name="ID_KV" />
           </Key>
           <Property Name="ID_KV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TEN_KV" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="LICH_HOATDONG">
+          <Key>
+            <PropertyRef Name="ID_HD" />
+          </Key>
+          <Property Name="ID_HD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TITLE" Type="nvarchar" MaxLength="255" />
+          <Property Name="DATEBEGIN" Type="smalldatetime" />
+          <Property Name="ĐỊA ĐIỂM" Type="nvarchar" MaxLength="255" />
+          <Property Name="ORDER" Type="int" />
+          <Property Name="HIDE" Type="int" />
         </EntityType>
         <EntityType Name="LOAITIEUCHI">
           <Key>
@@ -105,15 +123,18 @@
           <Property Name="MSSV" Type="int" />
           <Property Name="ID_CAP" Type="int" />
         </EntityType>
-        <EntityType Name="sysdiagrams">
+        <EntityType Name="Slider">
           <Key>
-            <PropertyRef Name="diagram_id" />
+            <PropertyRef Name="ID_SLIDE" />
           </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
+          <Property Name="ID_SLIDE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TITLE" Type="nvarchar" MaxLength="50" />
+          <Property Name="IMG" Type="varchar" MaxLength="255" />
+          <Property Name="DATEBEGIN" Type="smalldatetime" />
+          <Property Name="META" Type="varchar" MaxLength="255" />
+          <Property Name="ORDER" Type="int" />
+          <Property Name="LINK" Type="nvarchar" MaxLength="255" />
+          <Property Name="HIDE" Type="bit" />
         </EntityType>
         <EntityType Name="TIEUCHI">
           <Key>
@@ -129,6 +150,8 @@
           </Key>
           <Property Name="ID_TT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TITLE" Type="nvarchar" MaxLength="255" />
+          <Property Name="IMG" Type="varchar" MaxLength="255" />
+          <Property Name="MOTA" Type="ntext" />
           <Property Name="DETAIL" Type="ntext" />
           <Property Name="DATEBEGIN" Type="smalldatetime" />
           <Property Name="META" Type="varchar" MaxLength="255" />
@@ -136,7 +159,22 @@
           <Property Name="LINK" Type="nvarchar" MaxLength="255" />
           <Property Name="HIDE" Type="int" />
         </EntityType>
-        <Association Name="FK__CT_TEUCHI__ID_TC__239E4DCF">
+        <EntityType Name="VANBAN">
+          <Key>
+            <PropertyRef Name="ID_VB" />
+          </Key>
+          <Property Name="ID_VB" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TITLE" Type="nvarchar" MaxLength="255" />
+          <Property Name="IMG" Type="varchar" MaxLength="255" />
+          <Property Name="MOTA" Type="ntext" />
+          <Property Name="DETAIL" Type="ntext" />
+          <Property Name="DATEBEGIN" Type="smalldatetime" />
+          <Property Name="META" Type="varchar" MaxLength="255" />
+          <Property Name="ORDER" Type="int" />
+          <Property Name="LINK" Type="nvarchar" MaxLength="255" />
+          <Property Name="HIDE" Type="int" />
+        </EntityType>
+        <Association Name="FK__CT_TEUCHI__ID_TC__4D94879B">
           <End Role="TIEUCHI" Type="Self.TIEUCHI" Multiplicity="1" />
           <End Role="CT_TEUCHI" Type="Self.CT_TEUCHI" Multiplicity="*" />
           <ReferentialConstraint>
@@ -148,7 +186,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DANHGIA__ID_CAP__21B6055D">
+        <Association Name="FK__DANHGIA__ID_CAP__4E88ABD4">
           <End Role="CAP" Type="Self.CAP" Multiplicity="1" />
           <End Role="DANHGIA" Type="Self.DANHGIA" Multiplicity="*" />
           <ReferentialConstraint>
@@ -160,7 +198,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DANHGIA__ID_CTTC__24927208">
+        <Association Name="FK__DANHGIA__ID_CTTC__4F7CD00D">
           <End Role="CT_TEUCHI" Type="Self.CT_TEUCHI" Multiplicity="1" />
           <End Role="DANHGIA" Type="Self.DANHGIA" Multiplicity="*" />
           <ReferentialConstraint>
@@ -172,7 +210,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MINHCHUNG__ID_CT__25869641">
+        <Association Name="FK__MINHCHUNG__ID_CT__52593CB8">
           <End Role="CT_TEUCHI" Type="Self.CT_TEUCHI" Multiplicity="1" />
           <End Role="MINHCHUNG" Type="Self.MINHCHUNG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -184,7 +222,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MINHCHUNG__ID_SV__1FCDBCEB">
+        <Association Name="FK__MINHCHUNG__ID_SV__534D60F1">
           <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="1" />
           <End Role="MINHCHUNG" Type="Self.MINHCHUNG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -196,7 +234,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SINHVIEN__ID_KV__20C1E124">
+        <Association Name="FK__SINHVIEN__ID_KV__5441852A">
           <End Role="KHOAVIEN" Type="Self.KHOAVIEN" Multiplicity="1" />
           <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -208,7 +246,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__TIEUCHI__ID_LTCH__22AA2996">
+        <Association Name="FK__TIEUCHI__ID_LTCH__5629CD9C">
           <End Role="LOAITIEUCHI" Type="Self.LOAITIEUCHI" Multiplicity="1" />
           <End Role="TIEUCHI" Type="Self.TIEUCHI" Multiplicity="*" />
           <ReferentialConstraint>
@@ -261,40 +299,43 @@
           <EntitySet Name="CT_TEUCHI" EntityType="Self.CT_TEUCHI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DANHGIA" EntityType="Self.DANHGIA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DUYET_TC" EntityType="Self.DUYET_TC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GIOITHIEU" EntityType="Self.GIOITHIEU" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KHOAVIEN" EntityType="Self.KHOAVIEN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LICH_HOATDONG" EntityType="Self.LICH_HOATDONG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LOAITIEUCHI" EntityType="Self.LOAITIEUCHI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MENU" EntityType="Self.MENU" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MINHCHUNG" EntityType="Self.MINHCHUNG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NGUOIDUNG" EntityType="Self.NGUOIDUNG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SINHVIEN" EntityType="Self.SINHVIEN" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Slider" EntityType="Self.Slider" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TIEUCHI" EntityType="Self.TIEUCHI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TINTUC" EntityType="Self.TINTUC" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__CT_TEUCHI__ID_TC__239E4DCF" Association="Self.FK__CT_TEUCHI__ID_TC__239E4DCF">
+          <EntitySet Name="VANBAN" EntityType="Self.VANBAN" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__CT_TEUCHI__ID_TC__4D94879B" Association="Self.FK__CT_TEUCHI__ID_TC__4D94879B">
             <End Role="TIEUCHI" EntitySet="TIEUCHI" />
             <End Role="CT_TEUCHI" EntitySet="CT_TEUCHI" />
           </AssociationSet>
-          <AssociationSet Name="FK__DANHGIA__ID_CAP__21B6055D" Association="Self.FK__DANHGIA__ID_CAP__21B6055D">
+          <AssociationSet Name="FK__DANHGIA__ID_CAP__4E88ABD4" Association="Self.FK__DANHGIA__ID_CAP__4E88ABD4">
             <End Role="CAP" EntitySet="CAP" />
             <End Role="DANHGIA" EntitySet="DANHGIA" />
           </AssociationSet>
-          <AssociationSet Name="FK__DANHGIA__ID_CTTC__24927208" Association="Self.FK__DANHGIA__ID_CTTC__24927208">
+          <AssociationSet Name="FK__DANHGIA__ID_CTTC__4F7CD00D" Association="Self.FK__DANHGIA__ID_CTTC__4F7CD00D">
             <End Role="CT_TEUCHI" EntitySet="CT_TEUCHI" />
             <End Role="DANHGIA" EntitySet="DANHGIA" />
           </AssociationSet>
-          <AssociationSet Name="FK__MINHCHUNG__ID_CT__25869641" Association="Self.FK__MINHCHUNG__ID_CT__25869641">
+          <AssociationSet Name="FK__MINHCHUNG__ID_CT__52593CB8" Association="Self.FK__MINHCHUNG__ID_CT__52593CB8">
             <End Role="CT_TEUCHI" EntitySet="CT_TEUCHI" />
             <End Role="MINHCHUNG" EntitySet="MINHCHUNG" />
           </AssociationSet>
-          <AssociationSet Name="FK__MINHCHUNG__ID_SV__1FCDBCEB" Association="Self.FK__MINHCHUNG__ID_SV__1FCDBCEB">
+          <AssociationSet Name="FK__MINHCHUNG__ID_SV__534D60F1" Association="Self.FK__MINHCHUNG__ID_SV__534D60F1">
             <End Role="SINHVIEN" EntitySet="SINHVIEN" />
             <End Role="MINHCHUNG" EntitySet="MINHCHUNG" />
           </AssociationSet>
-          <AssociationSet Name="FK__SINHVIEN__ID_KV__20C1E124" Association="Self.FK__SINHVIEN__ID_KV__20C1E124">
+          <AssociationSet Name="FK__SINHVIEN__ID_KV__5441852A" Association="Self.FK__SINHVIEN__ID_KV__5441852A">
             <End Role="KHOAVIEN" EntitySet="KHOAVIEN" />
             <End Role="SINHVIEN" EntitySet="SINHVIEN" />
           </AssociationSet>
-          <AssociationSet Name="FK__TIEUCHI__ID_LTCH__22AA2996" Association="Self.FK__TIEUCHI__ID_LTCH__22AA2996">
+          <AssociationSet Name="FK__TIEUCHI__ID_LTCH__5629CD9C" Association="Self.FK__TIEUCHI__ID_LTCH__5629CD9C">
             <End Role="LOAITIEUCHI" EntitySet="LOAITIEUCHI" />
             <End Role="TIEUCHI" EntitySet="TIEUCHI" />
           </AssociationSet>
@@ -322,8 +363,8 @@
           <Property Name="ID_CAP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TEN_CAP" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="NAM" Type="Int32" />
-          <NavigationProperty Name="DANHGIAs" Relationship="Self.FK__DANHGIA__ID_CAP__21B6055D" FromRole="CAP" ToRole="DANHGIA" />
-          <NavigationProperty Name="SINHVIENs" Relationship="DACS_SV5TModel.FK_SINHVIEN_CAP" FromRole="CAP" ToRole="SINHVIEN" />
+          <NavigationProperty Name="DANHGIAs" Relationship="Self.FK__DANHGIA__ID_CAP__4E88ABD4" FromRole="CAP" ToRole="DANHGIA" />
+          <NavigationProperty Name="SINHVIENs" Relationship="Self.FK_SINHVIEN_CAP" FromRole="CAP" ToRole="SINHVIEN" />
         </EntityType>
         <EntityType Name="CT_TEUCHI">
           <Key>
@@ -332,9 +373,9 @@
           <Property Name="ID_CTTCHI" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ID_TCHI" Type="Int32" Nullable="false" />
           <Property Name="NOIDUNG" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="TIEUCHI" Relationship="Self.FK__CT_TEUCHI__ID_TC__239E4DCF" FromRole="CT_TEUCHI" ToRole="TIEUCHI" />
-          <NavigationProperty Name="DANHGIAs" Relationship="Self.FK__DANHGIA__ID_CTTC__24927208" FromRole="CT_TEUCHI" ToRole="DANHGIA" />
-          <NavigationProperty Name="MINHCHUNGs" Relationship="Self.FK__MINHCHUNG__ID_CT__25869641" FromRole="CT_TEUCHI" ToRole="MINHCHUNG" />
+          <NavigationProperty Name="TIEUCHI" Relationship="Self.FK__CT_TEUCHI__ID_TC__4D94879B" FromRole="CT_TEUCHI" ToRole="TIEUCHI" />
+          <NavigationProperty Name="DANHGIAs" Relationship="Self.FK__DANHGIA__ID_CTTC__4F7CD00D" FromRole="CT_TEUCHI" ToRole="DANHGIA" />
+          <NavigationProperty Name="MINHCHUNGs" Relationship="Self.FK__MINHCHUNG__ID_CT__52593CB8" FromRole="CT_TEUCHI" ToRole="MINHCHUNG" />
         </EntityType>
         <EntityType Name="DANHGIA">
           <Key>
@@ -344,10 +385,21 @@
           <Property Name="ID_CTTCHI" Type="Int32" Nullable="false" />
           <Property Name="TCHUAN_HOCTAP" Type="Double" />
           <Property Name="TCHUAN_HD" Type="Boolean" />
-          <NavigationProperty Name="CAP" Relationship="Self.FK__DANHGIA__ID_CAP__21B6055D" FromRole="DANHGIA" ToRole="CAP" />
-          <NavigationProperty Name="CT_TEUCHI" Relationship="Self.FK__DANHGIA__ID_CTTC__24927208" FromRole="DANHGIA" ToRole="CT_TEUCHI" />
           <Property Name="ID_DANHGIA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="DUYET_TC" Relationship="DACS_SV5TModel.FK_DUYET_TC_DANHGIA" FromRole="DANHGIA" ToRole="DUYET_TC" />
+          <NavigationProperty Name="CAP" Relationship="Self.FK__DANHGIA__ID_CAP__4E88ABD4" FromRole="DANHGIA" ToRole="CAP" />
+          <NavigationProperty Name="CT_TEUCHI" Relationship="Self.FK__DANHGIA__ID_CTTC__4F7CD00D" FromRole="DANHGIA" ToRole="CT_TEUCHI" />
+          <NavigationProperty Name="DUYET_TC" Relationship="Self.FK_DUYET_TC_DANHGIA" FromRole="DANHGIA" ToRole="DUYET_TC" />
+        </EntityType>
+        <EntityType Name="DUYET_TC">
+          <Key>
+            <PropertyRef Name="ID_SV" />
+            <PropertyRef Name="ID_DANHGIA" />
+          </Key>
+          <Property Name="ID_SV" Type="Int32" Nullable="false" />
+          <Property Name="ID_DANHGIA" Type="Int32" Nullable="false" />
+          <Property Name="DUYET" Type="Boolean" />
+          <NavigationProperty Name="DANHGIA" Relationship="Self.FK_DUYET_TC_DANHGIA" FromRole="DUYET_TC" ToRole="DANHGIA" />
+          <NavigationProperty Name="SINHVIEN" Relationship="Self.FK_DUYET_TC_SINHVIEN" FromRole="DUYET_TC" ToRole="SINHVIEN" />
         </EntityType>
         <EntityType Name="KHOAVIEN">
           <Key>
@@ -355,7 +407,7 @@
           </Key>
           <Property Name="ID_KV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TEN_KV" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="SINHVIENs" Relationship="Self.FK__SINHVIEN__ID_KV__20C1E124" FromRole="KHOAVIEN" ToRole="SINHVIEN" />
+          <NavigationProperty Name="SINHVIENs" Relationship="Self.FK__SINHVIEN__ID_KV__5441852A" FromRole="KHOAVIEN" ToRole="SINHVIEN" />
         </EntityType>
         <EntityType Name="LOAITIEUCHI">
           <Key>
@@ -364,7 +416,7 @@
           <Property Name="ID_LTCHI" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TEN_LTCHI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="NAM" Type="Int32" />
-          <NavigationProperty Name="TIEUCHIs" Relationship="Self.FK__TIEUCHI__ID_LTCH__22AA2996" FromRole="LOAITIEUCHI" ToRole="TIEUCHI" />
+          <NavigationProperty Name="TIEUCHIs" Relationship="Self.FK__TIEUCHI__ID_LTCH__5629CD9C" FromRole="LOAITIEUCHI" ToRole="TIEUCHI" />
         </EntityType>
         <EntityType Name="MENU">
           <Key>
@@ -388,9 +440,9 @@
           <Property Name="URL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="DUYET" Type="Boolean" />
           <Property Name="MOTA" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="CT_TEUCHI" Relationship="Self.FK__MINHCHUNG__ID_CT__25869641" FromRole="MINHCHUNG" ToRole="CT_TEUCHI" />
-          <NavigationProperty Name="SINHVIEN" Relationship="Self.FK__MINHCHUNG__ID_SV__1FCDBCEB" FromRole="MINHCHUNG" ToRole="SINHVIEN" />
           <Property Name="HINHANH" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CT_TEUCHI" Relationship="Self.FK__MINHCHUNG__ID_CT__52593CB8" FromRole="MINHCHUNG" ToRole="CT_TEUCHI" />
+          <NavigationProperty Name="SINHVIEN" Relationship="Self.FK__MINHCHUNG__ID_SV__534D60F1" FromRole="MINHCHUNG" ToRole="SINHVIEN" />
         </EntityType>
         <EntityType Name="NGUOIDUNG">
           <Key>
@@ -398,8 +450,8 @@
           </Key>
           <Property Name="ID_ND" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TENDN" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="MK" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="TENND" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MK" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="PQ" Type="Boolean" />
           <Property Name="XNMK" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
@@ -416,21 +468,11 @@
           <Property Name="ID_KV" Type="Int32" Nullable="false" />
           <Property Name="PASSWORD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="MSSV" Type="Int32" />
-          <NavigationProperty Name="KHOAVIEN" Relationship="Self.FK__SINHVIEN__ID_KV__20C1E124" FromRole="SINHVIEN" ToRole="KHOAVIEN" />
-          <NavigationProperty Name="MINHCHUNGs" Relationship="Self.FK__MINHCHUNG__ID_SV__1FCDBCEB" FromRole="SINHVIEN" ToRole="MINHCHUNG" />
           <Property Name="ID_CAP" Type="Int32" />
-          <NavigationProperty Name="CAP" Relationship="DACS_SV5TModel.FK_SINHVIEN_CAP" FromRole="SINHVIEN" ToRole="CAP" />
-          <NavigationProperty Name="DUYET_TC" Relationship="DACS_SV5TModel.FK_DUYET_TC_SINHVIEN" FromRole="SINHVIEN" ToRole="DUYET_TC" />
-        </EntityType>
-        <EntityType Name="sysdiagram">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="CAP" Relationship="Self.FK_SINHVIEN_CAP" FromRole="SINHVIEN" ToRole="CAP" />
+          <NavigationProperty Name="DUYET_TC" Relationship="Self.FK_DUYET_TC_SINHVIEN" FromRole="SINHVIEN" ToRole="DUYET_TC" />
+          <NavigationProperty Name="KHOAVIEN" Relationship="Self.FK__SINHVIEN__ID_KV__5441852A" FromRole="SINHVIEN" ToRole="KHOAVIEN" />
+          <NavigationProperty Name="MINHCHUNGs" Relationship="Self.FK__MINHCHUNG__ID_SV__534D60F1" FromRole="SINHVIEN" ToRole="MINHCHUNG" />
         </EntityType>
         <EntityType Name="TIEUCHI">
           <Key>
@@ -439,8 +481,8 @@
           <Property Name="ID_TCHI" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TEN_TCHI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="ID_LTCHI" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="CT_TEUCHI" Relationship="Self.FK__CT_TEUCHI__ID_TC__239E4DCF" FromRole="TIEUCHI" ToRole="CT_TEUCHI" />
-          <NavigationProperty Name="LOAITIEUCHI" Relationship="Self.FK__TIEUCHI__ID_LTCH__22AA2996" FromRole="TIEUCHI" ToRole="LOAITIEUCHI" />
+          <NavigationProperty Name="CT_TEUCHI" Relationship="Self.FK__CT_TEUCHI__ID_TC__4D94879B" FromRole="TIEUCHI" ToRole="CT_TEUCHI" />
+          <NavigationProperty Name="LOAITIEUCHI" Relationship="Self.FK__TIEUCHI__ID_LTCH__5629CD9C" FromRole="TIEUCHI" ToRole="LOAITIEUCHI" />
         </EntityType>
         <EntityType Name="TINTUC">
           <Key>
@@ -454,8 +496,25 @@
           <Property Name="ORDER" Type="Int32" />
           <Property Name="LINK" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="HIDE" Type="Int32" />
+          <Property Name="IMG" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="MOTA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
-        <Association Name="FK__DANHGIA__ID_CAP__21B6055D">
+        <EntityType Name="VANBAN">
+          <Key>
+            <PropertyRef Name="ID_VB" />
+          </Key>
+          <Property Name="TITLE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DETAIL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DATEBEGIN" Type="DateTime" Precision="0" />
+          <Property Name="META" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ORDER" Type="Int32" />
+          <Property Name="LINK" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HIDE" Type="Int32" />
+          <Property Name="ID_VB" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IMG" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="MOTA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK__DANHGIA__ID_CAP__4E88ABD4">
           <End Role="CAP" Type="Self.CAP" Multiplicity="1" />
           <End Role="DANHGIA" Type="Self.DANHGIA" Multiplicity="*" />
           <ReferentialConstraint>
@@ -467,7 +526,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CT_TEUCHI__ID_TC__239E4DCF">
+        <Association Name="FK_SINHVIEN_CAP">
+          <End Role="CAP" Type="Self.CAP" Multiplicity="0..1" />
+          <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CAP">
+              <PropertyRef Name="ID_CAP" />
+            </Principal>
+            <Dependent Role="SINHVIEN">
+              <PropertyRef Name="ID_CAP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CT_TEUCHI__ID_TC__4D94879B">
           <End Role="TIEUCHI" Type="Self.TIEUCHI" Multiplicity="1" />
           <End Role="CT_TEUCHI" Type="Self.CT_TEUCHI" Multiplicity="*" />
           <ReferentialConstraint>
@@ -479,7 +550,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DANHGIA__ID_CTTC__24927208">
+        <Association Name="FK__DANHGIA__ID_CTTC__4F7CD00D">
           <End Role="CT_TEUCHI" Type="Self.CT_TEUCHI" Multiplicity="1" />
           <End Role="DANHGIA" Type="Self.DANHGIA" Multiplicity="*" />
           <ReferentialConstraint>
@@ -491,7 +562,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MINHCHUNG__ID_CT__25869641">
+        <Association Name="FK__MINHCHUNG__ID_CT__52593CB8">
           <End Role="CT_TEUCHI" Type="Self.CT_TEUCHI" Multiplicity="1" />
           <End Role="MINHCHUNG" Type="Self.MINHCHUNG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -503,7 +574,31 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SINHVIEN__ID_KV__20C1E124">
+        <Association Name="FK_DUYET_TC_DANHGIA">
+          <End Role="DANHGIA" Type="Self.DANHGIA" Multiplicity="1" />
+          <End Role="DUYET_TC" Type="Self.DUYET_TC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DANHGIA">
+              <PropertyRef Name="ID_DANHGIA" />
+            </Principal>
+            <Dependent Role="DUYET_TC">
+              <PropertyRef Name="ID_DANHGIA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DUYET_TC_SINHVIEN">
+          <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="1" />
+          <End Role="DUYET_TC" Type="Self.DUYET_TC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SINHVIEN">
+              <PropertyRef Name="ID_SV" />
+            </Principal>
+            <Dependent Role="DUYET_TC">
+              <PropertyRef Name="ID_SV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SINHVIEN__ID_KV__5441852A">
           <End Role="KHOAVIEN" Type="Self.KHOAVIEN" Multiplicity="1" />
           <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -515,7 +610,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__TIEUCHI__ID_LTCH__22AA2996">
+        <Association Name="FK__TIEUCHI__ID_LTCH__5629CD9C">
           <End Role="LOAITIEUCHI" Type="Self.LOAITIEUCHI" Multiplicity="1" />
           <End Role="TIEUCHI" Type="Self.TIEUCHI" Multiplicity="*" />
           <ReferentialConstraint>
@@ -527,7 +622,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MINHCHUNG__ID_SV__1FCDBCEB">
+        <Association Name="FK__MINHCHUNG__ID_SV__534D60F1">
           <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="1" />
           <End Role="MINHCHUNG" Type="Self.MINHCHUNG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -543,104 +638,91 @@
           <EntitySet Name="CAPs" EntityType="Self.CAP" />
           <EntitySet Name="CT_TEUCHI" EntityType="Self.CT_TEUCHI" />
           <EntitySet Name="DANHGIAs" EntityType="Self.DANHGIA" />
+          <EntitySet Name="DUYET_TC" EntityType="Self.DUYET_TC" />
           <EntitySet Name="KHOAVIENs" EntityType="Self.KHOAVIEN" />
           <EntitySet Name="LOAITIEUCHIs" EntityType="Self.LOAITIEUCHI" />
           <EntitySet Name="MENUs" EntityType="Self.MENU" />
           <EntitySet Name="MINHCHUNGs" EntityType="Self.MINHCHUNG" />
           <EntitySet Name="NGUOIDUNGs" EntityType="Self.NGUOIDUNG" />
           <EntitySet Name="SINHVIENs" EntityType="Self.SINHVIEN" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="TIEUCHIs" EntityType="Self.TIEUCHI" />
           <EntitySet Name="TINTUCs" EntityType="Self.TINTUC" />
-          <AssociationSet Name="FK__DANHGIA__ID_CAP__21B6055D" Association="Self.FK__DANHGIA__ID_CAP__21B6055D">
+          <EntitySet Name="VANBANs" EntityType="Self.VANBAN" />
+          <AssociationSet Name="FK__DANHGIA__ID_CAP__4E88ABD4" Association="Self.FK__DANHGIA__ID_CAP__4E88ABD4">
             <End Role="CAP" EntitySet="CAPs" />
             <End Role="DANHGIA" EntitySet="DANHGIAs" />
           </AssociationSet>
-          <AssociationSet Name="FK__CT_TEUCHI__ID_TC__239E4DCF" Association="Self.FK__CT_TEUCHI__ID_TC__239E4DCF">
+          <AssociationSet Name="FK_SINHVIEN_CAP" Association="Self.FK_SINHVIEN_CAP">
+            <End Role="CAP" EntitySet="CAPs" />
+            <End Role="SINHVIEN" EntitySet="SINHVIENs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CT_TEUCHI__ID_TC__4D94879B" Association="Self.FK__CT_TEUCHI__ID_TC__4D94879B">
             <End Role="TIEUCHI" EntitySet="TIEUCHIs" />
             <End Role="CT_TEUCHI" EntitySet="CT_TEUCHI" />
           </AssociationSet>
-          <AssociationSet Name="FK__DANHGIA__ID_CTTC__24927208" Association="Self.FK__DANHGIA__ID_CTTC__24927208">
+          <AssociationSet Name="FK__DANHGIA__ID_CTTC__4F7CD00D" Association="Self.FK__DANHGIA__ID_CTTC__4F7CD00D">
             <End Role="CT_TEUCHI" EntitySet="CT_TEUCHI" />
             <End Role="DANHGIA" EntitySet="DANHGIAs" />
           </AssociationSet>
-          <AssociationSet Name="FK__MINHCHUNG__ID_CT__25869641" Association="Self.FK__MINHCHUNG__ID_CT__25869641">
+          <AssociationSet Name="FK__MINHCHUNG__ID_CT__52593CB8" Association="Self.FK__MINHCHUNG__ID_CT__52593CB8">
             <End Role="CT_TEUCHI" EntitySet="CT_TEUCHI" />
             <End Role="MINHCHUNG" EntitySet="MINHCHUNGs" />
           </AssociationSet>
-          <AssociationSet Name="FK__SINHVIEN__ID_KV__20C1E124" Association="Self.FK__SINHVIEN__ID_KV__20C1E124">
+          <AssociationSet Name="FK_DUYET_TC_DANHGIA" Association="Self.FK_DUYET_TC_DANHGIA">
+            <End Role="DANHGIA" EntitySet="DANHGIAs" />
+            <End Role="DUYET_TC" EntitySet="DUYET_TC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DUYET_TC_SINHVIEN" Association="Self.FK_DUYET_TC_SINHVIEN">
+            <End Role="SINHVIEN" EntitySet="SINHVIENs" />
+            <End Role="DUYET_TC" EntitySet="DUYET_TC" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SINHVIEN__ID_KV__5441852A" Association="Self.FK__SINHVIEN__ID_KV__5441852A">
             <End Role="KHOAVIEN" EntitySet="KHOAVIENs" />
             <End Role="SINHVIEN" EntitySet="SINHVIENs" />
           </AssociationSet>
-          <AssociationSet Name="FK__TIEUCHI__ID_LTCH__22AA2996" Association="Self.FK__TIEUCHI__ID_LTCH__22AA2996">
+          <AssociationSet Name="FK__TIEUCHI__ID_LTCH__5629CD9C" Association="Self.FK__TIEUCHI__ID_LTCH__5629CD9C">
             <End Role="LOAITIEUCHI" EntitySet="LOAITIEUCHIs" />
             <End Role="TIEUCHI" EntitySet="TIEUCHIs" />
           </AssociationSet>
-          <AssociationSet Name="FK__MINHCHUNG__ID_SV__1FCDBCEB" Association="Self.FK__MINHCHUNG__ID_SV__1FCDBCEB">
+          <AssociationSet Name="FK__MINHCHUNG__ID_SV__534D60F1" Association="Self.FK__MINHCHUNG__ID_SV__534D60F1">
             <End Role="SINHVIEN" EntitySet="SINHVIENs" />
             <End Role="MINHCHUNG" EntitySet="MINHCHUNGs" />
           </AssociationSet>
-          <AssociationSet Name="FK_SINHVIEN_CAP" Association="DACS_SV5TModel.FK_SINHVIEN_CAP">
-            <End Role="CAP" EntitySet="CAPs" />
-            <End Role="SINHVIEN" EntitySet="SINHVIENs" />
-          </AssociationSet>
-          <EntitySet Name="DUYET_TC" EntityType="DACS_SV5TModel.DUYET_TC" />
-          <AssociationSet Name="FK_DUYET_TC_DANHGIA" Association="DACS_SV5TModel.FK_DUYET_TC_DANHGIA">
-            <End Role="DANHGIA" EntitySet="DANHGIAs" />
-            <End Role="DUYET_TC" EntitySet="DUYET_TC" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DUYET_TC_SINHVIEN" Association="DACS_SV5TModel.FK_DUYET_TC_SINHVIEN">
-            <End Role="SINHVIEN" EntitySet="SINHVIENs" />
-            <End Role="DUYET_TC" EntitySet="DUYET_TC" />
-          </AssociationSet>
+          <EntitySet Name="GIOITHIEUx" EntityType="DACS_SV5TModel.GIOITHIEU" />
+          <EntitySet Name="Sliders" EntityType="DACS_SV5TModel.Slider" />
+          <EntitySet Name="LICH_HOATDONG" EntityType="DACS_SV5TModel.LICH_HOATDONG" />
         </EntityContainer>
-        <Association Name="FK_SINHVIEN_CAP">
-          <End Type="DACS_SV5TModel.CAP" Role="CAP" Multiplicity="0..1" />
-          <End Type="DACS_SV5TModel.SINHVIEN" Role="SINHVIEN" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CAP">
-              <PropertyRef Name="ID_CAP" />
-            </Principal>
-            <Dependent Role="SINHVIEN">
-              <PropertyRef Name="ID_CAP" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="DUYET_TC">
+        <EntityType Name="GIOITHIEU">
           <Key>
-            <PropertyRef Name="ID_SV" />
-            <PropertyRef Name="ID_DANHGIA" />
+            <PropertyRef Name="id_gt" />
           </Key>
-          <Property Name="ID_SV" Type="Int32" Nullable="false" />
-          <Property Name="ID_DANHGIA" Type="Int32" Nullable="false" />
-          <Property Name="DUYET" Type="Boolean" />
-          <NavigationProperty Name="DANHGIA" Relationship="DACS_SV5TModel.FK_DUYET_TC_DANHGIA" FromRole="DUYET_TC" ToRole="DANHGIA" />
-          <NavigationProperty Name="SINHVIEN" Relationship="DACS_SV5TModel.FK_DUYET_TC_SINHVIEN" FromRole="DUYET_TC" ToRole="SINHVIEN" />
+          <Property Name="id_gt" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="aboutus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
-        <Association Name="FK_DUYET_TC_DANHGIA">
-          <End Type="DACS_SV5TModel.DANHGIA" Role="DANHGIA" Multiplicity="1" />
-          <End Type="DACS_SV5TModel.DUYET_TC" Role="DUYET_TC" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="DANHGIA">
-              <PropertyRef Name="ID_DANHGIA" />
-            </Principal>
-            <Dependent Role="DUYET_TC">
-              <PropertyRef Name="ID_DANHGIA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_DUYET_TC_SINHVIEN">
-          <End Type="DACS_SV5TModel.SINHVIEN" Role="SINHVIEN" Multiplicity="1" />
-          <End Type="DACS_SV5TModel.DUYET_TC" Role="DUYET_TC" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="SINHVIEN">
-              <PropertyRef Name="ID_SV" />
-            </Principal>
-            <Dependent Role="DUYET_TC">
-              <PropertyRef Name="ID_SV" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
+        <EntityType Name="Slider">
+          <Key>
+            <PropertyRef Name="ID_SLIDE" />
+          </Key>
+          <Property Name="ID_SLIDE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TITLE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IMG" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DATEBEGIN" Type="DateTime" Precision="0" />
+          <Property Name="META" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ORDER" Type="Int32" />
+          <Property Name="LINK" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HIDE" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="LICH_HOATDONG">
+          <Key>
+            <PropertyRef Name="ID_HD" />
+          </Key>
+          <Property Name="ID_HD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TITLE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DATEBEGIN" Type="DateTime" Precision="0" />
+          <Property Name="ĐỊA_ĐIỂM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ORDER" Type="Int32" />
+          <Property Name="HIDE" Type="Int32" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -668,11 +750,20 @@
           <EntitySetMapping Name="DANHGIAs">
             <EntityTypeMapping TypeName="DACS_SV5TModel.DANHGIA">
               <MappingFragment StoreEntitySet="DANHGIA">
-                <ScalarProperty Name="ID_DANHGIA" ColumnName="ID_DANHGIA" />
                 <ScalarProperty Name="ID_CAP" ColumnName="ID_CAP" />
                 <ScalarProperty Name="ID_CTTCHI" ColumnName="ID_CTTCHI" />
                 <ScalarProperty Name="TCHUAN_HOCTAP" ColumnName="TCHUAN_HOCTAP" />
                 <ScalarProperty Name="TCHUAN_HD" ColumnName="TCHUAN_HD" />
+                <ScalarProperty Name="ID_DANHGIA" ColumnName="ID_DANHGIA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DUYET_TC">
+            <EntityTypeMapping TypeName="DACS_SV5TModel.DUYET_TC">
+              <MappingFragment StoreEntitySet="DUYET_TC">
+                <ScalarProperty Name="ID_SV" ColumnName="ID_SV" />
+                <ScalarProperty Name="ID_DANHGIA" ColumnName="ID_DANHGIA" />
+                <ScalarProperty Name="DUYET" ColumnName="DUYET" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -709,31 +800,30 @@
           <EntitySetMapping Name="MINHCHUNGs">
             <EntityTypeMapping TypeName="DACS_SV5TModel.MINHCHUNG">
               <MappingFragment StoreEntitySet="MINHCHUNG">
-                <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
                 <ScalarProperty Name="ID_SV" ColumnName="ID_SV" />
                 <ScalarProperty Name="ID_CTTCHI" ColumnName="ID_CTTCHI" />
                 <ScalarProperty Name="URL" ColumnName="URL" />
                 <ScalarProperty Name="DUYET" ColumnName="DUYET" />
                 <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+                <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="NGUOIDUNGs">
             <EntityTypeMapping TypeName="DACS_SV5TModel.NGUOIDUNG">
               <MappingFragment StoreEntitySet="NGUOIDUNG">
-                <ScalarProperty Name="XNMK" ColumnName="XNMK" />
                 <ScalarProperty Name="ID_ND" ColumnName="ID_ND" />
                 <ScalarProperty Name="TENDN" ColumnName="TENDN" />
-                <ScalarProperty Name="MK" ColumnName="MK" />
                 <ScalarProperty Name="TENND" ColumnName="TENND" />
+                <ScalarProperty Name="MK" ColumnName="MK" />
                 <ScalarProperty Name="PQ" ColumnName="PQ" />
+                <ScalarProperty Name="XNMK" ColumnName="XNMK" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SINHVIENs">
             <EntityTypeMapping TypeName="DACS_SV5TModel.SINHVIEN">
               <MappingFragment StoreEntitySet="SINHVIEN">
-                <ScalarProperty Name="ID_CAP" ColumnName="ID_CAP" />
                 <ScalarProperty Name="ID_SV" ColumnName="ID_SV" />
                 <ScalarProperty Name="TEN_SV" ColumnName="TEN_SV" />
                 <ScalarProperty Name="LOP" ColumnName="LOP" />
@@ -743,17 +833,7 @@
                 <ScalarProperty Name="ID_KV" ColumnName="ID_KV" />
                 <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
                 <ScalarProperty Name="MSSV" ColumnName="MSSV" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="DACS_SV5TModel.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="ID_CAP" ColumnName="ID_CAP" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -769,6 +849,8 @@
           <EntitySetMapping Name="TINTUCs">
             <EntityTypeMapping TypeName="DACS_SV5TModel.TINTUC">
               <MappingFragment StoreEntitySet="TINTUC">
+                <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+                <ScalarProperty Name="IMG" ColumnName="IMG" />
                 <ScalarProperty Name="ID_TT" ColumnName="ID_TT" />
                 <ScalarProperty Name="TITLE" ColumnName="TITLE" />
                 <ScalarProperty Name="DETAIL" ColumnName="DETAIL" />
@@ -780,12 +862,53 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="DUYET_TC">
-            <EntityTypeMapping TypeName="DACS_SV5TModel.DUYET_TC">
-              <MappingFragment StoreEntitySet="DUYET_TC">
-                <ScalarProperty Name="DUYET" ColumnName="DUYET" />
-                <ScalarProperty Name="ID_DANHGIA" ColumnName="ID_DANHGIA" />
-                <ScalarProperty Name="ID_SV" ColumnName="ID_SV" />
+          <EntitySetMapping Name="VANBANs">
+            <EntityTypeMapping TypeName="DACS_SV5TModel.VANBAN">
+              <MappingFragment StoreEntitySet="VANBAN">
+                <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+                <ScalarProperty Name="IMG" ColumnName="IMG" />
+                <ScalarProperty Name="ID_VB" ColumnName="ID_VB" />
+                <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+                <ScalarProperty Name="DETAIL" ColumnName="DETAIL" />
+                <ScalarProperty Name="DATEBEGIN" ColumnName="DATEBEGIN" />
+                <ScalarProperty Name="META" ColumnName="META" />
+                <ScalarProperty Name="ORDER" ColumnName="ORDER" />
+                <ScalarProperty Name="LINK" ColumnName="LINK" />
+                <ScalarProperty Name="HIDE" ColumnName="HIDE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GIOITHIEUx">
+            <EntityTypeMapping TypeName="DACS_SV5TModel.GIOITHIEU">
+              <MappingFragment StoreEntitySet="GIOITHIEU">
+                <ScalarProperty Name="aboutus" ColumnName="aboutus" />
+                <ScalarProperty Name="id_gt" ColumnName="id_gt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sliders">
+            <EntityTypeMapping TypeName="DACS_SV5TModel.Slider">
+              <MappingFragment StoreEntitySet="Slider">
+                <ScalarProperty Name="HIDE" ColumnName="HIDE" />
+                <ScalarProperty Name="LINK" ColumnName="LINK" />
+                <ScalarProperty Name="ORDER" ColumnName="ORDER" />
+                <ScalarProperty Name="META" ColumnName="META" />
+                <ScalarProperty Name="DATEBEGIN" ColumnName="DATEBEGIN" />
+                <ScalarProperty Name="IMG" ColumnName="IMG" />
+                <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+                <ScalarProperty Name="ID_SLIDE" ColumnName="ID_SLIDE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LICH_HOATDONG">
+            <EntityTypeMapping TypeName="DACS_SV5TModel.LICH_HOATDONG">
+              <MappingFragment StoreEntitySet="LICH_HOATDONG">
+                <ScalarProperty Name="HIDE" ColumnName="HIDE" />
+                <ScalarProperty Name="ORDER" ColumnName="ORDER" />
+                <ScalarProperty Name="ĐỊA_ĐIỂM" ColumnName="ĐỊA ĐIỂM" />
+                <ScalarProperty Name="DATEBEGIN" ColumnName="DATEBEGIN" />
+                <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+                <ScalarProperty Name="ID_HD" ColumnName="ID_HD" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

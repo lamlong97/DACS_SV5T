@@ -174,6 +174,7 @@ namespace DACS_SV5T.Controllers
                     {
                         mINHCHUNG.HINHANH = "logo-hutech.png";
                     }
+                    return RedirectToAction("LoaiTieuChi", "HoatDong");
                 }
             }
             catch (DbEntityValidationException e)

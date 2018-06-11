@@ -4,30 +4,33 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="bbfae7d5212448ac926cffe4bb370e89" Name="Diagram1">
-        <EntityTypeShape EntityType="DACS_SV5TModel.CAP" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DACS_SV5TModel.CT_TEUCHI" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DACS_SV5TModel.DANHGIA" Width="1.5" PointX="7.5" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DACS_SV5TModel.KHOAVIEN" Width="1.5" PointX="6" PointY="8.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DACS_SV5TModel.LOAITIEUCHI" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DACS_SV5TModel.MENU" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DACS_SV5TModel.MINHCHUNG" Width="1.5" PointX="10.5" PointY="3.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DACS_SV5TModel.NGUOIDUNG" Width="1.5" PointX="2.75" PointY="7.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DACS_SV5TModel.SINHVIEN" Width="1.5" PointX="8.25" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DACS_SV5TModel.sysdiagram" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DACS_SV5TModel.TIEUCHI" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DACS_SV5TModel.TINTUC" Width="1.5" PointX="2.75" PointY="10.5" IsExpanded="true" />
-        <AssociationConnector Association="DACS_SV5TModel.FK__DANHGIA__ID_CAP__21B6055D" ManuallyRouted="false" />
-        <AssociationConnector Association="DACS_SV5TModel.FK__CT_TEUCHI__ID_TC__239E4DCF" ManuallyRouted="false" />
-        <AssociationConnector Association="DACS_SV5TModel.FK__DANHGIA__ID_CTTC__24927208" ManuallyRouted="false" />
-        <AssociationConnector Association="DACS_SV5TModel.FK__MINHCHUNG__ID_CT__25869641" ManuallyRouted="false" />
-        <AssociationConnector Association="DACS_SV5TModel.FK__SINHVIEN__ID_KV__20C1E124" ManuallyRouted="false" />
-        <AssociationConnector Association="DACS_SV5TModel.FK__TIEUCHI__ID_LTCH__22AA2996" ManuallyRouted="false" />
-        <AssociationConnector Association="DACS_SV5TModel.FK__MINHCHUNG__ID_SV__1FCDBCEB" ManuallyRouted="false" />
-        <AssociationConnector Association="DACS_SV5TModel.FK_SINHVIEN_CAP" />
-        <EntityTypeShape EntityType="DACS_SV5TModel.DUYET_TC" Width="1.5" PointX="10.5" PointY="6.625" />
-        <AssociationConnector Association="DACS_SV5TModel.FK_DUYET_TC_DANHGIA" />
-        <AssociationConnector Association="DACS_SV5TModel.FK_DUYET_TC_SINHVIEN" />
+      <Diagram DiagramId="5a45026d3cbb492aa45e3b42fed82f40" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="DACS_SV5TModel.CAP" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="DACS_SV5TModel.CT_TEUCHI" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DACS_SV5TModel.DANHGIA" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DACS_SV5TModel.DUYET_TC" Width="1.5" PointX="8.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="DACS_SV5TModel.KHOAVIEN" Width="1.5" PointX="3.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DACS_SV5TModel.LOAITIEUCHI" Width="1.5" PointX="1.5" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DACS_SV5TModel.MENU" Width="1.5" PointX="3.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DACS_SV5TModel.MINHCHUNG" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DACS_SV5TModel.NGUOIDUNG" Width="1.5" PointX="5.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DACS_SV5TModel.SINHVIEN" Width="1.5" PointX="6" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DACS_SV5TModel.TIEUCHI" Width="1.5" PointX="1.5" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DACS_SV5TModel.TINTUC" Width="1.5" PointX="7.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DACS_SV5TModel.VANBAN" Width="1.5" PointX="9.75" PointY="7.125" IsExpanded="true" />
+        <AssociationConnector Association="DACS_SV5TModel.FK__DANHGIA__ID_CAP__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="DACS_SV5TModel.FK_SINHVIEN_CAP" ManuallyRouted="false" />
+        <AssociationConnector Association="DACS_SV5TModel.FK__CT_TEUCHI__ID_TC__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="DACS_SV5TModel.FK__DANHGIA__ID_CTTC__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="DACS_SV5TModel.FK__MINHCHUNG__ID_CT__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="DACS_SV5TModel.FK_DUYET_TC_DANHGIA" ManuallyRouted="false" />
+        <AssociationConnector Association="DACS_SV5TModel.FK_DUYET_TC_SINHVIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="DACS_SV5TModel.FK__SINHVIEN__ID_KV__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="DACS_SV5TModel.FK__TIEUCHI__ID_LTCH__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="DACS_SV5TModel.FK__MINHCHUNG__ID_SV__534D60F1" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DACS_SV5TModel.GIOITHIEU" Width="1.5" PointX="10.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DACS_SV5TModel.Slider" Width="1.5" PointX="10.375" PointY="3.75" />
+        <EntityTypeShape EntityType="DACS_SV5TModel.LICH_HOATDONG" Width="1.5" PointX="4.375" PointY="11.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

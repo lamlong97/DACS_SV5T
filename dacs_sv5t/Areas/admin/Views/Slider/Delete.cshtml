@@ -1,0 +1,85 @@
+﻿@model DACS_SV5T.Models.Slider
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/admin/Views/Shared/_MyLayout.cshtml";
+}
+
+<div style="height:15px"></div>
+<div class="panel panel-red">
+    <div class="panel-heading">Xoá ?</div>
+    <div class="panel-body">
+        <h3 style="color:red">Bạn có chắc chắn muốn xoá bài viết này?</h3>
+        <div>
+            <dl class="dl-horizontal">
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Tiêu đề: ")
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.TITLE)
+                </dd>
+
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Hình ảnh: ")
+                </dt>
+
+                <dd>
+                    <img src="~/Content/img/slider/@Html.DisplayFor(model => model.IMG)" width="150px" />
+                </dd>
+
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Ngày đăng: ")
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DATEBEGIN)
+                </dd>
+
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Meta: ")
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.META)
+                </dd>
+
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Sắp xếp: ")
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ORDER)
+                </dd>
+
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Liên kết: ")
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.LINK)
+                </dd>
+
+                <dt style="padding-bottom:5px">
+                    @Html.Raw("Trạng thái: ")
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.HIDE)
+                </dd>
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="XOÁ" class="btn btn-danger" /> |
+                    @Html.ActionLink("Quay về", "Index", "Index", new { @class = "btn btn-success" })
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

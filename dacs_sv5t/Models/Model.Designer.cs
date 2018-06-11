@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\SinhVien5Tot\DACS_SV5T\DACS_SV5T\Models\Model.edmx'. 
+﻿// T4 code generation is enabled for model 'E:\Winrar\DACS_SV5T-9-6-2018\DACS_SV5T-LamLong\DACS_SV5T-LamLong (2)\DACS_SV5T-LamLong\DACS_SV5T\Models\Model.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

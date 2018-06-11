@@ -1,0 +1,34 @@
+﻿@model DACS_SV5T.Models.VANBAN
+
+@{
+    ViewBag.Title = "DetailVanBan";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.0&appId=173173216678354&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <a href="/chi-tiet-van-ban/@Model.META-@Model.ID_VB">@Model.TITLE</a>
+        <p><img src="~/Content/img/Calendar-icon1.png">  Ngày đăng: @Convert.ToDateTime(Model.DATEBEGIN).ToString("dd/MM/yyyy").</p>
+    </div>
+    <div class="panel-body">
+        @*<div style="text-align: center;">
+                <img src="~/Content/upload/product/@Model.IMG" />
+            </div>*@
+        @*</br>
+            <p>@Model.DECREPSION</p>
+            </br>*@
+        <div>
+            <p>@Html.Raw(Model.DETAIL)</p>
+        </div>
+    </div>
+</div>

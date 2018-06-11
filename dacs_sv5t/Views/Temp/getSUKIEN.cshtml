@@ -1,0 +1,46 @@
+﻿@model DACS_SV5T.Models.LICH_HOATDONG
+
+<div class="panel panel-danger">
+    <div class="panel-heading" style="text-transform: uppercase;"><img src="~/Content/img/calendar-icon.png">Lịch sự kiện</div>
+    <div class="panel-body">
+        <div class="col-xs-12 nopadding event">
+            <div class="col-xs-4 nopadding event-left">
+                <div class="w-full back-orange text-white text-bold"> @Convert.ToDateTime(Model.DATEBEGIN).ToString("hh:mm:ss")</div>
+                <div class="w-full">@Convert.ToDateTime(Model.DATEBEGIN).ToString("dd/MM/yyyy")</div>
+            </div>
+            <div class="col-xs-8 no-padding-right-2 event-right">
+                <div class="text-justify">
+                    @Model.TITLE
+                </div>
+                <div class="text-orange">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    @Convert.ToDateTime(Model.DATEBEGIN).ToString("dd/MM/yyyy")
+                </div>
+                <div class="text-orange">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    @Model.ĐỊA_ĐIỂM
+            </div>
+        </div>
+    </div>
+
+        <div class="col-xs-12 nopadding event">
+            <div class="col-xs-4 nopadding event-left">
+                <div class="w-full back-orange text-white text-bold"> @Convert.ToDateTime(Model.DATEBEGIN).ToString("hh:mm:ss")</div>
+                <div class="w-full">@Convert.ToDateTime(Model.DATEBEGIN).ToString("dd/MM/yyyy")</div>
+            </div>
+            <div class="col-xs-8 no-padding-right-2 event-right">
+                <div class="text-justify">
+                    @Model.TITLE
+                </div>
+                <div class="text-orange">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    @Convert.ToDateTime(Model.DATEBEGIN).ToString("dd/MM/yyyy")
+                </div>
+                <div class="text-orange">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    @Model.ĐỊA_ĐIỂM
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
