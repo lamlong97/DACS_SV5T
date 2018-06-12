@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DACS_SV5TModelStoreContainer" CdmEntityContainer="DACS_SV5TEntities">
+    <EntitySetMapping Name="CAPs">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.CAP">
+        <MappingFragment StoreEntitySet="CAP">
+          <ScalarProperty Name="ID_CAP" ColumnName="ID_CAP" />
+          <ScalarProperty Name="TEN_CAP" ColumnName="TEN_CAP" />
+          <ScalarProperty Name="NAM" ColumnName="NAM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CT_TEUCHI">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.CT_TEUCHI">
+        <MappingFragment StoreEntitySet="CT_TEUCHI">
+          <ScalarProperty Name="ID_CTTCHI" ColumnName="ID_CTTCHI" />
+          <ScalarProperty Name="ID_TCHI" ColumnName="ID_TCHI" />
+          <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DANHGIAs">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.DANHGIA">
+        <MappingFragment StoreEntitySet="DANHGIA">
+          <ScalarProperty Name="ID_CAP" ColumnName="ID_CAP" />
+          <ScalarProperty Name="ID_CTTCHI" ColumnName="ID_CTTCHI" />
+          <ScalarProperty Name="TCHUAN_HOCTAP" ColumnName="TCHUAN_HOCTAP" />
+          <ScalarProperty Name="TCHUAN_HD" ColumnName="TCHUAN_HD" />
+          <ScalarProperty Name="ID_DANHGIA" ColumnName="ID_DANHGIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DUYET_TC">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.DUYET_TC">
+        <MappingFragment StoreEntitySet="DUYET_TC">
+          <ScalarProperty Name="ID_SV" ColumnName="ID_SV" />
+          <ScalarProperty Name="ID_DANHGIA" ColumnName="ID_DANHGIA" />
+          <ScalarProperty Name="DUYET" ColumnName="DUYET" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KHOAVIENs">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.KHOAVIEN">
+        <MappingFragment StoreEntitySet="KHOAVIEN">
+          <ScalarProperty Name="ID_KV" ColumnName="ID_KV" />
+          <ScalarProperty Name="TEN_KV" ColumnName="TEN_KV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOAITIEUCHIs">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.LOAITIEUCHI">
+        <MappingFragment StoreEntitySet="LOAITIEUCHI">
+          <ScalarProperty Name="ID_LTCHI" ColumnName="ID_LTCHI" />
+          <ScalarProperty Name="TEN_LTCHI" ColumnName="TEN_LTCHI" />
+          <ScalarProperty Name="NAM" ColumnName="NAM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MENUs">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.MENU">
+        <MappingFragment StoreEntitySet="MENU">
+          <ScalarProperty Name="ID_MENU" ColumnName="ID_MENU" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="DATEBEGIN" ColumnName="DATEBEGIN" />
+          <ScalarProperty Name="META" ColumnName="META" />
+          <ScalarProperty Name="ORDER" ColumnName="ORDER" />
+          <ScalarProperty Name="LINK" ColumnName="LINK" />
+          <ScalarProperty Name="HIDE" ColumnName="HIDE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MINHCHUNGs">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.MINHCHUNG">
+        <MappingFragment StoreEntitySet="MINHCHUNG">
+          <ScalarProperty Name="ID_SV" ColumnName="ID_SV" />
+          <ScalarProperty Name="ID_CTTCHI" ColumnName="ID_CTTCHI" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="DUYET" ColumnName="DUYET" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NGUOIDUNGs">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.NGUOIDUNG">
+        <MappingFragment StoreEntitySet="NGUOIDUNG">
+          <ScalarProperty Name="ID_ND" ColumnName="ID_ND" />
+          <ScalarProperty Name="TENDN" ColumnName="TENDN" />
+          <ScalarProperty Name="TENND" ColumnName="TENND" />
+          <ScalarProperty Name="MK" ColumnName="MK" />
+          <ScalarProperty Name="PQ" ColumnName="PQ" />
+          <ScalarProperty Name="XNMK" ColumnName="XNMK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SINHVIENs">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.SINHVIEN">
+        <MappingFragment StoreEntitySet="SINHVIEN">
+          <ScalarProperty Name="ID_SV" ColumnName="ID_SV" />
+          <ScalarProperty Name="TEN_SV" ColumnName="TEN_SV" />
+          <ScalarProperty Name="LOP" ColumnName="LOP" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="ID_KV" ColumnName="ID_KV" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="MSSV" ColumnName="MSSV" />
+          <ScalarProperty Name="ID_CAP" ColumnName="ID_CAP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIEUCHIs">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.TIEUCHI">
+        <MappingFragment StoreEntitySet="TIEUCHI">
+          <ScalarProperty Name="ID_TCHI" ColumnName="ID_TCHI" />
+          <ScalarProperty Name="TEN_TCHI" ColumnName="TEN_TCHI" />
+          <ScalarProperty Name="ID_LTCHI" ColumnName="ID_LTCHI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TINTUCs">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.TINTUC">
+        <MappingFragment StoreEntitySet="TINTUC">
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="IMG" ColumnName="IMG" />
+          <ScalarProperty Name="ID_TT" ColumnName="ID_TT" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="DETAIL" ColumnName="DETAIL" />
+          <ScalarProperty Name="DATEBEGIN" ColumnName="DATEBEGIN" />
+          <ScalarProperty Name="META" ColumnName="META" />
+          <ScalarProperty Name="ORDER" ColumnName="ORDER" />
+          <ScalarProperty Name="LINK" ColumnName="LINK" />
+          <ScalarProperty Name="HIDE" ColumnName="HIDE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VANBANs">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.VANBAN">
+        <MappingFragment StoreEntitySet="VANBAN">
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="IMG" ColumnName="IMG" />
+          <ScalarProperty Name="ID_VB" ColumnName="ID_VB" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="DETAIL" ColumnName="DETAIL" />
+          <ScalarProperty Name="DATEBEGIN" ColumnName="DATEBEGIN" />
+          <ScalarProperty Name="META" ColumnName="META" />
+          <ScalarProperty Name="ORDER" ColumnName="ORDER" />
+          <ScalarProperty Name="LINK" ColumnName="LINK" />
+          <ScalarProperty Name="HIDE" ColumnName="HIDE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GIOITHIEUx">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.GIOITHIEU">
+        <MappingFragment StoreEntitySet="GIOITHIEU">
+          <ScalarProperty Name="aboutus" ColumnName="aboutus" />
+          <ScalarProperty Name="id_gt" ColumnName="id_gt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sliders">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.Slider">
+        <MappingFragment StoreEntitySet="Slider">
+          <ScalarProperty Name="HIDE" ColumnName="HIDE" />
+          <ScalarProperty Name="LINK" ColumnName="LINK" />
+          <ScalarProperty Name="ORDER" ColumnName="ORDER" />
+          <ScalarProperty Name="META" ColumnName="META" />
+          <ScalarProperty Name="DATEBEGIN" ColumnName="DATEBEGIN" />
+          <ScalarProperty Name="IMG" ColumnName="IMG" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="ID_SLIDE" ColumnName="ID_SLIDE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LICH_HOATDONG">
+      <EntityTypeMapping TypeName="DACS_SV5TModel.LICH_HOATDONG">
+        <MappingFragment StoreEntitySet="LICH_HOATDONG">
+          <ScalarProperty Name="HIDE" ColumnName="HIDE" />
+          <ScalarProperty Name="ORDER" ColumnName="ORDER" />
+          <ScalarProperty Name="ĐỊA_ĐIỂM" ColumnName="ĐỊA ĐIỂM" />
+          <ScalarProperty Name="DATEBEGIN" ColumnName="DATEBEGIN" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="ID_HD" ColumnName="ID_HD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
